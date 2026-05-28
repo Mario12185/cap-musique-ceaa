@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta charset="UTF-8">
+    <!-- Mobile Font & Encoding Fix -->
+    <style>
+        /* Force UTF-8 rendering */
+        @charset "UTF-8";
+        
+        /* Police universelle pour mobile */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            text-rendering: optimizeLegibility !important;
+        }
+        
+        /* Évite le zoom automatique sur iOS */
+        input, select, textarea {
+            font-size: 16px !important;
+        }
+        
+        /* Fixe les débordements de texte */
+        p, li, h1, h2, h3, h4, h5, h6 {
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+            hyphens: auto !important;
+        }
+        
+        /* Ajuste la grille sur petits écrans */
+        @media (max-width: 480px) {
+            .modules-grid, .instrument-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .nav-primary {
+                flex-wrap: wrap !important;
+                gap: 0.5rem !important;
+            }
+            .nav-primary a {
+                font-size: 0.9rem !important;
+                padding: 0.4rem 0.6rem !important;
+            }
+        }
+    </style>
+    <!-- PWA Meta Tags -->
+    
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CAP Musique">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+    
+    <title>Piano | CAP MUSIQUE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Fallback Mobile Sûr */
+        @media (max-width: 768px) {
+            body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
+            .container { padding: 0 1rem !important; }
+            .module-header h1, .main-header h1 { font-size: 1.8rem !important; word-break: break-word !important; }
+            .nav-primary { flex-wrap: wrap !important; gap: 0.4rem !important; }
+            .nav-primary a { font-size: 0.85rem !important; padding: 0.4rem 0.6rem !important; white-space: nowrap !important; }
+            .modules-grid, .instrument-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+            .apc-block { padding: 1rem !important; margin: 0.8rem 0 !important; }
+            .comparison-table { display: block; overflow-x: auto; font-size: 0.85rem !important; }
+            .btn { width: 100% !important; text-align: center !important; }
+        }
+    </style>
+  </head>
+<body>
+    <nav class="main-nav">
+        <div class="container nav-wrapper">
+            <ul class="nav-primary">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="pratique-instrumentale.html">Pratique instrumentale</a></li>
+                <li class="dropdown">
+                    <a href="autres-matieres.html" class="dropdown-toggle">Autres matiÃ¨res â–¾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="maths-algebre.html">MathÃ©matiques - AlgÃ¨bre</a></li>
+                        <li><a href="histoire-art.html">Histoire de l'Art</a></li>
+                        <li><a href="legislation-travail.html">LÃ©gislation du travail</a></li>
+                        <li><a href="anglais.html">Anglais</a></li>
+                        <li><a href="francais.html">FranÃ§ais</a></li>
+                    </ul>
+                </li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="librairie.html">Librairie</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="module-header">
+        <div class="container">
+            <a href="pratique-instrumentale.html" class="back-link">â† Retour Ã  Pratique Instrumentale</a>
+            <h1>ðŸ¥ Batterie</h1>
+            <p class="competence">Posture, doigtÃ©s, lecture de partitions, gammes et rÃ©pertoire progressif</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="resource-section">
+            <h5>ðŸ“– Contenu du Cours</h5>
+            <p>Ce module couvre les bases de la batterie au niveau CAP : tenue correcte des baguettes, posture, indÃ©pendance et coordination des quatre membres, lecture de partitions rythmiques et grooves fondamentaux. Chaque leÃ§on inclut des exercices techniques de frappe et de roulement, des Ã©tudes de coordination mains-pieds et des patterns d'accompagnement progressifs.</p>
+            
+            <div class="resource-actions">
+                <!-- Bouton TÃ©lÃ©chargement PDF (Ã‰tudiants) -->
+                <a href="assets/partitions/piano_cours_1.pdf" download class="btn btn-pdf">ðŸ“¥ TÃ©lÃ©charger le PDF (Cours + Partitions)</a>
+                
+                <!-- Bouton VidÃ©o (Visionnage) -->
+                <a href="#video-section" class="btn btn-video">ðŸŽ¥ Voir les vidÃ©os du cours</a>
+            </div>
+
+            <!-- Zone d'upload (Interface admin/professeur) -->
+            <div class="upload-zone">
+                <h6>ðŸ“¤ Zone d'upload (Enseignants)</h6>
+                <p>Ajoute de nouvelles partitions ou vidÃ©os pour les Ã©lÃ¨ves.</p>
+                <label for="file-upload">
+                    ðŸ“ SÃ©lectionner un fichier (PDF ou MP4)
+                    <input type="file" id="file-upload" accept=".pdf,.mp4,.webm,.mov">
+                </label>
+                <div class="file-preview" id="file-preview">Aucun fichier sÃ©lectionnÃ©</div>
+            </div>
+
+            <!-- Section VidÃ©o intÃ©grÃ©e -->
+            <div id="video-section" class="apc-block content mt-2">
+                <h5>ðŸŽ¬ Supports VidÃ©o</h5>
+                <div style="background:#000; border-radius:var(--radius-md); overflow:hidden; aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; color:#fff;">
+                    <p>ðŸ“º IntÃ¨gre ici un iframe YouTube/Vimeo ou un fichier vidÃ©o local.<br>
+                    <code>&lt;video controls src="video.mp4" width="100%"&gt;&lt;/video&gt;</code></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p><a href="index.html">Accueil</a> Â· <a href="pratique-instrumentale.html">Pratique Instrumentale</a> Â· <a href="contacts.html">Contacts</a></p>
+            <p>Â© 2026-2027 CEAA-KpalimÃ© - CAP Musique.</p>
+        </div>
+    </footer>
+
+    <script>
+        // PrÃ©visualisation simple du fichier sÃ©lectionnÃ© (frontend only)
+        document.getElementById('file-upload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            const preview = document.getElementById('file-preview');
+            if (file) {
+                preview.textContent = `âœ… Fichier sÃ©lectionnÃ© : ${file.name} (${(file.size/1024).toFixed(1)} Ko)`;
+                preview.style.color = 'var(--success)';
+            } else {
+                preview.textContent = 'Aucun fichier sÃ©lectionnÃ©';
+                preview.style.color = 'var(--text-muted)';
+            }
+        });
+    </script>
+
+    <!-- PWA Service Worker -->
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('✅ Service Worker enregistré:', reg.scope))
+          .catch(err => console.log('❌ Service Worker échec:', err));
+      });
+    }
+    </script>
+  </body>
+</html>

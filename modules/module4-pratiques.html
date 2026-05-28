@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta charset="UTF-8">
+    <!-- Mobile Font & Encoding Fix -->
+    <style>
+        /* Force UTF-8 rendering */
+        @charset "UTF-8";
+        
+        /* Police universelle pour mobile */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            text-rendering: optimizeLegibility !important;
+        }
+        
+        /* Évite le zoom automatique sur iOS */
+        input, select, textarea {
+            font-size: 16px !important;
+        }
+        
+        /* Fixe les débordements de texte */
+        p, li, h1, h2, h3, h4, h5, h6 {
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+            hyphens: auto !important;
+        }
+        
+        /* Ajuste la grille sur petits écrans */
+        @media (max-width: 480px) {
+            .modules-grid, .instrument-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .nav-primary {
+                flex-wrap: wrap !important;
+                gap: 0.5rem !important;
+            }
+            .nav-primary a {
+                font-size: 0.9rem !important;
+                padding: 0.4rem 0.6rem !important;
+            }
+        }
+    </style>
+    <!-- PWA Meta Tags -->
+    
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CAP Musique">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+    
+    <title>Module 4 - Pratiques & Ã‰valuations | CAP MUSIQUE</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Fallback Mobile Sûr */
+        @media (max-width: 768px) {
+            body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
+            .container { padding: 0 1rem !important; }
+            .module-header h1, .main-header h1 { font-size: 1.8rem !important; word-break: break-word !important; }
+            .nav-primary { flex-wrap: wrap !important; gap: 0.4rem !important; }
+            .nav-primary a { font-size: 0.85rem !important; padding: 0.4rem 0.6rem !important; white-space: nowrap !important; }
+            .modules-grid, .instrument-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+            .apc-block { padding: 1rem !important; margin: 0.8rem 0 !important; }
+            .comparison-table { display: block; overflow-x: auto; font-size: 0.85rem !important; }
+            .btn { width: 100% !important; text-align: center !important; }
+        }
+    </style>
+  </head>
+<body>
+    <header class="module-header">
+        <div class="container">
+            <a href="../index.html" class="back-link">â† Retour Ã  l'accueil</a>
+            <h1>ðŸŽª Module 4</h1>
+            <h2>Pratiques Musicales et Ã‰valuations</h2>
+            <p class="competence">Objectif : DÃ©velopper les compÃ©tences pratiques, Ã©valuer les acquis et prÃ©parer les prestations scÃ©niques</p>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+    <div class="container nav-wrapper">
+        <ul class="nav-primary">
+            <li><a href="index.html">Accueil</a></li>
+            <li class="dropdown">
+                <a href="autres-matieres.html" class="dropdown-toggle">Autres matiÃ¨res â–¾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="maths-algebre.html">MathÃ©matiques - AlgÃ¨bre</a></li>
+                    <li><a href="histoire-art.html">Histoire de l'Art</a></li>
+                    <li><a href="legislation-travail.html">LÃ©gislation du travail</a></li>
+                    <li><a href="anglais.html">Anglais</a></li>
+                    <li><a href="francais.html">FranÃ§ais</a></li>
+                </ul>
+            </li>
+            <li><a href="contacts.html">Contacts</a></li>
+            <li><a href="librairie.html">Librairie</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <main class="container">
+        <!-- CHAPITRE 7 -->
+        <article id="chap7" class="chapter">
+            <h3>Chapitre 7 : Ateliers Pratiques</h3>
+            
+            <section class="lesson">
+                <div class="apc-block situation">
+                    <h5>ðŸ“‹ Situation d'Apprentissage</h5>
+                    <p>Dans le cadre de la prÃ©paration d'un spectacle de fin d'annÃ©e, les Ã©lÃ¨ves du CAP Musique sont regroupÃ©s en ateliers pratiques. Chaque atelier travaille un aspect prÃ©cis : lecture, rythme, chant et exÃ©cution instrumentale. Le professeur organise ces ateliers pour dÃ©velopper les compÃ©tences pratiques, la coordination et l'esprit d'Ã©quipe.</p>
+                </div>
+
+                <div class="apc-block content">
+                    <h5>ðŸ“– Contenu des Ateliers</h5>
+                    <h6>1. Exercices de lecture musicale</h6>
+                    <ul>
+                        <li>ReconnaÃ®tre les notes sur la portÃ©e</li>
+                        <li>Lire des mÃ©lodies simples sans hÃ©sitation</li>
+                        <li>Respecter la hauteur des sons sur partitions progressives</li>
+                    </ul>
+
+                    <h6>2. Exercices rythmiques</h6>
+                    <ul>
+                        <li>MaÃ®triser les valeurs (noire, blanche, croche)</li>
+                        <li>Respecter la pulsation et battre les temps</li>
+                        <li>AmÃ©liorer la coordination main-voix (imitation rythmique)</li>
+                    </ul>
+
+                    <h6>3. Exercices vocaux</h6>
+                    <ul>
+                        <li>Vocalises simples et contrÃ´le respiratoire</li>
+                        <li>DÃ©veloppement de la puissance vocale et de l'intonation</li>
+                        <li>Chant en groupe et rÃ©pÃ©tition de mÃ©lodies</li>
+                    </ul>
+
+                    <h6>4. Exercices instrumentaux</h6>
+                    <ul>
+                        <li>MaÃ®trise des instruments Ã©tudiÃ©s (flÃ»te, percussions, cordes simples)</li>
+                        <li>Coordination des doigts et rÃ©gularitÃ© du tempo</li>
+                        <li>Respect simultanÃ© du rythme et de la mÃ©lodie</li>
+                    </ul>
+
+                    <h6>5. Jeux musicaux collectifs</h6>
+                    <ul>
+                        <li>Renforcement de l'Ã©coute et de l'esprit d'Ã©quipe</li>
+                        <li>Jeux de questions-rÃ©ponses musicales et crÃ©ation de petits ensembles</li>
+                    </ul>
+
+                    <h6>6. Mise en situation professionnelle</h6>
+                    <p>Les Ã©lÃ¨ves sont placÃ©s dans des contextes rÃ©els :</p>
+                    <ul>
+                        <li>RÃ©pÃ©titions de chorale et mini-concerts</li>
+                        <li>Accompagnement musical et animation culturelle</li>
+                    </ul>
+                </div>
+
+                <div class="apc-block resume">
+                    <h5>âœ… RÃ©sumÃ©</h5>
+                    <p>Les ateliers pratiques permettent aux Ã©lÃ¨ves de mettre en application leurs connaissances. Ils dÃ©veloppent la lecture musicale, le rythme, le chant, la pratique instrumentale et la collaboration en groupe.</p>
+                </div>
+
+                <div class="apc-block evaluation">
+                    <h5>ðŸ“ Situation d'Ã‰valuation</h5>
+                    <p>Lors d'une rÃ©pÃ©tition gÃ©nÃ©rale pour un spectacle scolaire, les Ã©lÃ¨ves doivent prÃ©senter les compÃ©tences acquises. Le professeur observe leur niveau de maÃ®trise.</p>
+                    <ol>
+                        <li>Cite quatre types d'ateliers pratiques.</li>
+                        <li>Explique l'utilitÃ© des exercices rythmiques.</li>
+                        <li>Donne deux exemples d'exercices vocaux.</li>
+                        <li>DÃ©cris une mise en situation professionnelle.</li>
+                    </ol>
+                </div>
+
+                <div class="apc-block content">
+                    <h5>ðŸ› ï¸ Exercices de Consolidation</h5>
+                    <p><strong>Vrai ou Faux :</strong></p>
+                    <table class="comparison-table">
+                        <tr><th>Affirmations</th><th>Vrai</th><th>Faux</th></tr>
+                        <tr><td>Les ateliers servent Ã  pratiquer la musique</td><td></td><td></td></tr>
+                        <tr><td>La lecture musicale est inutile</td><td></td><td></td></tr>
+                        <tr><td>Les exercices vocaux amÃ©liorent la voix</td><td></td><td></td></tr>
+                        <tr><td>Les jeux musicaux renforcent l'esprit d'Ã©quipe</td><td></td><td></td></tr>
+                    </table>
+                    <p><strong>ComplÃ¨te :</strong> 1. La lecture musicale permet de lire les ______ | 2. Les exercices rythmiques travaillent le ______ | 3. Les ateliers dÃ©veloppent la pratique ______</p>
+                    <p><strong>ActivitÃ© pratique :</strong> Former des groupes, rÃ©aliser un atelier de chant et un atelier de rythme, puis prÃ©senter une courte prestation devant la classe.</p>
+                </div>
+            </section>
+        </article>
+
+        <!-- CHAPITRE 8 -->
+        <article id="chap8" class="chapter">
+            <h3>Chapitre 8 : Ã‰valuations et Projets</h3>
+            
+            <section class="lesson">
+                <div class="apc-block situation">
+                    <h5>ðŸ“‹ Situation d'Apprentissage</h5>
+                    <p>Ã€ la fin de l'annÃ©e scolaire, l'Ã©tablissement organise un projet artistique global rÃ©unissant toutes les compÃ©tences acquises. Les Ã©lÃ¨ves participent Ã  diffÃ©rentes Ã©valuations et prÃ©parent des prestations individuelles et collectives pour mesurer leurs acquis en solfÃ¨ge, chant, rythme et pratique instrumentale.</p>
+                </div>
+
+                <div class="apc-block content">
+                    <h5>ðŸ“– Contenu</h5>
+                    <h6>1. Ã‰valuations thÃ©oriques</h6>
+                    <p>VÃ©rification des connaissances sur : les notes, les figures rythmiques, les familles d'instruments et les notions de solfÃ¨ge (questions Ã©crites ou orales).</p>
+
+                    <h6>2. Ã‰valuations pratiques</h6>
+                    <p>VÃ©rification des compÃ©tences musicales : chant, lecture musicale, rythme et exÃ©cution instrumentale. L'Ã©lÃ¨ve est observÃ© pendant une prestation.</p>
+
+                    <h6>3. ContrÃ´les de lecture musicale</h6>
+                    <ul>
+                        <li>Lire des partitions simples</li>
+                        <li>Identifier les notes et respecter le rythme</li>
+                        <li>Chanter ou jouer correctement sans erreur</li>
+                    </ul>
+
+                    <h6>4. Projets artistiques</h6>
+                    <p>Travail en groupe pour crÃ©er une prestation musicale autour d'un thÃ¨me choisi (chanson Ã©ducative, spectacle culturel, animation, petit ensemble).</p>
+
+                    <h6>5. Prestations scÃ©niques</h6>
+                    <ul>
+                        <li>Chanter ou jouer devant un public</li>
+                        <li>Respecter la mise en scÃ¨ne et gÃ©rer le stress</li>
+                        <li>Soigner la posture, la diction et la coordination</li>
+                    </ul>
+
+                    <h6>6. Projet de fin de module</h6>
+                    <p>Regroupe toutes les compÃ©tences (solfÃ¨ge, chant, rythme, interprÃ©tation, travail collectif). Peut prendre la forme d'un concert scolaire, d'une chorale ou d'une crÃ©ation artistique originale.</p>
+                </div>
+
+                <div class="apc-block resume">
+                    <h5>âœ… RÃ©sumÃ©</h5>
+                    <p>Les Ã©valuations et projets permettent de mesurer les compÃ©tences musicales. Ils combinent thÃ©orie, pratique, crÃ©ativitÃ© et travail en groupe, prÃ©parant ainsi les Ã©lÃ¨ves Ã  des situations professionnelles rÃ©elles.</p>
+                </div>
+
+                <div class="apc-block evaluation">
+                    <h5>ðŸ“ Situation d'Ã‰valuation</h5>
+                    <p>Ã€ la fin du module, le professeur organise un spectacle de classe. Chaque groupe doit prÃ©senter une performance complÃ¨te.</p>
+                    <ol>
+                        <li>Cite deux types d'Ã©valuations.</li>
+                        <li>Donne deux exemples de projets artistiques.</li>
+                        <li>Explique ce qu'est une prestation scÃ©nique.</li>
+                        <li>DÃ©cris un projet de fin de module.</li>
+                    </ol>
+                </div>
+
+                <div class="apc-block content">
+                    <h5>ðŸ› ï¸ Exercices de Consolidation</h5>
+                    <p><strong>Vrai ou Faux :</strong></p>
+                    <table class="comparison-table">
+                        <tr><th>Affirmations</th><th>Vrai</th><th>Faux</th></tr>
+                        <tr><td>Les Ã©valuations servent Ã  mesurer les acquis</td><td></td><td></td></tr>
+                        <tr><td>Les projets artistiques sont individuels uniquement</td><td></td><td></td></tr>
+                        <tr><td>La prestation scÃ©nique est une performance devant un public</td><td></td><td></td></tr>
+                        <tr><td>Le travail en groupe est important</td><td></td><td></td></tr>
+                    </table>
+                    <p><strong>ComplÃ¨te :</strong> 1. Les Ã©valuations peuvent Ãªtre thÃ©oriques ou ______ | 2. Les projets artistiques dÃ©veloppent la ______ | 3. La prestation scÃ©nique se fait devant un ______</p>
+                    <p><strong>ActivitÃ© pratique :</strong> Former un groupe, choisir un thÃ¨me musical, prÃ©parer une mini prestation et la prÃ©senter devant la classe.</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p><a href="../index.html">â† Retour Ã  l'accueil</a> | <a href="module3-chant.html">Module 3</a> | <a href="module5-annexes.html">Module 5 â†’</a></p>
+            <p>Module 4 - Pratiques Musicales et Ã‰valuations</p>
+        </div>
+    </footer>
+
+    <!-- PWA Service Worker -->
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('✅ Service Worker enregistré:', reg.scope))
+          .catch(err => console.log('❌ Service Worker échec:', err));
+      });
+    }
+    </script>
+  </body>
+</html>

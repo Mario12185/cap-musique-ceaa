@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta charset="UTF-8">
+    <!-- Mobile Font & Encoding Fix -->
+    <style>
+        /* Force UTF-8 rendering */
+        @charset "UTF-8";
+        
+        /* Police universelle pour mobile */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+            -webkit-font-smoothing: antialiased !important;
+            -moz-osx-font-smoothing: grayscale !important;
+            text-rendering: optimizeLegibility !important;
+        }
+        
+        /* Évite le zoom automatique sur iOS */
+        input, select, textarea {
+            font-size: 16px !important;
+        }
+        
+        /* Fixe les débordements de texte */
+        p, li, h1, h2, h3, h4, h5, h6 {
+            word-wrap: break-word !important;
+            overflow-wrap: break-word !important;
+            hyphens: auto !important;
+        }
+        
+        /* Ajuste la grille sur petits écrans */
+        @media (max-width: 480px) {
+            .modules-grid, .instrument-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .nav-primary {
+                flex-wrap: wrap !important;
+                gap: 0.5rem !important;
+            }
+            .nav-primary a {
+                font-size: 0.9rem !important;
+                padding: 0.4rem 0.6rem !important;
+            }
+        }
+    </style>
+    <!-- PWA Meta Tags -->
+    
+    <meta name="theme-color" content="#2563eb">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="CAP Musique">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+    
+    <title>MathÃ©matiques - AlgÃ¨bre | CAP MUSIQUE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Fallback Mobile Sûr */
+        @media (max-width: 768px) {
+            body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
+            .container { padding: 0 1rem !important; }
+            .module-header h1, .main-header h1 { font-size: 1.8rem !important; word-break: break-word !important; }
+            .nav-primary { flex-wrap: wrap !important; gap: 0.4rem !important; }
+            .nav-primary a { font-size: 0.85rem !important; padding: 0.4rem 0.6rem !important; white-space: nowrap !important; }
+            .modules-grid, .instrument-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+            .apc-block { padding: 1rem !important; margin: 0.8rem 0 !important; }
+            .comparison-table { display: block; overflow-x: auto; font-size: 0.85rem !important; }
+            .btn { width: 100% !important; text-align: center !important; }
+        }
+    </style>
+  </head>
+<body>
+    <nav class="main-nav">
+        <div class="container nav-wrapper">
+            <ul class="nav-primary">
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="autres-matieres.html" class="dropdown-toggle active">Autres matiÃ¨res â–¾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="maths-algebre.html">MathÃ©matiques - AlgÃ¨bre</a></li>
+                        <li><a href="histoire-art.html">Histoire de l'Art</a></li>
+                        <li><a href="legislation-travail.html">LÃ©gislation du travail</a></li>
+                        <li><a href="anglais.html">Anglais</a></li>
+                        <li><a href="francais.html">FranÃ§ais</a></li>
+                    </ul>
+                </li>
+                <li><a href="informations.html">Informations</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="librairie.html">Librairie</a></li>
+                <li><a href="bibliotheque.html">BibliothÃ¨que</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="module-header">
+        <div class="container">
+            <a href="autres-matieres.html" class="back-link">â† Retour aux autres matiÃ¨res</a>
+            <h1>ðŸ”¢ MathÃ©matiques - AlgÃ¨bre</h1>
+            <h2>Calcul, Ã‰quations & Raisonnement Logique</h2>
+            <p class="competence">Fondamentaux mathÃ©matiques appliquÃ©s aux arts et Ã  la logique musicale</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="chapter">
+            <section class="lesson">
+                <div class="apc-block content">
+                    <h5>ðŸ“– Programme PÃ©dagogique</h5>
+                    <p>Les bases de l'algÃ¨bre, les opÃ©rations fondamentales, les Ã©quations simples et la logique mathÃ©matique. Ces notions renforcent la comprÃ©hension des proportions rythmiques, des frÃ©quences sonores et de la structure musicale.</p>
+                    <ul>
+                        <li>Calcul numÃ©rique et littÃ©ral</li>
+                        <li>RÃ©solution d'Ã©quations de premier degrÃ©</li>
+                        <li>Proportions et ratios appliquÃ©s Ã  la musique</li>
+                    </ul>
+                </div>
+
+                <div class="apc-block situation">
+                    <h5>â„¹ï¸ Information Administrative</h5>
+                    <p>Pour tous renseignements, <strong>contactez l'Administration du CollÃ¨ge d'Enseignement Artistique et Artisanal (CEAA-KpalimÃ©)</strong> afin d'obtenir les programmes dÃ©taillÃ©s, les supports de cours et les emplois du temps concernant cette matiÃ¨re.</p>
+                    <p style="font-size: 1.3rem; margin: 1.2rem 0; padding: 0.8rem; background: #edf2f7; border-radius: 8px; text-align: center;">
+                        ðŸ“ž <strong>TÃ©lÃ©phone : 70 42 41 96</strong>
+                    </p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p><a href="index.html">â† Retour Ã  l'accueil</a> | <a href="autres-matieres.html">Autres MatiÃ¨res</a></p>
+            <p>&copy; 2026-2027 CAP Musique - CollÃ¨ge d'Enseignement Artistique et Artisanal CEAA-KpalimÃ©</p>
+        </div>
+    </footer>
+
+    <!-- PWA Service Worker -->
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('✅ Service Worker enregistré:', reg.scope))
+          .catch(err => console.log('❌ Service Worker échec:', err));
+      });
+    }
+    </script>
+  </body>
+</html>

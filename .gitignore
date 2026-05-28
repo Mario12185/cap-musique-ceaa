@@ -1,0 +1,18 @@
+﻿# Système & Caches
+AppData/
+Local/
+Roaming/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Éditeurs & IDE
+.vscode/
+.idea/
+
+# Fichiers temporaires
+*.tmp
+*.log
+*.bak
+node_modules/
+__pycache__/
