@@ -1,50 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Mobile Font & Encoding Fix -->
     <style>
-        /* Force UTF-8 rendering */
         @charset "UTF-8";
-        
-        /* Police universelle pour mobile */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
             -webkit-font-smoothing: antialiased !important;
             -moz-osx-font-smoothing: grayscale !important;
             text-rendering: optimizeLegibility !important;
         }
-        
-        /* Évite le zoom automatique sur iOS */
-        input, select, textarea {
-            font-size: 16px !important;
-        }
-        
-        /* Fixe les débordements de texte */
+        input, select, textarea { font-size: 16px !important; }
         p, li, h1, h2, h3, h4, h5, h6 {
             word-wrap: break-word !important;
             overflow-wrap: break-word !important;
             hyphens: auto !important;
         }
-        
-        /* Ajuste la grille sur petits écrans */
         @media (max-width: 480px) {
-            .modules-grid, .instrument-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .nav-primary {
-                flex-wrap: wrap !important;
-                gap: 0.5rem !important;
-            }
-            .nav-primary a {
-                font-size: 0.9rem !important;
-                padding: 0.4rem 0.6rem !important;
-            }
+            .modules-grid, .instrument-grid { grid-template-columns: 1fr !important; }
+            .nav-primary { flex-wrap: wrap !important; gap: 0.5rem !important; }
+            .nav-primary a { font-size: 0.9rem !important; padding: 0.4rem 0.6rem !important; }
         }
     </style>
-    <!-- PWA Meta Tags -->
     
+    <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#2563eb">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -57,7 +39,6 @@
     <title>CAP MUSIQUE - Espace Pédagogique</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Fallback Mobile Sûr */
         @media (max-width: 768px) {
             body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
             .container { padding: 0 1rem !important; }
@@ -70,7 +51,7 @@
             .btn { width: 100% !important; text-align: center !important; }
         }
     </style>
-  </head>
+</head>
 <body>
     <!-- NAVIGATION -->
     <nav class="main-nav">
@@ -79,7 +60,7 @@
                 <li><a href="index.html" class="active">Accueil</a></li>
                 <li><a href="pratique-instrumentale.html">Pratique instrumentale</a></li>
                 <li class="dropdown">
-                    <a href="autres-matieres.html" class="dropdown-toggle">Autres matières â–¾</a>
+                    <a href="autres-matieres.html" class="dropdown-toggle">Autres matières ▾</a>
                     <ul class="dropdown-menu">
                         <li><a href="maths-algebre.html">Mathématiques - Algèbre</a></li>
                         <li><a href="histoire-art.html">Histoire de l'Art</a></li>
@@ -97,7 +78,7 @@
     <!-- HEADER -->
     <header class="main-header">
         <div class="container">
-            <h1>ðŸŽµ CAP MUSIQUE</h1>
+            <h1>🎵 CAP MUSIQUE</h1>
             <p class="subtitle">Collège d'Enseignement Artistique & Artisanal (CEAA) - Kpalimé</p>
         </div>
     </header>
@@ -111,55 +92,55 @@
 
         <section class="modules-grid">
             <a href="modules/module1-organologie.html" class="module-card" style="border-top: 3px solid var(--accent-primary);">
-                <h3>ðŸ¥ Module 1</h3>
+                <h3>🥁 Module 1</h3>
                 <p>Organologie & Culture Musicale<br><small>Idiophones, Membranophones, Cordophones, Aérophones</small></p>
                 <span class="btn btn-outline">Accéder au cours</span>
             </a>
             <a href="modules/module2-solfege.html" class="module-card" style="border-top: 3px solid var(--success);">
-                <h3>ðŸŽ¼ Module 2</h3>
+                <h3>🎼 Module 2</h3>
                 <p>Formation Musicale & Solfège<br><small>Portée, Clé de Sol, Notes, Rythmes</small></p>
                 <span class="btn btn-outline">Accéder au cours</span>
             </a>
             <a href="modules/module3-chant.html" class="module-card" style="border-top: 3px solid var(--warning);">
-                <h3>ðŸŽ¤ Module 3</h3>
+                <h3>🎤 Module 3</h3>
                 <p>Chant & Culture Artistique<br><small>Chansons éducatives, Interprétation, Création</small></p>
                 <span class="btn btn-outline">Accéder au cours</span>
             </a>
             <a href="modules/module4-pratiques.html" class="module-card" style="border-top: 3px solid var(--danger);">
-                <h3>ðŸŽª Module 4</h3>
+                <h3>🎪 Module 4</h3>
                 <p>Pratiques Musicales & Évaluations<br><small>Ateliers, Prestations, Projets</small></p>
                 <span class="btn btn-outline">Accéder au cours</span>
             </a>
             <a href="modules/module5-annexes.html" class="module-card" style="border-top: 3px solid var(--purple);">
-                <h3>ðŸ“š Module 5</h3>
+                <h3>📚 Module 5</h3>
                 <p>Annexes Pédagogiques<br><small>Lexique, Symboles, Tableaux, Conseils</small></p>
                 <span class="btn btn-outline">Accéder au cours</span>
             </a>
-            <!-- âœ… CARTE PRATIQUE INSTRUMENTALE -->
+            <!-- ✅ CARTE PRATIQUE INSTRUMENTALE -->
             <a href="pratique-instrumentale.html" class="module-card" style="border-top: 3px solid #0ea5e9;">
-                <h3>ðŸŽ¹ Pratique Instrumentale</h3>
+                <h3>🎹 Pratique Instrumentale</h3>
                 <p>Solfège, Technique vocale, Piano, Orgue, Trompette, Batterie, Percussion, Guitares & Flûte</p>
                 <span class="btn btn-outline">Accéder aux cours</span>
             </a>
         </section>
 
         <div class="apc-block situation mt-2">
-            <h5>ðŸ« Besoin d'informations officielles ?</h5>
+            <h5>🏫 Besoin d'informations officielles ?</h5>
             <p>Pour toute question relative aux programmes, inscriptions ou supports pédagogiques, contactez directement l'administration :</p>
             <p style="font-size: 1.2rem; margin: 1rem 0; padding: 1rem; background: #fff; border-radius: var(--radius-md); box-shadow: var(--shadow-sm);">
-                ðŸ“ž <strong>Secrétariat :</strong> +228 70 42 41 96 | 
-                ðŸ“ž <strong>Direction :</strong> +228 91 55 60 62
+                📞 <strong>Secrétariat :</strong> +228 70 42 41 96 | 
+                📞 <strong>Direction :</strong> +228 91 55 60 62
             </p>
             <div class="text-center">
-                <a href="contacts.html" class="btn">ðŸ“… Voir tous les contacts</a>
+                <a href="contacts.html" class="btn">📅 Voir tous les contacts</a>
             </div>
         </div>
     </main>
 
     <footer class="main-footer">
         <div class="container">
-            <p><a href="index.html">Accueil</a> Â· <a href="pratique-instrumentale.html">Pratique Instrumentale</a> Â· <a href="contacts.html">Contacts</a> Â· <a href="librairie.html">Librairie</a></p>
-            <p>Â© 2025-2027 CEAA-Kpalimé - CAP Musique. Conforme au référentiel APC.</p>
+            <p><a href="index.html">Accueil</a> · <a href="pratique-instrumentale.html">Pratique Instrumentale</a> · <a href="contacts.html">Contacts</a> · <a href="librairie.html">Librairie</a></p>
+            <p>© 2025-2027 CEAA-Kpalimé - CAP Musique. Conforme au référentiel APC.</p>
         </div>
     </footer>
 
@@ -168,10 +149,10 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js')
-          .then(reg => console.log('âœ… Service Worker enregistré:', reg.scope))
-          .catch(err => console.log('âŒ Service Worker échec:', err));
+          .then(reg => console.log('✅ Service Worker enregistré:', reg.scope))
+          .catch(err => console.log('❌ Service Worker échec:', err));
       });
     }
     </script>
-  </body>
+</body>
 </html>
