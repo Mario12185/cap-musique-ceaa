@@ -1,50 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Mobile Font & Encoding Fix -->
     <style>
-        /* Force UTF-8 rendering */
         @charset "UTF-8";
-        
-        /* Police universelle pour mobile */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
             -webkit-font-smoothing: antialiased !important;
             -moz-osx-font-smoothing: grayscale !important;
             text-rendering: optimizeLegibility !important;
         }
-        
-        /* Évite le zoom automatique sur iOS */
-        input, select, textarea {
-            font-size: 16px !important;
-        }
-        
-        /* Fixe les débordements de texte */
+        input, select, textarea { font-size: 16px !important; }
         p, li, h1, h2, h3, h4, h5, h6 {
             word-wrap: break-word !important;
             overflow-wrap: break-word !important;
             hyphens: auto !important;
         }
-        
-        /* Ajuste la grille sur petits écrans */
         @media (max-width: 480px) {
-            .modules-grid, .instrument-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .nav-primary {
-                flex-wrap: wrap !important;
-                gap: 0.5rem !important;
-            }
-            .nav-primary a {
-                font-size: 0.9rem !important;
-                padding: 0.4rem 0.6rem !important;
-            }
+            .modules-grid, .instrument-grid { grid-template-columns: 1fr !important; }
+            .nav-primary { flex-wrap: wrap !important; gap: 0.5rem !important; }
+            .nav-primary a { font-size: 0.9rem !important; padding: 0.4rem 0.6rem !important; }
         }
     </style>
-    <!-- PWA Meta Tags -->
     
+    <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#2563eb">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -54,10 +36,9 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
     
-    <title>Piano | CAP MUSIQUE</title>
+    <title>Guitare classique | CAP MUSIQUE</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Fallback Mobile Sûr */
         @media (max-width: 768px) {
             body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
             .container { padding: 0 1rem !important; }
@@ -70,7 +51,7 @@
             .btn { width: 100% !important; text-align: center !important; }
         }
     </style>
-  </head>
+</head>
 <body>
     <nav class="main-nav">
         <div class="container nav-wrapper">
@@ -78,7 +59,7 @@
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="pratique-instrumentale.html">Pratique instrumentale</a></li>
                 <li class="dropdown">
-                    <a href="autres-matieres.html" class="dropdown-toggle">Autres matières ââ€“Â¾</a>
+                    <a href="autres-matieres.html" class="dropdown-toggle">Autres matières ▾</a>
                     <ul class="dropdown-menu">
                         <li><a href="maths-algebre.html">Mathématiques - Algèbre</a></li>
                         <li><a href="histoire-art.html">Histoire de l'Art</a></li>
@@ -95,31 +76,31 @@
 
     <header class="module-header">
         <div class="container">
-            <a href="pratique-instrumentale.html" class="back-link">← Retour Â  Pratique Instrumentale</a>
-            <h1>Å½Â¸ Guitare classique</h1>
-            <p class="competence">Posture, doigtés, lecture de partitions, gammes et répertoire progressif</p>
+            <a href="pratique-instrumentale.html" class="back-link">← Retour à Pratique Instrumentale</a>
+            <h1>🎸 Guitare classique</h1>
+            <p class="competence">Posture, doigtés, accords ouverts, arpèges et répertoire classique/folk</p>
         </div>
     </header>
 
     <main class="container">
         <section class="resource-section">
-            <h5>â€œâ€“ Contenu du Cours</h5>
+            <h5>📖 Contenu du Cours</h5>
             <p>Ce module couvre les bases de la guitare classique au niveau CAP : posture assise, tenue correcte de la main droite et de la main gauche, lecture de la portée et des tablatures, accords ouverts fondamentaux, arpèges simples et initiation au jeu en position. Chaque leçon inclut des exercices techniques de coordination, des études de doigtés et des pièces adaptées du répertoire classique, folk et traditionnel.</p>
             
             <div class="resource-actions">
-                <!-- Bouton Téléchargement PDF (â€°tudiants) -->
-                <a href="assets/partitions/piano_cours_1.pdf" download class="btn btn-pdf">â€œÂ¥ Télécharger le PDF (Cours + Partitions)</a>
+                <!-- Bouton Téléchargement PDF (Étudiants) -->
+                <a href="assets/partitions/guitare-classique_cours_1.pdf" download class="btn btn-pdf">📥 Télécharger le PDF (Cours + Partitions)</a>
                 
                 <!-- Bouton Vidéo (Visionnage) -->
-                <a href="#video-section" class="btn btn-video">Å½Â¥ Voir les vidéos du cours</a>
+                <a href="#video-section" class="btn btn-video">▶️ Voir les vidéos du cours</a>
             </div>
 
             <!-- Zone d'upload (Interface admin/professeur) -->
             <div class="upload-zone">
-                <h6>â€œÂ¤ Zone d'upload (Enseignants)</h6>
+                <h6>📤 Zone d'upload (Enseignants)</h6>
                 <p>Ajoute de nouvelles partitions ou vidéos pour les élèves.</p>
                 <label for="file-upload">
-                    â€œÂ Sélectionner un fichier (PDF ou MP4)
+                    📁 Sélectionner un fichier (PDF ou MP4)
                     <input type="file" id="file-upload" accept=".pdf,.mp4,.webm,.mov">
                 </label>
                 <div class="file-preview" id="file-preview">Aucun fichier sélectionné</div>
@@ -127,9 +108,9 @@
 
             <!-- Section Vidéo intégrée -->
             <div id="video-section" class="apc-block content mt-2">
-                <h5>Å½Â¬ Supports Vidéo</h5>
+                <h5>🎬 Supports Vidéo</h5>
                 <div style="background:#000; border-radius:var(--radius-md); overflow:hidden; aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; color:#fff;">
-                    <p>â€œÂº Intègre ici un iframe YouTube/Vimeo ou un fichier vidéo local.<br>
+                    <p>🎥 Intègre ici un iframe YouTube/Vimeo ou un fichier vidéo local.<br>
                     <code>&lt;video controls src="video.mp4" width="100%"&gt;&lt;/video&gt;</code></p>
                 </div>
             </div>
@@ -163,10 +144,10 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js')
-          .then(reg => console.log('âœ… Service Worker enregistré:', reg.scope))
-          .catch(err => console.log('âŒ Service Worker échec:', err));
+          .then(reg => console.log('✅ Service Worker enregistré:', reg.scope))
+          .catch(err => console.log('❌ Service Worker échec:', err));
       });
     }
     </script>
-  </body>
+</body>
 </html>
