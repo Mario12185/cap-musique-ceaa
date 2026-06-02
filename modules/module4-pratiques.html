@@ -1,63 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Mobile Font & Encoding Fix -->
     <style>
-        /* Force UTF-8 rendering */
         @charset "UTF-8";
-        
-        /* Police universelle pour mobile */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
             -webkit-font-smoothing: antialiased !important;
             -moz-osx-font-smoothing: grayscale !important;
             text-rendering: optimizeLegibility !important;
         }
-        
-        /* Évite le zoom automatique sur iOS */
-        input, select, textarea {
-            font-size: 16px !important;
-        }
-        
-        /* Fixe les débordements de texte */
+        input, select, textarea { font-size: 16px !important; }
         p, li, h1, h2, h3, h4, h5, h6 {
             word-wrap: break-word !important;
             overflow-wrap: break-word !important;
             hyphens: auto !important;
         }
-        
-        /* Ajuste la grille sur petits écrans */
         @media (max-width: 480px) {
-            .modules-grid, .instrument-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .nav-primary {
-                flex-wrap: wrap !important;
-                gap: 0.5rem !important;
-            }
-            .nav-primary a {
-                font-size: 0.9rem !important;
-                padding: 0.4rem 0.6rem !important;
-            }
+            .modules-grid, .instrument-grid { grid-template-columns: 1fr !important; }
+            .nav-primary { flex-wrap: wrap !important; gap: 0.5rem !important; }
+            .nav-primary a { font-size: 0.9rem !important; padding: 0.4rem 0.6rem !important; }
         }
     </style>
-    <!-- PWA Meta Tags -->
     
+    <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#2563eb">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="CAP Musique">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="assets/icon-192.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="apple-touch-icon" href="../assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/icon-512.png">
     
-    <title>Module 4 - Pratiques & â€°valuations | CAP MUSIQUE</title>
+    <title>Module 4 - Pratiques & Évaluations | CAP MUSIQUE</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        /* Fallback Mobile Sûr */
         @media (max-width: 768px) {
             body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
             .container { padding: 0 1rem !important; }
@@ -70,36 +51,36 @@
             .btn { width: 100% !important; text-align: center !important; }
         }
     </style>
-  </head>
+</head>
 <body>
     <header class="module-header">
         <div class="container">
-            <a href="../index.html" class="back-link">← Retour Â  l'accueil</a>
-            <h1>Å½Âª Module 4</h1>
-            <h2>Pratiques Musicales et â€°valuations</h2>
+            <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+            <h1>🎪 Module 4</h1>
+            <h2>Pratiques Musicales et Évaluations</h2>
             <p class="competence">Objectif : Développer les compétences pratiques, évaluer les acquis et préparer les prestations scéniques</p>
         </div>
     </header>
 
     <nav class="main-nav">
-    <div class="container nav-wrapper">
-        <ul class="nav-primary">
-            <li><a href="index.html">Accueil</a></li>
-            <li class="dropdown">
-                <a href="autres-matieres.html" class="dropdown-toggle">Autres matières ââ€“Â¾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="maths-algebre.html">Mathématiques - Algèbre</a></li>
-                    <li><a href="histoire-art.html">Histoire de l'Art</a></li>
-                    <li><a href="legislation-travail.html">Législation du travail</a></li>
-                    <li><a href="anglais.html">Anglais</a></li>
-                    <li><a href="francais.html">Français</a></li>
-                </ul>
-            </li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="librairie.html">Librairie</a></li>
-        </ul>
-    </div>
-</nav>
+        <div class="container nav-wrapper">
+            <ul class="nav-primary">
+                <li><a href="../index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="../autres-matieres.html" class="dropdown-toggle">Autres matières ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../maths-algebre.html">Mathématiques - Algèbre</a></li>
+                        <li><a href="../histoire-art.html">Histoire de l'Art</a></li>
+                        <li><a href="../legislation-travail.html">Législation du travail</a></li>
+                        <li><a href="../anglais.html">Anglais</a></li>
+                        <li><a href="../francais.html">Français</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contacts.html">Contacts</a></li>
+                <li><a href="../librairie.html">Librairie</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <main class="container">
         <!-- CHAPITRE 7 -->
@@ -108,22 +89,22 @@
             
             <section class="lesson">
                 <div class="apc-block situation">
-                    <h5>â€œâ€¹ Situation d'Apprentissage</h5>
+                    <h5>📋 Situation d'Apprentissage</h5>
                     <p>Dans le cadre de la préparation d'un spectacle de fin d'année, les élèves du CAP Musique sont regroupés en ateliers pratiques. Chaque atelier travaille un aspect précis : lecture, rythme, chant et exécution instrumentale. Le professeur organise ces ateliers pour développer les compétences pratiques, la coordination et l'esprit d'équipe.</p>
                 </div>
 
                 <div class="apc-block content">
-                    <h5>â€œâ€“ Contenu des Ateliers</h5>
+                    <h5>📖 Contenu des Ateliers</h5>
                     <h6>1. Exercices de lecture musicale</h6>
                     <ul>
-                        <li>Reconna®tre les notes sur la portée</li>
+                        <li>Reconnaître les notes sur la portée</li>
                         <li>Lire des mélodies simples sans hésitation</li>
                         <li>Respecter la hauteur des sons sur partitions progressives</li>
                     </ul>
 
                     <h6>2. Exercices rythmiques</h6>
                     <ul>
-                        <li>Ma®triser les valeurs (noire, blanche, croche)</li>
+                        <li>Maîtriser les valeurs (noire, blanche, croche)</li>
                         <li>Respecter la pulsation et battre les temps</li>
                         <li>Améliorer la coordination main-voix (imitation rythmique)</li>
                     </ul>
@@ -137,7 +118,7 @@
 
                     <h6>4. Exercices instrumentaux</h6>
                     <ul>
-                        <li>Ma®trise des instruments étudiés (flÂ»te, percussions, cordes simples)</li>
+                        <li>Maîtrise des instruments étudiés (flûte, percussions, cordes simples)</li>
                         <li>Coordination des doigts et régularité du tempo</li>
                         <li>Respect simultané du rythme et de la mélodie</li>
                     </ul>
@@ -162,8 +143,8 @@
                 </div>
 
                 <div class="apc-block evaluation">
-                    <h5>â€œÂ Situation d'â€°valuation</h5>
-                    <p>Lors d'une répétition générale pour un spectacle scolaire, les élèves doivent présenter les compétences acquises. Le professeur observe leur niveau de ma®trise.</p>
+                    <h5>📝 Situation d'Évaluation</h5>
+                    <p>Lors d'une répétition générale pour un spectacle scolaire, les élèves doivent présenter les compétences acquises. Le professeur observe leur niveau de maîtrise.</p>
                     <ol>
                         <li>Cite quatre types d'ateliers pratiques.</li>
                         <li>Explique l'utilité des exercices rythmiques.</li>
@@ -173,11 +154,11 @@
                 </div>
 
                 <div class="apc-block content">
-                    <h5>â€ºÂ ïÂ¸Â Exercices de Consolidation</h5>
+                    <h5>💡 Exercices de Consolidation</h5>
                     <p><strong>Vrai ou Faux :</strong></p>
                     <table class="comparison-table">
                         <tr><th>Affirmations</th><th>Vrai</th><th>Faux</th></tr>
-                        <tr><td>Les ateliers servent Â  pratiquer la musique</td><td></td><td></td></tr>
+                        <tr><td>Les ateliers servent à pratiquer la musique</td><td></td><td></td></tr>
                         <tr><td>La lecture musicale est inutile</td><td></td><td></td></tr>
                         <tr><td>Les exercices vocaux améliorent la voix</td><td></td><td></td></tr>
                         <tr><td>Les jeux musicaux renforcent l'esprit d'équipe</td><td></td><td></td></tr>
@@ -190,20 +171,20 @@
 
         <!-- CHAPITRE 8 -->
         <article id="chap8" class="chapter">
-            <h3>Chapitre 8 : â€°valuations et Projets</h3>
+            <h3>Chapitre 8 : Évaluations et Projets</h3>
             
             <section class="lesson">
                 <div class="apc-block situation">
-                    <h5>â€œâ€¹ Situation d'Apprentissage</h5>
-                    <p>â‚¬ la fin de l'année scolaire, l'établissement organise un projet artistique global réunissant toutes les compétences acquises. Les élèves participent Â  différentes évaluations et préparent des prestations individuelles et collectives pour mesurer leurs acquis en solfège, chant, rythme et pratique instrumentale.</p>
+                    <h5>📋 Situation d'Apprentissage</h5>
+                    <p>À la fin de l'année scolaire, l'établissement organise un projet artistique global réunissant toutes les compétences acquises. Les élèves participent à différentes évaluations et préparent des prestations individuelles et collectives pour mesurer leurs acquis en solfège, chant, rythme et pratique instrumentale.</p>
                 </div>
 
                 <div class="apc-block content">
-                    <h5>â€œâ€“ Contenu</h5>
-                    <h6>1. â€°valuations théoriques</h6>
+                    <h5>📖 Contenu</h5>
+                    <h6>1. Évaluations théoriques</h6>
                     <p>Vérification des connaissances sur : les notes, les figures rythmiques, les familles d'instruments et les notions de solfège (questions écrites ou orales).</p>
 
-                    <h6>2. â€°valuations pratiques</h6>
+                    <h6>2. Évaluations pratiques</h6>
                     <p>Vérification des compétences musicales : chant, lecture musicale, rythme et exécution instrumentale. L'élève est observé pendant une prestation.</p>
 
                     <h6>3. Contrôles de lecture musicale</h6>
@@ -229,12 +210,12 @@
 
                 <div class="apc-block resume">
                     <h5>✅ Résumé</h5>
-                    <p>Les évaluations et projets permettent de mesurer les compétences musicales. Ils combinent théorie, pratique, créativité et travail en groupe, préparant ainsi les élèves Â  des situations professionnelles réelles.</p>
+                    <p>Les évaluations et projets permettent de mesurer les compétences musicales. Ils combinent théorie, pratique, créativité et travail en groupe, préparant ainsi les élèves à des situations professionnelles réelles.</p>
                 </div>
 
                 <div class="apc-block evaluation">
-                    <h5>â€œÂ Situation d'â€°valuation</h5>
-                    <p>â‚¬ la fin du module, le professeur organise un spectacle de classe. Chaque groupe doit présenter une performance complète.</p>
+                    <h5>📝 Situation d'Évaluation</h5>
+                    <p>À la fin du module, le professeur organise un spectacle de classe. Chaque groupe doit présenter une performance complète.</p>
                     <ol>
                         <li>Cite deux types d'évaluations.</li>
                         <li>Donne deux exemples de projets artistiques.</li>
@@ -244,11 +225,11 @@
                 </div>
 
                 <div class="apc-block content">
-                    <h5>â€ºÂ ïÂ¸Â Exercices de Consolidation</h5>
+                    <h5>💡 Exercices de Consolidation</h5>
                     <p><strong>Vrai ou Faux :</strong></p>
                     <table class="comparison-table">
                         <tr><th>Affirmations</th><th>Vrai</th><th>Faux</th></tr>
-                        <tr><td>Les évaluations servent Â  mesurer les acquis</td><td></td><td></td></tr>
+                        <tr><td>Les évaluations servent à mesurer les acquis</td><td></td><td></td></tr>
                         <tr><td>Les projets artistiques sont individuels uniquement</td><td></td><td></td></tr>
                         <tr><td>La prestation scénique est une performance devant un public</td><td></td><td></td></tr>
                         <tr><td>Le travail en groupe est important</td><td></td><td></td></tr>
@@ -262,8 +243,8 @@
 
     <footer class="main-footer">
         <div class="container">
-            <p><a href="../index.html">← Retour Â  l'accueil</a> | <a href="module3-chant.html">Module 3</a> | <a href="module5-annexes.html">Module 5 ââ€ â€™</a></p>
-            <p>Module 4 - Pratiques Musicales et â€°valuations</p>
+            <p><a href="../index.html">← Retour à l'accueil</a> | <a href="module3-chant.html">Module 3</a> | <a href="module5-annexes.html">Module 5 →</a></p>
+            <p>Module 4 - Pratiques Musicales et Évaluations</p>
         </div>
     </footer>
 
@@ -271,11 +252,11 @@
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js')
-          .then(reg => console.log('âœ… Service Worker enregistré:', reg.scope))
-          .catch(err => console.log('âŒ Service Worker échec:', err));
+        navigator.serviceWorker.register('../sw.js')
+          .then(reg => console.log('✅ Service Worker enregistré:', reg.scope))
+          .catch(err => console.log('❌ Service Worker échec:', err));
       });
     }
     </script>
-  </body>
+</body>
 </html>
