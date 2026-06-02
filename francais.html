@@ -1,50 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Mobile Font & Encoding Fix -->
     <style>
-        /* Force UTF-8 rendering */
         @charset "UTF-8";
-        
-        /* Police universelle pour mobile */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
             -webkit-font-smoothing: antialiased !important;
             -moz-osx-font-smoothing: grayscale !important;
             text-rendering: optimizeLegibility !important;
         }
-        
-        /* Évite le zoom automatique sur iOS */
-        input, select, textarea {
-            font-size: 16px !important;
-        }
-        
-        /* Fixe les débordements de texte */
+        input, select, textarea { font-size: 16px !important; }
         p, li, h1, h2, h3, h4, h5, h6 {
             word-wrap: break-word !important;
             overflow-wrap: break-word !important;
             hyphens: auto !important;
         }
-        
-        /* Ajuste la grille sur petits écrans */
         @media (max-width: 480px) {
-            .modules-grid, .instrument-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .nav-primary {
-                flex-wrap: wrap !important;
-                gap: 0.5rem !important;
-            }
-            .nav-primary a {
-                font-size: 0.9rem !important;
-                padding: 0.4rem 0.6rem !important;
-            }
+            .modules-grid, .instrument-grid { grid-template-columns: 1fr !important; }
+            .nav-primary { flex-wrap: wrap !important; gap: 0.5rem !important; }
+            .nav-primary a { font-size: 0.9rem !important; padding: 0.4rem 0.6rem !important; }
         }
     </style>
-    <!-- PWA Meta Tags -->
     
+    <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#2563eb">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -57,7 +39,6 @@
     <title>Français | CAP MUSIQUE</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Fallback Mobile Sûr */
         @media (max-width: 768px) {
             body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
             .container { padding: 0 1rem !important; }
@@ -70,14 +51,14 @@
             .btn { width: 100% !important; text-align: center !important; }
         }
     </style>
-  </head>
+</head>
 <body>
     <nav class="main-nav">
         <div class="container nav-wrapper">
             <ul class="nav-primary">
                 <li><a href="index.html">Accueil</a></li>
                 <li class="dropdown">
-                    <a href="autres-matieres.html" class="dropdown-toggle active">Autres matières ââ€“Â¾</a>
+                    <a href="autres-matieres.html" class="dropdown-toggle active">Autres matières ▾</a>
                     <ul class="dropdown-menu">
                         <li><a href="maths-algebre.html">Mathématiques - Algèbre</a></li>
                         <li><a href="histoire-art.html">Histoire de l'Art</a></li>
@@ -97,7 +78,7 @@
     <header class="module-header">
         <div class="container">
             <a href="autres-matieres.html" class="back-link">← Retour aux autres matières</a>
-            <h1>â€¡Â«â€¡· Français</h1>
+            <h1>🇫🇷 Français</h1>
             <h2>Expression, Grammaire & Littérature</h2>
             <p class="competence">Développer l'expression écrite et orale pour la communication artistique</p>
         </div>
@@ -107,8 +88,8 @@
         <article class="chapter">
             <section class="lesson">
                 <div class="apc-block content">
-                    <h5>â€œâ€“ Programme Pédagogique</h5>
-                    <p>Renforcement des compétences linguistiques fondamentales : grammaire, orthographe, expression écrite et orale. Application Â  la rédaction de notes d'intention, de programmes de concert et Â  l'analyse de textes littéraires et musicaux.</p>
+                    <h5>📖 Programme Pédagogique</h5>
+                    <p>Renforcement des compétences linguistiques fondamentales : grammaire, orthographe, expression écrite et orale. Application à la rédaction de notes d'intention, de programmes de concert et à l'analyse de textes littéraires et musicaux.</p>
                     <ul>
                         <li>Grammaire appliquée et syntaxe</li>
                         <li>Rédaction professionnelle et artistique</li>
@@ -117,10 +98,10 @@
                 </div>
 
                 <div class="apc-block situation">
-                    <h5>ââ€žÂ¹ïÂ¸Â Information Administrative</h5>
+                    <h5>ℹ️ Information Administrative</h5>
                     <p>Pour tous renseignements, <strong>contactez l'Administration du Collège d'Enseignement Artistique et Artisanal (CEAA-Kpalimé)</strong> afin d'obtenir les programmes détaillés, les supports de cours et les emplois du temps concernant cette matière.</p>
                     <p style="font-size: 1.3rem; margin: 1.2rem 0; padding: 0.8rem; background: #edf2f7; border-radius: 8px; text-align: center;">
-                        â€œÅ¾ <strong>Téléphone : 70 42 41 96</strong>
+                        📞 <strong>Téléphone : 70 42 41 96</strong>
                     </p>
                 </div>
             </section>
@@ -129,7 +110,7 @@
 
     <footer class="main-footer">
         <div class="container">
-            <p><a href="index.html">← Retour Â  l'accueil</a> | <a href="autres-matieres.html">Autres Matières</a></p>
+            <p><a href="index.html">← Retour à l'accueil</a> | <a href="autres-matieres.html">Autres Matières</a></p>
             <p>&copy; 2026-2027 CAP Musique - Collège d'Enseignement Artistique et Artisanal CEAA-Kpalimé</p>
         </div>
     </footer>
@@ -139,10 +120,10 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js')
-          .then(reg => console.log('âœ… Service Worker enregistré:', reg.scope))
-          .catch(err => console.log('âŒ Service Worker échec:', err));
+          .then(reg => console.log('✅ Service Worker enregistré:', reg.scope))
+          .catch(err => console.log('❌ Service Worker échec:', err));
       });
     }
     </script>
-  </body>
+</body>
 </html>
