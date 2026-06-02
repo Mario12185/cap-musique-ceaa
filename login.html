@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#2563eb">
+    <title>Accès CAP MUSIQUE | CEAA-Kpalimé</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 🔐 Page de connexion - Style SaaS Premium */
+        .auth-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%);
+            padding: 2rem;
+        }
+        .auth-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+        }
+        .auth-header { text-align: center; margin-bottom: 2rem; }
+        .auth-header h1 {
+            font-size: var(--text-2xl);
+            font-weight: 800;
+            color: var(--text);
+            margin: 0 0 0.5rem;
+        }
+        .auth-header p { color: var(--text-secondary); font-size: var(--text-sm); margin: 0; }
+        .auth-logo {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .form-step { display: none; animation: fadeIn 0.3s ease; }
+        .form-step.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text);
+            font-size: var(--text-sm);
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: var(--text-base);
+            transition: var(--transition);
+            background: var(--surface);
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+        }
+        .btn-full { width: 100%; justify-content: center; }
+        .auth-note {
+            font-size: var(--text-xs);
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 1.5rem;
+            line-height: 1.5;
+        }
+        .auth-note a { color: var(--primary); text-decoration: none; }
+        .auth-note a:hover { text-decoration: underline; }
+        .code-input {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.5rem;
+            padding: 1rem;
+        }
+        #authStatus {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            text-align: center;
+            display: none;
+        }
+        #authStatus.success { background: #f0fdf4; color: var(--success); border: 1px solid #bbf7d0; }
+        #authStatus.error { background: #fef2f2; color: var(--danger); border: 1px solid #fecaca; }
+        .step-indicator {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .step-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--border);
+            transition: var(--transition);
+        }
+        .step-dot.active { background: var(--primary); }
+    </style>
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <div class="auth-header">
+                <span class="auth-logo">🎵</span>
+                <h1>CAP MUSIQUE</h1>
+                <p>CEAA-Kpalimé - Espace pédagogique sécurisé</p>
+            </div>
+
+            <!-- Indicateur d'étape -->
+            <div class="step-indicator">
+                <span class="step-dot active" id="dot1"></span>
+                <span class="step-dot" id="dot2"></span>
+            </div>
+
+            <!-- ÉTAPE 1 : Inscription -->
+            <form id="step1" class="form-step active">
+                <div class="form-group">
+                    <label for="fullName">Nom complet</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Ex: Koffi AMOUZOU" autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Email personnel</label>
+                    <input type="email" id="userEmail" name="userEmail" required placeholder="ton.email@exemple.com" autocomplete="email">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" id="requestBtn">
+                    <span id="reqText">🔐 Demander mon accès</span>
+                    <span id="reqLoading" style="display:none">⏳ Envoi...</span>
+                </button>
+                <p class="auth-note">
+                    Un code d'accès te sera envoyé par email après validation par l'administration. 
+                    <br><strong>Problème ?</strong> Contacte le <a href="tel:+22870424196">+228 70 42 41 96</a>
+                </p>
+                <p id="step1Status" class="auth-note" style="display:none; margin-top:1rem; font-weight:500;"></p>
+            </form>
+
+            <!-- ÉTAPE 2 : Code d'accès -->
+            <form id="step2" class="form-step">
+                <div class="form-group">
+                    <label for="accessCode">Code d'accès reçu par email</label>
+                    <input type="text" id="accessCode" name="accessCode" required placeholder="••••••" class="code-input" maxlength="8" autocomplete="one-time-code">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" id="verifyBtn">
+                    <span id="verText">✅ Accéder à l'espace</span>
+                    <span id="verLoading" style="display:none">⏳ Vérification...</span>
+                </button>
+                <p class="auth-note">
+                    Tu n'as pas reçu le code ? <a href="#" id="resendLink">Renvoyer la demande</a>
+                </p>
+                <p id="step2Status" style="display:none; margin-top:1rem; font-weight:500;"></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    // 🔐 CONFIGURATION (À PERSONNALISER)
+    const CONFIG = {
+        formspreeEndpoint: 'https://formspree.io/f/xlgkrjbg', // Ton endpoint Formspree
+        accessCode: 'CEAA2026', // 🔑 Code secret à partager manuellement avec les élèves
+        redirectUrl: 'index.html' // Page après connexion réussie
+    };
+
+    // 🎯 Gestion des étapes
+    const step1 = document.getElementById('step1');
+    const step2 = document.getElementById('step2');
+    const dot1 = document.getElementById('dot1');
+    const dot2 = document.getElementById('dot2');
+
+    function goToStep(step) {
+        if (step === 2) {
+            step1.classList.remove('active');
+            step2.classList.add('active');
+            dot1.classList.remove('active');
+            dot2.classList.add('active');
+            document.getElementById('accessCode').focus();
+        } else {
+            step2.classList.remove('active');
+            step1.classList.add('active');
+            dot2.classList.remove('active');
+            dot1.classList.add('active');
+        }
+    }
+
+    // 📤 Étape 1 : Envoi de la demande d'accès
+    document.getElementById('step1').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const btn = document.getElementById('requestBtn');
+        const reqText = document.getElementById('reqText');
+        const reqLoading = document.getElementById('reqLoading');
+        const status = document.getElementById('step1Status');
+        
+        btn.disabled = true;
+        reqText.style.display = 'none';
+        reqLoading.style.display = 'inline';
+        status.style.display = 'none';
+        
+        const fullName = document.getElementById('fullName').value;
+        const userEmail = document.getElementById('userEmail').value;
+        
+        try {
+            // Envoi à Formspree (notification admin)
+            const response = await fetch(CONFIG.formspreeEndpoint, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: { 'Accept': 'application/json' }
+            });
+            
+            if (response.ok) {
+                status.textContent = `✅ Demande envoyée ! Vérifie tes emails (et spams) pour le code d'accès.`;
+                status.className = 'auth-note success';
+                status.style.display = 'block';
+                // Passer à l'étape 2 après 2 secondes
+                setTimeout(() => goToStep(2), 2000);
+            } else {
+                status.textContent = `❌ Erreur d'envoi. Réessaie ou contacte le +228 70 42 41 96`;
+                status.className = 'auth-note error';
+                status.style.display = 'block';
+            }
+        } catch (err) {
+            status.textContent = '❌ Problème de connexion. Vérifie ton internet.';
+            status.className = 'auth-note error';
+            status.style.display = 'block';
+        } finally {
+            setTimeout(() => {
+                btn.disabled = false;
+                reqText.style.display = 'inline';
+                reqLoading.style.display = 'none';
+            }, 500);
+        }
+    });
+
+    // 🔑 Étape 2 : Vérification du code
+    document.getElementById('step2').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const btn = document.getElementById('verifyBtn');
+        const verText = document.getElementById('verText');
+        const verLoading = document.getElementById('verLoading');
+        const status = document.getElementById('step2Status');
+        const codeEntered = document.getElementById('accessCode').value.trim().toUpperCase();
+        
+        btn.disabled = true;
+        verText.style.display = 'none';
+        verLoading.style.display = 'inline';
+        status.style.display = 'none';
+        
+        // Vérification simple du code
+        setTimeout(() => {
+            if (codeEntered === CONFIG.accessCode.toUpperCase()) {
+                // ✅ Code correct : sauvegarde en localStorage + redirection
+                localStorage.setItem('capMusiqueAccess', 'authenticated');
+                localStorage.setItem('capMusiqueUser', document.getElementById('userEmail').value);
+                status.textContent = '✅ Accès validé ! Redirection...';
+                status.className = 'auth-note success';
+                status.style.display = 'block';
+                setTimeout(() => {
+                    window.location.href = CONFIG.redirectUrl;
+                }, 1500);
+            } else {
+                // ❌ Code incorrect
+                status.textContent = '❌ Code incorrect. Vérifie ou demande un nouveau code.';
+                status.className = 'auth-note error';
+                status.style.display = 'block';
+                document.getElementById('accessCode').focus();
+                document.getElementById('accessCode').select();
+            }
+            
+            btn.disabled = false;
+            verText.style.display = 'inline';
+            verLoading.style.display = 'none';
+        }, 800);
+    });
+
+    // 🔁 Renvoyer la demande
+    document.getElementById('resendLink').addEventListener('click', function(e) {
+        e.preventDefault();
+        goToStep(1);
+        document.getElementById('step1Status').textContent = '💡 Remplis à nouveau le formulaire pour renvoyer ta demande.';
+        document.getElementById('step1Status').className = 'auth-note';
+        document.getElementById('step1Status').style.display = 'block';
+    });
+
+    // 🚀 Vérification au chargement : si déjà authentifié, rediriger
+    if (localStorage.getItem('capMusiqueAccess') === 'authenticated') {
+        window.location.href = CONFIG.redirectUrl;
+    }
+    </script>
+</body>
+</html>

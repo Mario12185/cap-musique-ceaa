@@ -37,6 +37,23 @@
         </div>
     </nav>
 
+    <!-- 🔐 Vérification d'accès - À placer juste après <body> -->
+<script>
+(function() {
+    // Si la page actuelle EST login.html, ne pas bloquer
+    if (window.location.pathname.includes('login.html')) return;
+    
+    // Vérifier l'authentification
+    const authenticated = localStorage.getItem('capMusiqueAccess');
+    const isProduction = window.location.hostname.includes('github.io'); // Optionnel : désactiver en local
+    
+    if (!authenticated && isProduction) {
+        // Rediriger vers la page de connexion
+        window.location.href = 'login.html';
+    }
+})();
+</script>
+
     <header class="main-header">
         <div class="container">
             <h1 class="hero-title">🎵 CAP MUSIQUE</h1>
