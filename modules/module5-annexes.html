@@ -1,63 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Mobile Font & Encoding Fix -->
     <style>
-        /* Force UTF-8 rendering */
         @charset "UTF-8";
-        
-        /* Police universelle pour mobile */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
             -webkit-font-smoothing: antialiased !important;
             -moz-osx-font-smoothing: grayscale !important;
             text-rendering: optimizeLegibility !important;
         }
-        
-        /* Évite le zoom automatique sur iOS */
-        input, select, textarea {
-            font-size: 16px !important;
-        }
-        
-        /* Fixe les débordements de texte */
+        input, select, textarea { font-size: 16px !important; }
         p, li, h1, h2, h3, h4, h5, h6 {
             word-wrap: break-word !important;
             overflow-wrap: break-word !important;
             hyphens: auto !important;
         }
-        
-        /* Ajuste la grille sur petits écrans */
         @media (max-width: 480px) {
-            .modules-grid, .instrument-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .nav-primary {
-                flex-wrap: wrap !important;
-                gap: 0.5rem !important;
-            }
-            .nav-primary a {
-                font-size: 0.9rem !important;
-                padding: 0.4rem 0.6rem !important;
-            }
+            .modules-grid, .instrument-grid { grid-template-columns: 1fr !important; }
+            .nav-primary { flex-wrap: wrap !important; gap: 0.5rem !important; }
+            .nav-primary a { font-size: 0.9rem !important; padding: 0.4rem 0.6rem !important; }
         }
     </style>
-    <!-- PWA Meta Tags -->
     
+    <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#2563eb">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="CAP Musique">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="assets/icon-192.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="apple-touch-icon" href="../assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/icon-512.png">
     
     <title>Module 5 - Annexes Pédagogiques | CAP MUSIQUE</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        /* Fallback Mobile Sûr */
         @media (max-width: 768px) {
             body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
             .container { padding: 0 1rem !important; }
@@ -70,36 +51,36 @@
             .btn { width: 100% !important; text-align: center !important; }
         }
     </style>
-  </head>
+</head>
 <body>
     <header class="module-header">
         <div class="container">
-            <a href="../index.html" class="back-link">← Retour Â  l'accueil</a>
-            <h1>â€œÅ¡ Module 5</h1>
+            <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+            <h1>📚 Module 5</h1>
             <h2>Annexes Pédagogiques</h2>
             <p class="competence">Objectif : Fournir des ressources complémentaires, références et outils de révision pour l'élève</p>
         </div>
     </header>
 
     <nav class="main-nav">
-    <div class="container nav-wrapper">
-        <ul class="nav-primary">
-            <li><a href="index.html">Accueil</a></li>
-            <li class="dropdown">
-                <a href="autres-matieres.html" class="dropdown-toggle">Autres matières ââ€“Â¾</a>
-                <ul class="dropdown-menu">
-                    <li><a href="maths-algebre.html">Mathématiques - Algèbre</a></li>
-                    <li><a href="histoire-art.html">Histoire de l'Art</a></li>
-                    <li><a href="legislation-travail.html">Législation du travail</a></li>
-                    <li><a href="anglais.html">Anglais</a></li>
-                    <li><a href="francais.html">Français</a></li>
-                </ul>
-            </li>
-            <li><a href="contacts.html">Contacts</a></li>
-            <li><a href="librairie.html">Librairie</a></li>
-        </ul>
-    </div>
-</nav>
+        <div class="container nav-wrapper">
+            <ul class="nav-primary">
+                <li><a href="../index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="../autres-matieres.html" class="dropdown-toggle">Autres matières ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../maths-algebre.html">Mathématiques - Algèbre</a></li>
+                        <li><a href="../histoire-art.html">Histoire de l'Art</a></li>
+                        <li><a href="../legislation-travail.html">Législation du travail</a></li>
+                        <li><a href="../anglais.html">Anglais</a></li>
+                        <li><a href="../francais.html">Français</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contacts.html">Contacts</a></li>
+                <li><a href="../librairie.html">Librairie</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <main class="container">
         <article id="chap9" class="chapter">
@@ -110,7 +91,7 @@
                 <h3>I. Lexique Musical</h3>
                 <div class="apc-block content">
                     <h4>1. Notes de musique</h4>
-                    <p>Do ââ‚¬â€œ Ré ââ‚¬â€œ Mi ââ‚¬â€œ Fa ââ‚¬â€œ Sol ââ‚¬â€œ La ââ‚¬â€œ Si</p>
+                    <p>Do – Ré – Mi – Fa – Sol – La – Si</p>
                     
                     <h4>2. Figures rythmiques</h4>
                     <ul>
@@ -118,7 +99,7 @@
                         <li><strong>Blanche :</strong> 2 temps</li>
                         <li><strong>Croche :</strong> 1/2 temps</li>
                         <li><strong>Double croche :</strong> 1/4 de temps</li>
-                        <li><strong>Soupir :</strong> silence dââ‚¬â„¢un temps</li>
+                        <li><strong>Soupir :</strong> silence d'un temps</li>
                     </ul>
                     
                     <h4>3. Termes musicaux essentiels</h4>
@@ -139,21 +120,21 @@
                 <div class="apc-block content">
                     <h4>1. Clés musicales</h4>
                     <ul>
-                        <li><strong>Clé de Sol :</strong> placée au début de la portée pour les sons aigus (voix, flÂ»te, violon, guitare)</li>
+                        <li><strong>Clé de Sol :</strong> placée au début de la portée pour les sons aigus (voix, flûte, violon, guitare)</li>
                         <li><strong>Clé de Fa :</strong> utilisée pour les sons graves (violoncelle, contrebasse, main gauche du piano)</li>
                     </ul>
                     
                     <h4>2. Signes de notes</h4>
                     <ul>
-                        <li>Note pleine (noire) ââ€ â€™ 1 temps</li>
-                        <li>Note creuse (blanche) ââ€ â€™ 2 temps</li>
-                        <li>Double croche groupée ââ€ â€™ rythme rapide (1/4 de temps chacune)</li>
+                        <li>Note pleine (noire) = 1 temps</li>
+                        <li>Note creuse (blanche) = 2 temps</li>
+                        <li>Double croche groupée = rythme rapide (1/4 de temps chacune)</li>
                     </ul>
                     
                     <h4>3. Silences</h4>
                     <ul>
                         <li><strong>Soupir :</strong> 1 temps de silence</li>
-                        <li><strong>Pause :</strong> silence plus long (équivalent Â  la ronde, 4 temps)</li>
+                        <li><strong>Pause :</strong> silence plus long (équivalent à la ronde, 4 temps)</li>
                     </ul>
                 </div>
             </section>
@@ -183,22 +164,22 @@
                         <tr><td>Idiophones</td><td>Balafon, triangle, maracas, sanza, guiros</td></tr>
                         <tr><td>Membranophones</td><td>Djembé, caisse claire, conga, tam-tam, talking drum</td></tr>
                         <tr><td>Cordophones</td><td>Guitare, kora, violon, piano, harpe, ngoni</td></tr>
-                        <tr><td>Aérophones</td><td>FlÂ»te traversière, flÂ»te Â  bec, trompette, tuba, cor</td></tr>
+                        <tr><td>Aérophones</td><td>Flûte traversière, flûte à bec, trompette, tuba, cor</td></tr>
                     </tbody>
                 </table>
             </section>
 
-            <!-- CULTURE & Râ€°PERTOIRE -->
+            <!-- CULTURE & RÉPERTOIRE -->
             <section class="lesson" id="culture">
                 <h3>IV. Notions de Culture Artistique & Répertoire</h3>
                 <div class="apc-block content">
                     <h4>Culture artistique</h4>
-                    <p>La culture artistique permet Â  lââ‚¬â„¢élève de :</p>
+                    <p>La culture artistique permet à l'élève de :</p>
                     <ul>
                         <li>Comprendre les musiques traditionnelles et modernes</li>
                         <li>Respecter les cultures musicales africaines et mondiales</li>
                         <li>Développer son expression artistique et sa sensibilité</li>
-                        <li>Participer activement Â  la vie culturelle de son environnement</li>
+                        <li>Participer activement à la vie culturelle de son environnement</li>
                     </ul>
                     
                     <h4>Répertoire de chants scolaires et traditionnels</h4>
@@ -212,15 +193,15 @@
                 </div>
             </section>
 
-            <!-- CONSEILS & Râ€°SUMâ€° -->
+            <!-- CONSEILS & RÉSUMÉ -->
             <section class="lesson" id="conseils">
                 <h3>V. Conseils pour la Pratique Instrumentale</h3>
                 <div class="apc-block resume">
                     <h5>✅ Guide de progression</h5>
-                    <p>Pour progresser efficacement en musique, lââ‚¬â„¢élève doit :</p>
+                    <p>Pour progresser efficacement en musique, l'élève doit :</p>
                     <ol>
-                        <li>Sââ‚¬â„¢exercer régulièrement avec constance et discipline</li>
-                        <li>â€°couter attentivement les modèles sonores et les corrections</li>
+                        <li>S'exercer régulièrement avec constance et discipline</li>
+                        <li>Écouter attentivement les modèles sonores et les corrections</li>
                         <li>Respecter scrupuleusement le rythme et le tempo</li>
                         <li>Travailler la justesse et la qualité du son produit</li>
                         <li>Jouer en groupe pour développer l'écoute collective</li>
@@ -229,15 +210,15 @@
                 </div>
 
                 <div class="apc-block resume">
-                    <h5>â€œÅ’ Résumé Général du Module</h5>
+                    <h5>📚 Résumé Général du Module</h5>
                     <p>Le Module 5 constitue un guide de révision complet regroupant :</p>
                     <ul>
                         <li>Le vocabulaire et lexique musical fondamental</li>
                         <li>Les symboles et figures musicales essentiels</li>
-                        <li>La classification des familles dââ‚¬â„¢instruments</li>
+                        <li>La classification des familles d'instruments</li>
                         <li>Les notions de culture artistique et le répertoire de référence</li>
                     </ul>
-                    <p><em>Ce manuel vise Â  former des musiciens complets, capables de lire, chanter, jouer et s'exprimer artistiquement.</em></p>
+                    <p><em>Ce manuel vise à former des musiciens complets, capables de lire, chanter, jouer et s'exprimer artistiquement.</em></p>
                 </div>
             </section>
         </article>
@@ -245,7 +226,7 @@
 
     <footer class="main-footer">
         <div class="container">
-            <p><a href="../index.html">← Retour Â  l'accueil</a> | <a href="module4-pratiques.html">Module 4</a> | <strong>Module 5 - Annexes Pédagogiques</strong></p>
+            <p><a href="../index.html">← Retour à l'accueil</a> | <a href="module4-pratiques.html">Module 4</a> | <strong>Module 5 - Annexes Pédagogiques</strong></p>
             <p>&copy; 2026-2027 CAP Musique - Formation Musicale et Culture Artistique</p>
         </div>
     </footer>
@@ -254,11 +235,11 @@
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js')
-          .then(reg => console.log('âœ… Service Worker enregistré:', reg.scope))
-          .catch(err => console.log('âŒ Service Worker échec:', err));
+        navigator.serviceWorker.register('../sw.js')
+          .then(reg => console.log('✅ Service Worker enregistré:', reg.scope))
+          .catch(err => console.log('❌ Service Worker échec:', err));
       });
     }
     </script>
-  </body>
+</body>
 </html>
