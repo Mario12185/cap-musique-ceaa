@@ -1,68 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Mobile Font & Encoding Fix -->
     <style>
-        /* Force UTF-8 rendering */
         @charset "UTF-8";
-        
-        /* Police universelle pour mobile */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
             -webkit-font-smoothing: antialiased !important;
             -moz-osx-font-smoothing: grayscale !important;
             text-rendering: optimizeLegibility !important;
         }
-        
-        /* Évite le zoom automatique sur iOS */
-        input, select, textarea {
-            font-size: 16px !important;
-        }
-        
-        /* Fixe les débordements de texte */
+        input, select, textarea { font-size: 16px !important; }
         p, li, h1, h2, h3, h4, h5, h6 {
             word-wrap: break-word !important;
             overflow-wrap: break-word !important;
             hyphens: auto !important;
         }
-        
-        /* Ajuste la grille sur petits écrans */
         @media (max-width: 480px) {
-            .modules-grid, .instrument-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .nav-primary {
-                flex-wrap: wrap !important;
-                gap: 0.5rem !important;
-            }
-            .nav-primary a {
-                font-size: 0.9rem !important;
-                padding: 0.4rem 0.6rem !important;
-            }
+            .modules-grid, .instrument-grid { grid-template-columns: 1fr !important; }
+            .nav-primary { flex-wrap: wrap !important; gap: 0.5rem !important; }
+            .nav-primary a { font-size: 0.9rem !important; padding: 0.4rem 0.6rem !important; }
         }
     </style>
-    <!-- PWA Meta Tags -->
     
+    <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#2563eb">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="CAP Musique">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="assets/icon-192.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="apple-touch-icon" href="../assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/icon-512.png">
     
     <title>Module 1 - Organologie | CAP MUSIQUE</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        /* Conteneur responsive pour les schémas musicaux */
         .music-svg { max-width: 100%; height: auto; margin: 1.5rem auto; display: block; }
         .music-svg svg { background: #fff; padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border); }
     </style>
     <style>
-        /* Fallback Mobile Sûr */
         @media (max-width: 768px) {
             body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
             .container { padding: 0 1rem !important; }
@@ -75,25 +55,25 @@
             .btn { width: 100% !important; text-align: center !important; }
         }
     </style>
-  </head>
+</head>
 <body>
     <header class="module-header">
         <div class="container">
-            <a href="../index.html" class="back-link">← Retour Â  l'accueil</a>
-            <h1>Â¥Â Module 1</h1>
+            <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+            <h1>🥁 Module 1</h1>
             <h2>Organologie et Culture Musicale</h2>
-            <p class="competence">Compétence 1 : Traiter une situation relative Â  lââ‚¬â„¢étude des familles dââ‚¬â„¢instruments de musique</p>
+            <p class="competence">Compétence 1 : Traiter une situation relative à l'étude des familles d'instruments de musique</p>
         </div>
     </header>
 
-    <!-- NAVIGATION CORRIGâ€°E -->
+    <!-- NAVIGATION CORRIGÉE -->
     <nav class="main-nav">
         <div class="container nav-wrapper">
             <ul class="nav-primary">
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="../pratique-instrumentale.html">Pratique instrumentale</a></li>
                 <li class="dropdown">
-                    <a href="../autres-matieres.html" class="dropdown-toggle">Autres matières ââ€“Â¾</a>
+                    <a href="../autres-matieres.html" class="dropdown-toggle">Autres matières ▾</a>
                     <ul class="dropdown-menu">
                         <li><a href="../maths-algebre.html">Mathématiques - Algèbre</a></li>
                         <li><a href="../histoire-art.html">Histoire de l'Art</a></li>
@@ -116,12 +96,12 @@
             <section class="lesson" id="lec1_1">
                 <h4>Leçon 1 : Les Idiophones</h4>
                 <div class="apc-block situation">
-                    <h5>â€œâ€¹ Situation d'Apprentissage</h5>
-                    <p>â‚¬ lââ‚¬â„¢occasion de la semaine culturelle de leur établissement, les élèves du CAP Musique sont chargés dââ‚¬â„¢organiser une animation artistique mettant en valeur les instruments traditionnels africains. Pour réussir leur prestation, ils doivent identifier, décrire et utiliser correctement certains instruments de percussion ne possédant ni corde ni membrane.</p>
+                    <h5>📋 Situation d'Apprentissage</h5>
+                    <p>À l'occasion de la semaine culturelle de leur établissement, les élèves du CAP Musique sont chargés d'organiser une animation artistique mettant en valeur les instruments traditionnels africains. Pour réussir leur prestation, ils doivent identifier, décrire et utiliser correctement certains instruments de percussion ne possédant ni corde ni membrane.</p>
                 </div>
 
                 <div class="apc-block content">
-                    <h5>â€œâ€“ Contenu</h5>
+                    <h5>📖 Contenu</h5>
                     <h6>1. Définition et classification</h6>
                     <p>Les idiophones produisent le son par la vibration de leur propre matière, sans corde ni membrane. Ils sont classés selon leur mode de jeu :</p>
                     <ul>
@@ -131,7 +111,7 @@
                         <li><strong>Frottés :</strong> guiro</li>
                     </ul>
 
-                    <!-- ✅ SVG : Classification Organologique -->
+                    <!-- SVG : Classification Organologique -->
                     <div class="music-svg">
                         <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
                             <text x="300" y="25" font-family="system-ui" font-size="15" fill="#0f172a" text-anchor="middle" font-weight="700">Classification des Instruments (Organologie)</text>
@@ -152,17 +132,17 @@
                                 <text x="385" y="118" fill="#64748b" font-size="10">Guitare, Kora</text>
 
                                 <rect x="470" y="50" width="130" height="80" fill="#fce7f3" stroke="#ec4899" rx="8"/>
-                                <text x="535" y="80" font-weight="600" fill="#be185d">Aâ€°ROPHONES</text>
+                                <text x="535" y="80" font-weight="600" fill="#be185d">AÉROPHONES</text>
                                 <text x="535" y="100" fill="#475569" font-size="11">Air vibrant</text>
-                                <text x="535" y="118" fill="#64748b" font-size="10">FlÂ»te, Trompette</text>
+                                <text x="535" y="118" fill="#64748b" font-size="10">Flûte, Trompette</text>
                             </g>
                         </svg>
                     </div>
 
                     <h6>2. Le Balafon (exemple type)</h6>
-                    <p>Instrument Â  lames en bois disposées sur un cadre, avec des calebasses en résonateurs. Joué avec des mailloches.</p>
+                    <p>Instrument à lames en bois disposées sur un cadre, avec des calebasses en résonateurs. Joué avec des mailloches.</p>
                     
-                    <!-- ✅ SVG : Schéma Balafon -->
+                    <!-- SVG : Schéma Balafon -->
                     <div class="music-svg">
                         <svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
                             <text x="200" y="20" font-family="system-ui" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="600">Le Balafon (Idiophone frappé)</text>
@@ -195,22 +175,22 @@
             <section class="lesson" id="lec1_2">
                 <h4>Leçon 2 : Les Membranophones</h4>
                 <div class="apc-block situation">
-                    <h5>â€œâ€¹ Situation d'Apprentissage</h5>
-                    <p>Lors dââ‚¬â„¢une fête traditionnelle, les élèves observent des groupes artistiques jouant divers tambours. Le professeur les initie aux membranophones pour comprendre leur fonctionnement, ma®triser les techniques de frappe et saisir leur importance culturelle.</p>
+                    <h5>📋 Situation d'Apprentissage</h5>
+                    <p>Lors d'une fête traditionnelle, les élèves observent des groupes artistiques jouant divers tambours. Le professeur les initie aux membranophones pour comprendre leur fonctionnement, maîtriser les techniques de frappe et saisir leur importance culturelle.</p>
                 </div>
 
                 <div class="apc-block content">
-                    <h5>â€œâ€“ Contenu</h5>
+                    <h5>📖 Contenu</h5>
                     <h6>1. Définition</h6>
-                    <p>Son produit par la vibration dââ‚¬â„¢une membrane tendue (peau animale ou synthétique) frappée, frottée ou pincée.</p>
+                    <p>Son produit par la vibration d'une membrane tendue (peau animale ou synthétique) frappée, frottée ou pincée.</p>
                     <h6>2. Exemples majeurs</h6>
                     <ul>
-                        <li><strong>Djembé :</strong> tambour en calice d'Afrique de l'Ouest, joué Â  mains nues</li>
-                        <li><strong>Talking drum :</strong> tambour parleur Â  pression de cordes</li>
+                        <li><strong>Djembé :</strong> tambour en calice d'Afrique de l'Ouest, joué à mains nues</li>
+                        <li><strong>Talking drum :</strong> tambour parleur à pression de cordes</li>
                         <li><strong>Caisse claire / Grosse caisse :</strong> batterie moderne</li>
                     </ul>
 
-                    <!-- ✅ SVG : Schéma Djembé -->
+                    <!-- SVG : Schéma Djembé -->
                     <div class="music-svg">
                         <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
                             <text x="150" y="20" font-family="system-ui" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="600">Le Djembé (Membranophone)</text>
@@ -241,14 +221,14 @@
         <article id="chap2" class="chapter">
             <h3>Chapitre 2 : Les Cordophones</h3>
             <section class="lesson">
-                <h4>Leçon 1 : Les Instruments Â  Cordes</h4>
+                <h4>Leçon 1 : Les Instruments à Cordes</h4>
                 <div class="apc-block situation">
-                    <h5>â€œâ€¹ Situation d'Apprentissage</h5>
-                    <p>Lors dââ‚¬â„¢un concert pédagogique, les élèves découvrent des instruments produisant des sons grÂ¢ce Â  des cordes tendues. Le professeur leur demande dââ‚¬â„¢étudier les cordophones pour comprendre leur fonctionnement, leur classification et leur rôle musical.</p>
+                    <h5>📋 Situation d'Apprentissage</h5>
+                    <p>Lors d'un concert pédagogique, les élèves découvrent des instruments produisant des sons grâce à des cordes tendues. Le professeur leur demande d'étudier les cordophones pour comprendre leur fonctionnement, leur classification et leur rôle musical.</p>
                 </div>
 
                 <div class="apc-block content">
-                    <h5>â€œâ€“ Contenu</h5>
+                    <h5>📖 Contenu</h5>
                     <h6>1. Définition & Classification</h6>
                     <p>Son produit par la vibration de cordes tendues. Trois modes de jeu principaux :</p>
                     <ul>
@@ -257,7 +237,7 @@
                         <li><strong>Cordes frappées :</strong> piano, cymbalum</li>
                     </ul>
 
-                    <!-- ✅ SVG : Schéma Guitare (Cordophone) -->
+                    <!-- SVG : Schéma Guitare (Cordophone) -->
                     <div class="music-svg">
                         <svg viewBox="0 0 350 140" xmlns="http://www.w3.org/2000/svg">
                             <text x="175" y="18" font-family="system-ui" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="600">La Guitare (Cordophone pincé)</text>
@@ -293,30 +273,30 @@
         <article id="chap3" class="chapter">
             <h3>Chapitre 3 : Les Aérophones</h3>
             <section class="lesson">
-                <h4>Leçon 1 : Les FlÂ»tes & Cuivres</h4>
+                <h4>Leçon 1 : Les Flûtes & Cuivres</h4>
                 <div class="apc-block situation">
-                    <h5>â€œâ€¹ Situation d'Apprentissage</h5>
-                    <p>Lors dââ‚¬â„¢une sortie culturelle, les élèves découvrent des instruments Â  vent. Le professeur les amène Â  étudier les flÂ»tes et les cuivres pour comprendre leur fonctionnement, techniques de souffle et importance musicale.</p>
+                    <h5>📋 Situation d'Apprentissage</h5>
+                    <p>Lors d'une sortie culturelle, les élèves découvrent des instruments à vent. Le professeur les amène à étudier les flûtes et les cuivres pour comprendre leur fonctionnement, techniques de souffle et importance musicale.</p>
                 </div>
 
                 <div class="apc-block content">
-                    <h5>â€œâ€“ Contenu</h5>
-                    <h6>1. Les FlÂ»tes</h6>
-                    <p>Le son na®t de la vibration de l'air soufflé sur un biseau ou dans un tube. Pas d'anche. Ex : flÂ»te Â  bec, flÂ»te traversière, flÂ»te peule.</p>
+                    <h5>📖 Contenu</h5>
+                    <h6>1. Les Flûtes</h6>
+                    <p>Le son naît de la vibration de l'air soufflé sur un biseau ou dans un tube. Pas d'anche. Ex : flûte à bec, flûte traversière, flûte peule.</p>
                     <h6>2. Les Cuivres</h6>
-                    <p>Le son na®t de la vibration des lèvres dans une embouchure métallique, amplifié par un pavillon. Ex : trompette, trombone, cor.</p>
+                    <p>Le son naît de la vibration des lèvres dans une embouchure métallique, amplifié par un pavillon. Ex : trompette, trombone, cor.</p>
 
-                    <!-- ✅ SVG : FlÂ»te & Trompette côte Â  côte -->
+                    <!-- SVG : Flûte & Trompette côte à côte -->
                     <div class="music-svg">
                         <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
-                            <text x="200" y="18" font-family="system-ui" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="600">FlÂ»te & Trompette (Aérophones)</text>
-                            <!-- FlÂ»te -->
+                            <text x="200" y="18" font-family="system-ui" font-size="13" fill="#0f172a" text-anchor="middle" font-weight="600">Flûte & Trompette (Aérophones)</text>
+                            <!-- Flûte -->
                             <rect x="40" y="50" width="140" height="12" fill="#94a3b8" rx="4" stroke="#64748b" stroke-width="1.5"/>
                             <circle cx="60" cy="56" r="3" fill="#475569"/>
                             <circle cx="85" cy="56" r="3" fill="#475569"/>
                             <circle cx="110" cy="56" r="3" fill="#475569"/>
                             <circle cx="135" cy="56" r="3" fill="#475569"/>
-                            <text x="110" y="85" font-family="system-ui" font-size="11" fill="#475569" text-anchor="middle">FlÂ»te (sans anche)</text>
+                            <text x="110" y="85" font-family="system-ui" font-size="11" fill="#475569" text-anchor="middle">Flûte (sans anche)</text>
                             
                             <!-- Trompette -->
                             <rect x="210" y="52" width="80" height="8" fill="#f59e0b" rx="3" stroke="#d97706" stroke-width="1.5"/>
@@ -329,7 +309,7 @@
 
                 <div class="apc-block resume">
                     <h5>✅ Résumé</h5>
-                    <p>Les aérophones produisent le son par vibration d'une colonne d'air. La ma®trise du souffle, de l'embouchure et des doigtés est essentielle pour la justesse et le timbre.</p>
+                    <p>Les aérophones produisent le son par vibration d'une colonne d'air. La maîtrise du souffle, de l'embouchure et des doigtés est essentielle pour la justesse et le timbre.</p>
                 </div>
             </section>
         </article>
@@ -337,8 +317,8 @@
 
     <footer class="main-footer">
         <div class="container">
-            <p><a href="../index.html">← Retour Â  l'accueil</a> | Module 1 - Organologie</p>
-            <p>&copy; 2024-2025 CEAA-Kpalimé - CAP Musique. Conforme au référentiel APC.</p>
+            <p><a href="../index.html">← Retour à l'accueil</a> | Module 1 - Organologie</p>
+            <p>&copy; 2026-2027 CEAA-Kpalimé - CAP Musique. Conforme au référentiel APC.</p>
         </div>
     </footer>
 
@@ -346,11 +326,11 @@
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js')
-          .then(reg => console.log('âœ… Service Worker enregistré:', reg.scope))
-          .catch(err => console.log('âŒ Service Worker échec:', err));
+        navigator.serviceWorker.register('../sw.js')
+          .then(reg => console.log('✅ Service Worker enregistré:', reg.scope))
+          .catch(err => console.log('❌ Service Worker échec:', err));
       });
     }
     </script>
-  </body>
+</body>
 </html>
