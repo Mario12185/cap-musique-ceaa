@@ -95,31 +95,31 @@
 
     <header class="module-header">
         <div class="container">
-            <a href="pratique-instrumentale.html" class="back-link">ââ€ Â Retour Â  Pratique Instrumentale</a>
-            <h1>Ã°Å¸Â¥Â Batterie</h1>
+            <a href="pratique-instrumentale.html" class="back-link">← Retour Â  Pratique Instrumentale</a>
+            <h1>Â¥Â Batterie</h1>
             <p class="competence">Posture, doigtés, lecture de partitions, gammes et répertoire progressif</p>
         </div>
     </header>
 
     <main class="container">
         <section class="resource-section">
-            <h5>Ã°Å¸â€œâ€“ Contenu du Cours</h5>
+            <h5>â€œâ€“ Contenu du Cours</h5>
             <p>Ce module couvre les bases de la batterie au niveau CAP : tenue correcte des baguettes, posture, indépendance et coordination des quatre membres, lecture de partitions rythmiques et grooves fondamentaux. Chaque leçon inclut des exercices techniques de frappe et de roulement, des études de coordination mains-pieds et des patterns d'accompagnement progressifs.</p>
             
             <div class="resource-actions">
                 <!-- Bouton Téléchargement PDF (â€°tudiants) -->
-                <a href="assets/partitions/piano_cours_1.pdf" download class="btn btn-pdf">Ã°Å¸â€œÂ¥ Télécharger le PDF (Cours + Partitions)</a>
+                <a href="assets/partitions/piano_cours_1.pdf" download class="btn btn-pdf">â€œÂ¥ Télécharger le PDF (Cours + Partitions)</a>
                 
                 <!-- Bouton Vidéo (Visionnage) -->
-                <a href="#video-section" class="btn btn-video">Ã°Å¸Å½Â¥ Voir les vidéos du cours</a>
+                <a href="#video-section" class="btn btn-video">Å½Â¥ Voir les vidéos du cours</a>
             </div>
 
             <!-- Zone d'upload (Interface admin/professeur) -->
             <div class="upload-zone">
-                <h6>Ã°Å¸â€œÂ¤ Zone d'upload (Enseignants)</h6>
+                <h6>â€œÂ¤ Zone d'upload (Enseignants)</h6>
                 <p>Ajoute de nouvelles partitions ou vidéos pour les élèves.</p>
                 <label for="file-upload">
-                    Ã°Å¸â€œÂ Sélectionner un fichier (PDF ou MP4)
+                    â€œÂ Sélectionner un fichier (PDF ou MP4)
                     <input type="file" id="file-upload" accept=".pdf,.mp4,.webm,.mov">
                 </label>
                 <div class="file-preview" id="file-preview">Aucun fichier sélectionné</div>
@@ -127,9 +127,9 @@
 
             <!-- Section Vidéo intégrée -->
             <div id="video-section" class="apc-block content mt-2">
-                <h5>Ã°Å¸Å½Â¬ Supports Vidéo</h5>
+                <h5>Å½Â¬ Supports Vidéo</h5>
                 <div style="background:#000; border-radius:var(--radius-md); overflow:hidden; aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; color:#fff;">
-                    <p>Ã°Å¸â€œÂº Intègre ici un iframe YouTube/Vimeo ou un fichier vidéo local.<br>
+                    <p>â€œÂº Intègre ici un iframe YouTube/Vimeo ou un fichier vidéo local.<br>
                     <code>&lt;video controls src="video.mp4" width="100%"&gt;&lt;/video&gt;</code></p>
                 </div>
             </div>
@@ -149,7 +149,7 @@
             const file = e.target.files[0];
             const preview = document.getElementById('file-preview');
             if (file) {
-                preview.textContent = `âÅ“â€¦ Fichier sélectionné : ${file.name} (${(file.size/1024).toFixed(1)} Ko)`;
+                preview.textContent = `✅ Fichier sélectionné : ${file.name} (${(file.size/1024).toFixed(1)} Ko)`;
                 preview.style.color = 'var(--success)';
             } else {
                 preview.textContent = 'Aucun fichier sélectionné';
