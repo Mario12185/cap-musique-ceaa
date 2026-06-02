@@ -1,50 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Mobile Font & Encoding Fix -->
     <style>
-        /* Force UTF-8 rendering */
         @charset "UTF-8";
-        
-        /* Police universelle pour mobile */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
             -webkit-font-smoothing: antialiased !important;
             -moz-osx-font-smoothing: grayscale !important;
             text-rendering: optimizeLegibility !important;
         }
-        
-        /* Évite le zoom automatique sur iOS */
-        input, select, textarea {
-            font-size: 16px !important;
-        }
-        
-        /* Fixe les débordements de texte */
+        input, select, textarea { font-size: 16px !important; }
         p, li, h1, h2, h3, h4, h5, h6 {
             word-wrap: break-word !important;
             overflow-wrap: break-word !important;
             hyphens: auto !important;
         }
-        
-        /* Ajuste la grille sur petits écrans */
         @media (max-width: 480px) {
-            .modules-grid, .instrument-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .nav-primary {
-                flex-wrap: wrap !important;
-                gap: 0.5rem !important;
-            }
-            .nav-primary a {
-                font-size: 0.9rem !important;
-                padding: 0.4rem 0.6rem !important;
-            }
+            .modules-grid, .instrument-grid { grid-template-columns: 1fr !important; }
+            .nav-primary { flex-wrap: wrap !important; gap: 0.5rem !important; }
+            .nav-primary a { font-size: 0.9rem !important; padding: 0.4rem 0.6rem !important; }
         }
     </style>
-    <!-- PWA Meta Tags -->
     
+    <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#2563eb">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -63,9 +45,11 @@
         .product-card p { flex: 1; margin: 0.5rem 0; color: var(--text-light); font-size: 0.95rem; }
         .btn-maketou { background: #d69e2e; color: white; text-align: center; padding: 0.8rem; border-radius: var(--radius-sm); font-weight: 700; margin-top: auto; transition: background 0.2s; }
         .btn-maketou:hover { background: #b7791f; text-decoration: none; color: white; }
+        .review-card { background: #f7fafc; padding: 1.2rem; border-radius: var(--radius-sm); border-left: 3px solid #48bb78; }
+        .stars { color: #d69e2e; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .reviewer { display: block; margin-top: 0.5rem; font-size: 0.85rem; color: #718096; font-style: italic; }
     </style>
     <style>
-        /* Fallback Mobile Sûr */
         @media (max-width: 768px) {
             body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
             .container { padding: 0 1rem !important; }
@@ -78,14 +62,14 @@
             .btn { width: 100% !important; text-align: center !important; }
         }
     </style>
-  </head>
+</head>
 <body>
     <nav class="main-nav">
         <div class="container nav-wrapper">
             <ul class="nav-primary">
                 <li><a href="index.html">Accueil</a></li>
                 <li class="dropdown">
-                    <a href="autres-matieres.html" class="dropdown-toggle">Autres matières ââ€“Â¾</a>
+                    <a href="autres-matieres.html" class="dropdown-toggle">Autres matières ▾</a>
                     <ul class="dropdown-menu">
                         <li><a href="maths-algebre.html">Mathématiques - Algèbre</a></li>
                         <li><a href="histoire-art.html">Histoire de l'Art</a></li>
@@ -102,8 +86,8 @@
 
     <header class="module-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Retour Â  l'accueil</a>
-            <h1>â€ºâ€™ Librairie</h1>
+            <a href="index.html" class="back-link">← Retour à l'accueil</a>
+            <h1>🛒 Librairie</h1>
             <h2>Manuels & Supports Pédagogiques Officiels</h2>
             <p class="competence">Achetez vos cours via la plateforme sécurisée Maketou</p>
         </div>
@@ -113,70 +97,70 @@
         <article class="chapter">
             <section class="lesson">
                 <div class="apc-block situation">
-                    <h5>â€™Â³ Paiement & Accès aux Manuels</h5>
-                    <p>Tous les supports pédagogiques du CEAA-Kpalimé sont disponibles Â  l'achat via <strong>Maketou</strong>. Après validation du paiement, vous recevrez un accès immédiat au contenu numérique ou une livraison physique.</p>
+                    <h5>💳 Paiement & Accès aux Manuels</h5>
+                    <p>Tous les supports pédagogiques du CEAA-Kpalimé sont disponibles à l'achat via <strong>Maketou</strong>. Après validation du paiement, vous recevrez un accès immédiat au contenu numérique ou une livraison physique.</p>
                 </div>
 
                 <div class="modules-grid">
                     <div class="product-card">
-                        <h4>Å½Âµ Formation Musicale & Culture Artistique</h4>
+                        <h4>🎵 Formation Musicale & Culture Artistique</h4>
                         <p>Manuel complet CAP Musique (Cours Préparatoire). Théorie, organologie, solfège, chant et APC.</p>
-                        <a href="https://maketou.tg/ceaa-formation-musicale" target="_blank" class="btn-maketou">â€ºÂïÂ¸Â Acheter sur Maketou</a>
+                        <a href="https://maketou.tg/ceaa-formation-musicale" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
                     </div>
                     <div class="product-card">
-                        <h4>Å½Â¼ Solfège & Lecture Musicale</h4>
+                        <h4>🎼 Solfège & Lecture Musicale</h4>
                         <p>Apprentissage progressif de la portée, clés, notes, rythmes et exercices pratiques corrigés.</p>
-                        <a href="https://maketou.tg/ceaa-solfege" target="_blank" class="btn-maketou">â€ºÂïÂ¸Â Acheter sur Maketou</a>
+                        <a href="https://maketou.tg/ceaa-solfege" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
                     </div>
                     <div class="product-card">
-                        <h4>Å½Â¹ Piano & Orgue</h4>
+                        <h4>🎹 Piano & Orgue</h4>
                         <p>Méthode complète : posture, doigtés, lecture de partitions, exercices techniques et répertoire.</p>
-                        <a href="https://maketou.tg/ceaa-piano-orgue" target="_blank" class="btn-maketou">â€ºÂïÂ¸Â Acheter sur Maketou</a>
+                        <a href="https://maketou.tg/ceaa-piano-orgue" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
                     </div>
                     <div class="product-card">
-                        <h4>Å½Âº Trompette & Cuivres</h4>
+                        <h4>🎺 Trompette & Cuivres</h4>
                         <p>Technique d'embouchure, souffle, pistons, gammes, études et exercices d'orchestre/fanfare.</p>
-                        <a href="https://maketou.tg/ceaa-trompette" target="_blank" class="btn-maketou">â€ºÂïÂ¸Â Acheter sur Maketou</a>
+                        <a href="https://maketou.tg/ceaa-trompette" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
                     </div>
                     <div class="product-card">
-                        <h4>Â¥Â Batterie & Percussion / Tam-tam</h4>
+                        <h4>🥁 Batterie & Percussion / Tam-tam</h4>
                         <p>Rythmes, coordination, frappes, lecture de partitions percussion, techniques africaines & modernes.</p>
-                        <a href="https://maketou.tg/ceaa-percussion" target="_blank" class="btn-maketou">â€ºÂïÂ¸Â Acheter sur Maketou</a>
+                        <a href="https://maketou.tg/ceaa-percussion" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
                     </div>
                     <div class="product-card">
-                        <h4>Å½Â¤ Technique Vocale & MAO</h4>
+                        <h4>🎤 Technique Vocale & MAO</h4>
                         <p>Respiration, justesse, interprétation, enregistrement, logiciels audio et production musicale.</p>
-                        <a href="https://maketou.tg/ceaa-voix-mao" target="_blank" class="btn-maketou">â€ºÂïÂ¸Â Acheter sur Maketou</a>
+                        <a href="https://maketou.tg/ceaa-voix-mao" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
                     </div>
                 </div>
 
                 <section class="lesson" id="avis">
-  <div class="apc-block situation">
-    <h5>âÂ­Â Avis des â€°tudiants & Professionnels</h5>
-    <div class="modules-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-      <div class="review-card">
-        <div class="stars">âËœâ€¦âËœâ€¦âËœâ€¦âËœâ€¦âËœâ€¦</div>
-        <p>« Le manuel de Formation Musicale est très clair et parfaitement adapté au niveau CAP. Les exercices APC sont excellents pour la pratique ! »</p>
-        <span class="reviewer">ââ‚¬â€ M. Koffi, Professeur de Musique</span>
-      </div>
-      <div class="review-card">
-        <div class="stars">âËœâ€¦âËœâ€¦âËœâ€¦âËœâ€¦âËœâ€ </div>
-        <p>« J'ai acheté le guide Solfège & Piano. Très pratique pour réviser hors connexion. Le paiement Maketou est rapide. »</p>
-        <span class="reviewer">ââ‚¬â€ Amina, â€°lève CAP 1</span>
-      </div>
-      <div class="review-card">
-        <div class="stars">âËœâ€¦âËœâ€¦âËœâ€¦âËœâ€¦âËœâ€¦</div>
-        <p>« La MAO et Technique Vocale sont bien structurées. Idéal pour les débutants comme pour les confirmés. Merci CEAA ! »</p>
-        <span class="reviewer">ââ‚¬â€ Prof. Edem, Responsable Pédagogique</span>
-      </div>
-    </div>
-  </div>
-</section>
+                    <div class="apc-block situation">
+                        <h5>⭐ Avis des Étudiants & Professionnels</h5>
+                        <div class="modules-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <p>« Le manuel de Formation Musicale est très clair et parfaitement adapté au niveau CAP. Les exercices APC sont excellents pour la pratique ! »</p>
+                                <span class="reviewer">— M. Koffi, Professeur de Musique</span>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★☆</div>
+                                <p>« J'ai acheté le guide Solfège & Piano. Très pratique pour réviser hors connexion. Le paiement Maketou est rapide. »</p>
+                                <span class="reviewer">— Amina, Élève CAP 1</span>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <p>« La MAO et Technique Vocale sont bien structurées. Idéal pour les débutants comme pour les confirmés. Merci CEAA ! »</p>
+                                <span class="reviewer">— Prof. Edem, Responsable Pédagogique</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <div class="apc-block resume" style="margin-top: 2rem; text-align: center;">
                     <h5>✅ Assistance & Support</h5>
                     <p>En cas de problème de paiement ou d'accès aux manuels, contactez le secrétariat au <strong>+228 70 42 41 96</strong>.</p>
-                    <a href="contacts.html" class="btn" style="margin-top: 1rem; display: inline-block;">â€œÅ¾ Besoin d'aide ? Contactez-nous</a>
+                    <a href="contacts.html" class="btn" style="margin-top: 1rem; display: inline-block;">📞 Besoin d'aide ? Contactez-nous</a>
                 </div>
             </section>
         </article>
@@ -184,7 +168,7 @@
 
     <footer class="main-footer">
         <div class="container">
-            <p><a href="index.html">← Retour Â  l'accueil</a> | <a href="contacts.html">Contacts</a></p>
+            <p><a href="index.html">← Retour à l'accueil</a> | <a href="contacts.html">Contacts</a></p>
             <p>&copy; 2026-2027 CAP Musique - Collège d'Enseignement Artistique et Artisanal CEAA-Kpalimé</p>
         </div>
     </footer>
@@ -194,10 +178,10 @@
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js')
-          .then(reg => console.log('âœ… Service Worker enregistré:', reg.scope))
-          .catch(err => console.log('âŒ Service Worker échec:', err));
+          .then(reg => console.log('✅ Service Worker enregistré:', reg.scope))
+          .catch(err => console.log('❌ Service Worker échec:', err));
       });
     }
     </script>
-  </body>
+</body>
 </html>
