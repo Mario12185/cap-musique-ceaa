@@ -1,68 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Mobile Font & Encoding Fix -->
     <style>
-        /* Force UTF-8 rendering */
         @charset "UTF-8";
-        
-        /* Police universelle pour mobile */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
             -webkit-font-smoothing: antialiased !important;
             -moz-osx-font-smoothing: grayscale !important;
             text-rendering: optimizeLegibility !important;
         }
-        
-        /* â€°vite le zoom automatique sur iOS */
-        input, select, textarea {
-            font-size: 16px !important;
-        }
-        
-        /* Fixe les débordements de texte */
+        input, select, textarea { font-size: 16px !important; }
         p, li, h1, h2, h3, h4, h5, h6 {
             word-wrap: break-word !important;
             overflow-wrap: break-word !important;
             hyphens: auto !important;
         }
-        
-        /* Ajuste la grille sur petits écrans */
         @media (max-width: 480px) {
-            .modules-grid, .instrument-grid {
-                grid-template-columns: 1fr !important;
-            }
-            .nav-primary {
-                flex-wrap: wrap !important;
-                gap: 0.5rem !important;
-            }
-            .nav-primary a {
-                font-size: 0.9rem !important;
-                padding: 0.4rem 0.6rem !important;
-            }
+            .modules-grid, .instrument-grid { grid-template-columns: 1fr !important; }
+            .nav-primary { flex-wrap: wrap !important; gap: 0.5rem !important; }
+            .nav-primary a { font-size: 0.9rem !important; padding: 0.4rem 0.6rem !important; }
         }
     </style>
-    <!-- PWA Meta Tags -->
     
+    <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#2563eb">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="CAP Musique">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="assets/icon-192.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="apple-touch-icon" href="../assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/icon-512.png">
     
-    <title>Module 2 - SolfÆ’¨ge | CAP MUSIQUE</title>
+    <title>Module 2 - Solfège | CAP MUSIQUE</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        /* Conteneur responsive pour les schÆ’©mas musicaux */
         .music-svg { max-width: 100%; height: auto; margin: 1.5rem auto; display: block; }
         .music-svg svg { background: #fff; padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border); }
     </style>
     <style>
-        /* Fallback Mobile SÂ»r */
         @media (max-width: 768px) {
             body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
             .container { padding: 0 1rem !important; }
@@ -75,31 +55,31 @@
             .btn { width: 100% !important; text-align: center !important; }
         }
     </style>
-  </head>
+</head>
 <body>
     <header class="module-header">
         <div class="container">
-            <a href="../index.html" class="back-link">âââ‚¬Â  Retour Æ’  l'accueil</a>
-            <h1>🎼Ã…Â½¼ Module 2</h1>
-            <h2>Formation Musicale et SolfÆ’¨ge</h2>
-            <p class="competence">CompÆ’©tence 2 : Traiter une situation relative Æ’  lâ'Æ’©tude des notes et des formules rythmiques</p>
+            <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+            <h1>🎼 Module 2</h1>
+            <h2>Formation Musicale et Solfège</h2>
+            <p class="competence">Compétence 2 : Traiter une situation relative à l'étude des notes et des formules rythmiques</p>
         </div>
     </header>
 
-    <!-- NAVIGATION CORRIGÆ’°E (chemins relatifs ../) -->
+    <!-- NAVIGATION CORRIGÉE (chemins relatifs ../) -->
     <nav class="main-nav">
         <div class="container nav-wrapper">
             <ul class="nav-primary">
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="../pratique-instrumentale.html">Pratique instrumentale</a></li>
                 <li class="dropdown">
-                    <a href="../autres-matieres.html" class="dropdown-toggle">Autres matiÆ’¨res âââ‚¬â€œ¾</a>
+                    <a href="../autres-matieres.html" class="dropdown-toggle">Autres matières ▾</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../maths-algebre.html">MathÆ’©matiques - AlgÆ’¨bre</a></li>
+                        <li><a href="../maths-algebre.html">Mathématiques - Algèbre</a></li>
                         <li><a href="../histoire-art.html">Histoire de l'Art</a></li>
-                        <li><a href="../legislation-travail.html">LÆ’©gislation du travail</a></li>
+                        <li><a href="../legislation-travail.html">Législation du travail</a></li>
                         <li><a href="../anglais.html">Anglais</a></li>
-                        <li><a href="../francais.html">FranÆ’§ais</a></li>
+                        <li><a href="../francais.html">Français</a></li>
                     </ul>
                 </li>
                 <li><a href="../contacts.html">Contacts</a></li>
@@ -111,54 +91,53 @@
     <main class="container">
         <!-- CHAPITRE 4 -->
         <article id="chap4" class="chapter">
-            <h3>Chapitre 4 : Initiation au SolfÆ’¨ge</h3>
+            <h3>Chapitre 4 : Initiation au Solfège</h3>
             
             <section class="lesson">
-                <h4>LeÆ’§on 1 : La PortÆ’©e, la ClÆ’© de Sol et les Notes</h4>
+                <h4>Leçon 1 : La Portée, la Clé de Sol et les Notes</h4>
                 <div class="apc-block situation">
-                    <h5>🎼ââ‚¬Å“ââ‚¬Â¹ Situation d'Apprentissage</h5>
-                    <p>Lors dâ'un atelier de formation musicale, les Æ’©lÆ’¨ves dÆ’©couvrent pour la premiÆ’¨re fois une partition musicale. Certains ne savent pas lire les notes et ne comprennent pas la disposition des symboles sur la portÆ’©e. Le professeur dÆ’©cide de les initier au solfÆ’¨ge.</p>
+                    <h5>📋 Situation d'Apprentissage</h5>
+                    <p>Lors d'un atelier de formation musicale, les élèves découvrent pour la première fois une partition musicale. Certains ne savent pas lire les notes et ne comprennent pas la disposition des symboles sur la portée. Le professeur décide de les initier au solfège.</p>
                 </div>
 
                 <div class="apc-block content">
-                    <h5>🎼ââ‚¬Å“ââ‚¬â€œ Contenu</h5>
-                    <h6>1. La portÆ’©e musicale</h6>
-                    <p>Ensemble de <strong>5 lignes horizontales</strong> et <strong>4 interlignes</strong> sur lesquels sont Æ’©crites les notes. Elle reprÆ’©sente graphiquement les sons.</p>
+                    <h5>📖 Contenu</h5>
+                    <h6>1. La portée musicale</h6>
+                    <p>Ensemble de <strong>5 lignes horizontales</strong> et <strong>4 interlignes</strong> sur lesquels sont écrites les notes. Elle représente graphiquement les sons.</p>
                     
-                    <h6>2. La clÆ’© de Sol</h6>
-                    <p>Symbole placÆ’© au dÆ’©but de la portÆ’©e indiquant la position des notes. UtilisÆ’©e pour les sons aigus (voix, flÆ’»te, guitare, violon).</p>
-                    <!-- 🎼ââ‚¬â„¢¡ Remplacement possible par : <img src="../assets/clef-sol.svg" alt="ClÆ’© de Sol"> -->
+                    <h6>2. La clé de Sol</h6>
+                    <p>Symbole placé au début de la portée indiquant la position des notes. Utilisée pour les sons aigus (voix, flûte, guitare, violon).</p>
                     
-                    <h6>3. Position des notes en clÆ’© de Sol</h6>
+                    <h6>3. Position des notes en clé de Sol</h6>
                     <ul>
-                        <li><strong>Mi</strong> : 1Æ’¨re ligne (en bas)</li>
+                        <li><strong>Mi</strong> : 1ère ligne (en bas)</li>
                         <li><strong>Fa</strong> : 1er interligne</li>
                         <li><strong>Sol</strong> : 2e ligne</li>
                         <li><strong>La</strong> : 2e interligne</li>
                     </ul>
 
-                    <!-- âœââ‚¬Â¦ SVG : PortÆ’©e + ClÆ’© de Sol + Notes Do Æ’  Si (positionnÆ’©es avec prÆ’©cision) -->
+                    <!-- SVG : Portée + Clé de Sol + Notes Do à Si -->
                     <div class="music-svg">
                         <svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Lignes de portÆ’©e (Y: 30, 45, 60, 75, 90) -->
+                            <!-- Lignes de portée -->
                             <line x1="60" y1="30" x2="380" y2="30" stroke="#0f172a" stroke-width="1.2"/>
                             <line x1="60" y1="45" x2="380" y2="45" stroke="#0f172a" stroke-width="1.2"/>
                             <line x1="60" y1="60" x2="380" y2="60" stroke="#0f172a" stroke-width="1.2"/>
                             <line x1="60" y1="75" x2="380" y2="75" stroke="#0f172a" stroke-width="1.2"/>
                             <line x1="60" y1="90" x2="380" y2="90" stroke="#0f172a" stroke-width="1.2"/>
                             
-                            <!-- ClÆ’© de Sol simplifiÆ’©e mais reconnaissable -->
+                            <!-- Clé de Sol simplifiée -->
                             <path d="M 35,70 C 25,65 22,55 24,45 C 26,35 32,30 37,33 C 42,36 42,45 36,52 C 30,59 28,72 32,84 C 36,96 46,100 50,93 C 54,86 52,75 46,67 C 40,59 36,55 33,60" 
                                   fill="none" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
                             <circle cx="36" cy="48" r="2.5" fill="#0f172a"/>
 
-                            <!-- Ligne supplÆ’©mentaire pour Do -->
+                            <!-- Ligne supplémentaire pour Do -->
                             <line x1="95" y1="105" x2="125" y2="105" stroke="#0f172a" stroke-width="1.2"/>
 
-                            <!-- Notes (centres Y alignÆ’©s sur la portÆ’©e) -->
+                            <!-- Notes -->
                             <g font-family="system-ui" font-size="11" fill="#475569" text-anchor="middle">
                                 <ellipse cx="110" cy="105" rx="5.5" ry="4" fill="#0f172a"/><line x1="115.5" y1="105" x2="115.5" y2="65" stroke="#0f172a" stroke-width="1.5"/><text x="110" y="125">Do</text>
-                                <ellipse cx="145" cy="97.5" rx="5.5" ry="4" fill="#0f172a"/><line x1="150.5" y1="97.5" x2="150.5" y2="57.5" stroke="#0f172a" stroke-width="1.5"/><text x="145" y="125">RÆ’©</text>
+                                <ellipse cx="145" cy="97.5" rx="5.5" ry="4" fill="#0f172a"/><line x1="150.5" y1="97.5" x2="150.5" y2="57.5" stroke="#0f172a" stroke-width="1.5"/><text x="145" y="125">Ré</text>
                                 <ellipse cx="180" cy="90" rx="5.5" ry="4" fill="#0f172a"/><line x1="185.5" y1="90" x2="185.5" y2="50" stroke="#0f172a" stroke-width="1.5"/><text x="180" y="125">Mi</text>
                                 <ellipse cx="215" cy="82.5" rx="5.5" ry="4" fill="#0f172a"/><line x1="220.5" y1="82.5" x2="220.5" y2="42.5" stroke="#0f172a" stroke-width="1.5"/><text x="215" y="125">Fa</text>
                                 <ellipse cx="250" cy="75" rx="5.5" ry="4" fill="#0f172a"/><line x1="255.5" y1="75" x2="255.5" y2="35" stroke="#0f172a" stroke-width="1.5"/><text x="250" y="125">Sol</text>
@@ -170,23 +149,23 @@
                 </div>
 
                 <div class="apc-block resume">
-                    <h5>âœââ‚¬Â¦ RÆ’©sumÆ’©</h5>
-                    <p>La portÆ’©e comporte 5 lignes et 4 interlignes. La clÆ’© de Sol permet de situer les notes. Le solfÆ’¨ge est essentiel pour lire, Æ’©crire et interprÆ’©ter la musique.</p>
+                    <h5>✅ Résumé</h5>
+                    <p>La portée comporte 5 lignes et 4 interlignes. La clé de Sol permet de situer les notes. Le solfège est essentiel pour lire, écrire et interpréter la musique.</p>
                 </div>
 
                 <div class="apc-block evaluation">
-                    <h5>🎼ââ‚¬Å“ Æ’°valuation</h5>
+                    <h5>📝 Évaluation</h5>
                     <ol>
-                        <li>DÆ’©finis la portÆ’©e musicale.</li>
+                        <li>Définis la portée musicale.</li>
                         <li>Donne les 7 notes de musique.</li>
-                        <li>Explique le rÆ’´le de la clÆ’© de Sol.</li>
-                        <li>Lis et chante une courte sÆ’©quence de notes.</li>
+                        <li>Explique le rôle de la clé de Sol.</li>
+                        <li>Lis et chante une courte séquence de notes.</li>
                     </ol>
                 </div>
             </section>
 
             <section class="lesson">
-                <h4>LeÆ’§on 2 : Les Notes SOL âââ‚¬Å“ LA âââ‚¬Å“ SI</h4>
+                <h4>Leçon 2 : Les Notes SOL – LA – SI</h4>
                 <div class="apc-block content">
                     <h6>Positions</h6>
                     <ul>
@@ -194,49 +173,49 @@
                         <li><strong>LA</strong> : 2e interligne</li>
                         <li><strong>SI</strong> : 3e ligne</li>
                     </ul>
-                    <p>Notes aiguÆ’«s utilisÆ’©es pour enrichir les mÆ’©lodies. Travail d'intonation, chant collectif et exÆ’©cution Æ’  la flÆ’»te.</p>
+                    <p>Notes aiguës utilisées pour enrichir les mélodies. Travail d'intonation, chant collectif et exécution à la flûte.</p>
                 </div>
             </section>
 
             <section class="lesson">
-                <h4>LeÆ’§on 3 : Les Notes DO âââ‚¬Å“ RÆ’° âââ‚¬Å“ MI âââ‚¬Å“ FA</h4>
+                <h4>Leçon 3 : Les Notes DO – RÉ – MI – FA</h4>
                 <div class="apc-block content">
                     <h6>Positions</h6>
                     <ul>
-                        <li><strong>DO</strong> : sous la portÆ’©e (1Æ’¨re ligne supplÆ’©mentaire infÆ’©rieure)</li>
-                        <li><strong>RÆ’°</strong> : sous la 1Æ’¨re ligne</li>
-                        <li><strong>MI</strong> : 1Æ’¨re ligne</li>
+                        <li><strong>DO</strong> : sous la portée (1ère ligne supplémentaire inférieure)</li>
+                        <li><strong>RÉ</strong> : sous la 1ère ligne</li>
+                        <li><strong>MI</strong> : 1ère ligne</li>
                         <li><strong>FA</strong> : 1er interligne</li>
                     </ul>
-                    <p>PremiÆ’¨res notes de la gamme. Exercices d'Æ’©criture, lecture chantÆ’©e et pratique instrumentale.</p>
+                    <p>Premières notes de la gamme. Exercices d'écriture, lecture chantée et pratique instrumentale.</p>
                 </div>
             </section>
         </article>
 
         <!-- CHAPITRE 5 -->
         <article id="chap5" class="chapter">
-            <h3>Chapitre 5 : Æ’°tude Rythmique</h3>
+            <h3>Chapitre 5 : Étude Rythmique</h3>
             
             <section class="lesson">
-                <h4>LeÆ’§on 1 : La Noire, la Blanche et le Soupir</h4>
+                <h4>Leçon 1 : La Noire, la Blanche et le Soupir</h4>
                 <div class="apc-block situation">
-                    <h5>🎼ââ‚¬Å“ââ‚¬Â¹ Situation d'Apprentissage</h5>
-                    <p>Lors dâ'une rÆ’©pÆ’©tition de chorale, le professeur remarque que certains Æ’©lÆ’¨ves ne respectent pas la durÆ’©e des sons et des silences. Il introduit lâ'Æ’©tude des valeurs rythmiques de base.</p>
+                    <h5>📋 Situation d'Apprentissage</h5>
+                    <p>Lors d'une répétition de chorale, le professeur remarque que certains élèves ne respectent pas la durée des sons et des silences. Il introduit l'étude des valeurs rythmiques de base.</p>
                 </div>
 
                 <div class="apc-block content">
-                    <h5>🎼ââ‚¬Å“ââ‚¬â€œ Contenu</h5>
+                    <h5>📖 Contenu</h5>
                     <table class="comparison-table">
                         <caption>Valeurs rythmiques de base</caption>
-                        <thead><tr><th>Figure</th><th>Valeur</th><th>ReprÆ’©sentation</th></tr></thead>
+                        <thead><tr><th>Figure</th><th>Valeur</th><th>Représentation</th></tr></thead>
                         <tbody>
-                            <tr><td>Noire</td><td>1 temps</td><td>TÆ’ªte noire + hampe</td></tr>
-                            <tr><td>Blanche</td><td>2 temps</td><td>TÆ’ªte vide + hampe</td></tr>
-                            <tr><td>Soupir</td><td>1 temps de silence</td><td>Signe de silence spÆ’©cifique</td></tr>
+                            <tr><td>Noire</td><td>1 temps</td><td>Tête noire + hampe</td></tr>
+                            <tr><td>Blanche</td><td>2 temps</td><td>Tête vide + hampe</td></tr>
+                            <tr><td>Soupir</td><td>1 temps de silence</td><td>Signe de silence spécifique</td></tr>
                         </tbody>
                     </table>
                     
-                    <!-- âœââ‚¬Â¦ SVG : Figures Rythmiques simplifiÆ’©es & prÆ’©cises -->
+                    <!-- SVG : Figures Rythmiques -->
                     <div class="music-svg">
                         <svg viewBox="0 0 460 110" xmlns="http://www.w3.org/2000/svg">
                             <text x="230" y="18" font-family="system-ui" font-size="14" fill="#0f172a" text-anchor="middle" font-weight="600">Figures Rythmiques</text>
@@ -256,7 +235,7 @@
                                 <ellipse cx="310" cy="55" rx="6" ry="4.5" fill="#0f172a"/>
                                 <line x1="316" y1="55" x2="316" y2="15" stroke="#0f172a" stroke-width="1.5"/>
                                 <path d="M 316,15 Q 332,22 330,35" stroke="#0f172a" stroke-width="1.5" fill="none"/>
-                                <text x="310" y="90">Croche (â€š½t)</text>
+                                <text x="310" y="90">Croche (½t)</text>
                                 <!-- Soupir -->
                                 <path d="M 400,50 Q 405,42 410,46 Q 414,52 412,60 Q 408,64 403,60 Q 398,56 400,50" fill="#0f172a"/>
                                 <text x="405" y="90">Soupir (1t)</text>
@@ -264,12 +243,12 @@
                         </svg>
                     </div>
 
-                    <p>Exercices de battue, lecture chantÆ’©e et coordination voix/mains.</p>
+                    <p>Exercices de battue, lecture chantée et coordination voix/mains.</p>
                 </div>
             </section>
 
             <section class="lesson">
-                <h4>LeÆ’§on 2 : Les Deux-Croches</h4>
+                <h4>Leçon 2 : Les Deux-Croches</h4>
                 <div class="apc-block content">
                     <h6>Valeurs</h6>
                     <ul>
@@ -279,11 +258,11 @@
                         <li>4 doubles croches = 1 temps complet</li>
                     </ul>
 
-                    <!-- âœââ‚¬Â¦ SVG : Mesure Æ’  4/4 avec doubles-croches groupÆ’©es -->
+                    <!-- SVG : Mesure à 4/4 avec doubles-croches groupées -->
                     <div class="music-svg">
                         <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
-                            <text x="200" y="18" font-family="system-ui" font-size="14" fill="#0f172a" text-anchor="middle" font-weight="600">Mesure Æ’  4/4 & Doubles-Croches</text>
-                            <!-- PortÆ’©e -->
+                            <text x="200" y="18" font-family="system-ui" font-size="14" fill="#0f172a" text-anchor="middle" font-weight="600">Mesure à 4/4 & Doubles-Croches</text>
+                            <!-- Portée -->
                             <line x1="40" y1="35" x2="360" y2="35" stroke="#0f172a" stroke-width="1.2"/>
                             <line x1="40" y1="50" x2="360" y2="50" stroke="#0f172a" stroke-width="1.2"/>
                             <line x1="40" y1="65" x2="360" y2="65" stroke="#0f172a" stroke-width="1.2"/>
@@ -294,13 +273,13 @@
                             <text x="60" y="62" font-family="Georgia, serif" font-size="22" fill="#0f172a" font-weight="bold">4</text>
                             <text x="60" y="88" font-family="Georgia, serif" font-size="22" fill="#0f172a" font-weight="bold">4</text>
                             
-                            <!-- 4 doubles croches groupÆ’©es -->
+                            <!-- 4 doubles croches groupées -->
                             <g>
                                 <ellipse cx="110" cy="50" rx="5" ry="4" fill="#0f172a"/><line x1="115" y1="50" x2="115" y2="15" stroke="#0f172a" stroke-width="1.5"/>
                                 <ellipse cx="145" cy="65" rx="5" ry="4" fill="#0f172a"/><line x1="150" y1="65" x2="150" y2="30" stroke="#0f172a" stroke-width="1.5"/>
                                 <ellipse cx="180" cy="50" rx="5" ry="4" fill="#0f172a"/><line x1="185" y1="50" x2="185" y2="15" stroke="#0f172a" stroke-width="1.5"/>
                                 <ellipse cx="215" cy="65" rx="5" ry="4" fill="#0f172a"/><line x1="220" y1="65" x2="220" y2="30" stroke="#0f172a" stroke-width="1.5"/>
-                                <!-- Barres de groupement (hampes liÆ’©es) -->
+                                <!-- Barres de groupement -->
                                 <line x1="115" y1="20" x2="220" y2="35" stroke="#0f172a" stroke-width="2"/>
                                 <line x1="115" y1="15" x2="220" y2="30" stroke="#0f172a" stroke-width="2"/>
                             </g>
@@ -311,7 +290,7 @@
                         </svg>
                     </div>
 
-                    <p>ReprÆ’©sentation : tÆ’ªte noire, hampe, deux crochets/barres. Travail de rÆ’©gularitÆ’©, syllabation <em>"ta-ka-ta-ka"</em> et pratique instrumentale.</p>
+                    <p>Représentation : tête noire, hampe, deux crochets/barres. Travail de régularité, syllabation <em>"ta-ka-ta-ka"</em> et pratique instrumentale.</p>
                 </div>
             </section>
         </article>
@@ -319,8 +298,8 @@
 
     <footer class="main-footer">
         <div class="container">
-            <p><a href="../index.html">âââ‚¬Â  Retour Æ’  l'accueil</a> | Module 2 - SolfÆ’¨ge</p>
-            <p>&copy; 2026-2027 CEAA-KpalimÆ’© - CAP Musique. Conforme au rÆ’©fÆ’©rentiel APC.</p>
+            <p><a href="../index.html">← Retour à l'accueil</a> | Module 2 - Solfège</p>
+            <p>&copy; 2026-2027 CEAA-Kpalimé - CAP Musique. Conforme au référentiel APC.</p>
         </div>
     </footer>
 
@@ -328,11 +307,11 @@
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js')
+        navigator.serviceWorker.register('../sw.js')
           .then(reg => console.log('✅ Service Worker enregistré:', reg.scope))
-          .catch(err => console.log('❌’ Service Worker échec:', err));
+          .catch(err => console.log('❌ Service Worker échec:', err));
       });
     }
     </script>
-  </body>
+</body>
 </html>
