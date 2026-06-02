@@ -1,272 +1,207 @@
 /* =========================================
-   CAP MUSIQUE - Design SaaS Professionnel
-   100% Hors-ligne | Responsive | Accessible
+   🎵 CAP MUSIQUE - SAAS DESIGN SYSTEM
    ========================================= */
-
 :root {
-  /* Couleurs SaaS */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-tertiary: #f1f5f9;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
-  --border: #e2e8f0;
-  --border-focus: #94a3b8;
-  
-  /* Accents */
-  --accent-primary: #2563eb;
-  --accent-hover: #1d4ed8;
-  --accent-light: #dbeafe;
+  /* 🎨 Palette SaaS Pro */
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-hover: #f1f5f9;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --accent: #7c3aed;
   --success: #10b981;
   --warning: #f59e0b;
   --danger: #ef4444;
-  --info: #0ea5e9;
-  --purple: #8b5cf6;
+  --border: #e2e8f0;
   
-  /* Ombres & Arrondis */
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  /* 📐 Dimensions & Effets */
+  --radius: 12px;
+  --radius-sm: 8px;
   --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* Typographie */
-  --font-main: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --line-height: 1.6;
-  --transition: all 0.2s ease-in-out;
+  /* 📱 Mobile */
+  --nav-height: 64px;
 }
 
-/* ===== RESET & BASE ===== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* 🔧 Reset & Base */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
 body {
-  font-family: var(--font-main);
-  line-height: var(--line-height);
-  color: var(--text-primary);
-  background: var(--bg-secondary);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-a { color: var(--accent-primary); text-decoration: none; transition: var(--transition); }
-a:hover { color: var(--accent-hover); }
-img { max-width: 100%; height: auto; border-radius: var(--radius-md); }
 
-/* ===== CONTAINER ===== */
-.container { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
+/* 📦 Container */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
 
-/* ===== NAVIGATION SaaS ===== */
+/* 🧭 Navigation SaaS (Glass + Sticky) */
 .main-nav {
+  position: sticky; top: 0; z-index: 100;
   background: rgba(255,255,255,0.85);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
-  position: sticky; top: 0; z-index: 100;
 }
-.nav-wrapper {
-  display: flex; align-items: center; justify-content: space-between; height: 64px;
-}
-.nav-primary { list-style: none; display: flex; gap: 1.5rem; align-items: center; }
+.nav-wrapper { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 0; }
+.nav-primary { list-style: none; display: flex; gap: 0.25rem; flex-wrap: wrap; margin: 0; padding: 0; }
 .nav-primary a {
-  color: var(--text-secondary); font-weight: 500; font-size: 0.95rem; padding: 0.5rem 0.8rem;
-  border-radius: var(--radius-md); transition: var(--transition);
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: var(--transition);
 }
-.nav-primary a:hover, .nav-primary a.active {
-  color: var(--accent-primary); background: var(--accent-light);
-}
+.nav-primary a:hover, .nav-primary a.active { background: var(--surface-hover); color: var(--primary); }
 .dropdown { position: relative; }
-.dropdown-toggle { cursor: pointer; display: flex; align-items: center; gap: 0.4rem; }
-.dropdown-toggle::after { content: "▾"; font-size: 0.7em; opacity: 0.6; }
 .dropdown-menu {
-  position: absolute; top: 100%; left: 0; background: var(--bg-primary);
-  border: 1px solid var(--border); border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg); min-width: 220px; padding: 0.5rem 0;
-  opacity: 0; visibility: hidden; transform: translateY(8px);
-  transition: var(--transition); z-index: 200; list-style: none;
+  position: absolute; top: 100%; left: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 0.5rem 0;
+  min-width: 200px;
+  opacity: 0; visibility: hidden;
+  transform: translateY(8px);
+  transition: var(--transition);
 }
-.dropdown:hover .dropdown-menu, .dropdown:focus-within .dropdown-menu {
-  opacity: 1; visibility: visible; transform: translateY(0);
-}
-.dropdown-menu a {
-  display: block; padding: 0.7rem 1.2rem; color: var(--text-secondary);
-  white-space: nowrap; transition: var(--transition);
-}
-.dropdown-menu a:hover { background: var(--bg-tertiary); color: var(--accent-primary); }
+.dropdown:hover .dropdown-menu, .dropdown:focus-within .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown-menu a { display: block; padding: 0.6rem 1rem; color: var(--text); }
+.dropdown-menu a:hover { background: var(--surface-hover); color: var(--primary); }
 
-/* ===== HEADER / HERO ===== */
+/* 🌟 Hero SaaS */
 .main-header, .module-header {
-  background: var(--bg-primary);
-  border-bottom: 1px solid var(--border);
-  padding: 4rem 0 2.5rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  color: #ffffff;
+  padding: 4rem 0 3rem;
   text-align: center;
 }
 .main-header h1, .module-header h1 {
-  font-size: 2.8rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 100%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
 }
-.module-header h1 { font-size: 2.4rem; }
-.main-header .subtitle, .module-header .competence {
-  color: var(--text-secondary); font-size: 1.15rem; max-width: 700px; margin: 0 auto;
-}
+.subtitle, .competence { font-size: 1.125rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
 .back-link {
-  display: inline-flex; align-items: center; gap: 0.4rem; margin-bottom: 1.5rem;
-  color: var(--text-muted); font-weight: 500; font-size: 0.95rem;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  color: #94a3b8; text-decoration: none; font-weight: 500;
+  margin-bottom: 1.5rem; transition: var(--transition);
 }
-.back-link:hover { color: var(--accent-primary); }
+.back-link:hover { color: #ffffff; transform: translateX(-4px); }
 
-/* ===== SECTION & GRID ===== */
-section { margin: 2.5rem 0; }
-.modules-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;
+/* 📦 Cartes SaaS (Modules & Instruments) */
+.modules-grid, .instrument-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2.5rem 0;
 }
-.module-card {
-  background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-lg);
-  padding: 1.8rem; transition: var(--transition); position: relative; overflow: hidden;
+.module-card, .instrument-card, .product-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column;
 }
-.module-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--accent-primary); }
-.module-card h3 { color: var(--text-primary); font-size: 1.4rem; margin-bottom: 0.6rem; }
-.module-card p { color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.6; }
-.btn {
+.module-card:hover, .instrument-card:hover, .product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+.module-card h3, .instrument-card h4, .product-card h4 {
+  margin: 0 0 0.75rem 0; font-size: 1.25rem; font-weight: 700; color: var(--text);
+}
+.module-card p, .instrument-card p, .product-card p {
+  flex: 1; color: var(--text-muted); margin-bottom: 1rem;
+}
+
+/* 🔘 Boutons SaaS */
+.btn, .btn-outline, .btn-primary, .btn-maketou {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-  background: var(--accent-primary); color: #fff; padding: 0.7rem 1.4rem;
-  border-radius: var(--radius-md); font-weight: 600; font-size: 0.95rem;
-  transition: var(--transition); border: none; cursor: pointer; text-align: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600; text-decoration: none;
+  transition: var(--transition); cursor: pointer; border: none; font-size: 0.95rem;
 }
-.btn:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: var(--shadow-sm); color: #fff; }
-.btn-outline {
-  background: transparent; border: 1px solid var(--border); color: var(--text-secondary);
-}
-.btn-outline:hover { border-color: var(--accent-primary); color: var(--accent-primary); background: var(--accent-light); }
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: var(--primary-hover); transform: translateY(-1px); box-shadow: var(--shadow); }
+.btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--text); }
+.btn-outline:hover { border-color: var(--primary); color: var(--primary); background: rgba(37,99,235,0.05); }
+.btn-maketou { background: linear-gradient(135deg, #d97706, #b45309); color: white; margin-top: auto; }
+.btn-maketou:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(217,119,6,0.3); }
 
-/* ===== APC BLOCKS (SaaS Style) ===== */
+/* 📄 Blocs APC (Situation, Contenu, Résumé) */
 .apc-block {
-  background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-lg);
-  padding: 1.6rem; margin: 1.5rem 0; transition: var(--transition);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow-sm);
 }
-.apc-block:hover { box-shadow: var(--shadow-sm); }
-.apc-block.situation { border-left: 4px solid var(--warning); background: #fffbeb; }
-.apc-block.content { border-left: 4px solid var(--accent-primary); background: var(--bg-secondary); }
-.apc-block.resume { border-left: 4px solid var(--success); background: #ecfdf5; }
-.apc-block.evaluation { border-left: 4px solid var(--danger); background: #fef2f2; }
-.apc-block.exercice { border-left: 4px solid var(--purple); background: #f5f3ff; }
-.apc-block h5 {
-  margin: 0 0 1rem; color: var(--text-primary); font-weight: 700; display: flex; align-items: center; gap: 0.5rem;
-}
-.apc-block p, .apc-block ul, .apc-block ol { margin: 0.6rem 0; color: var(--text-secondary); }
-.apc-block strong { color: var(--text-primary); }
+.apc-block h5 { margin: 0 0 1rem 0; font-size: 1.15rem; font-weight: 700; color: var(--text); }
+.apc-block.situation { border-left: 4px solid var(--warning); background: linear-gradient(135deg, #fffbeb, #ffffff); }
+.apc-block.content { border-left: 4px solid var(--primary); }
+.apc-block.resume { border-left: 4px solid var(--success); background: linear-gradient(135deg, #f0fdf4, #ffffff); }
+.apc-block.evaluation { border-left: 4px solid var(--accent); }
 
-/* ===== TABLES SaaS ===== */
-.comparison-table {
-  width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: var(--bg-primary);
-  border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden;
-}
-.comparison-table caption {
-  background: var(--bg-tertiary); padding: 0.9rem 1.2rem; font-weight: 600;
-  text-align: left; color: var(--text-primary); border-bottom: 1px solid var(--border);
-}
-.comparison-table th, .comparison-table td {
-  padding: 1rem 1.2rem; text-align: left; border-bottom: 1px solid var(--border);
-  font-size: 0.95rem; color: var(--text-secondary);
-}
-.comparison-table th { background: var(--bg-tertiary); font-weight: 600; color: var(--text-primary); }
-.comparison-table tr:hover td { background: var(--bg-secondary); }
-.comparison-table tr:last-child td { border-bottom: none; }
+/* 📊 Tableaux & Avis */
+.comparison-table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.comparison-table th, .comparison-table td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+.comparison-table th { background: var(--surface-hover); font-weight: 600; }
+.review-card { background: var(--surface-hover); padding: 1.25rem; border-radius: var(--radius); }
+.stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 0.5rem; }
+.reviewer { display: block; margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted); font-style: italic; }
 
-/* ===== FORMS & INPUTS ===== */
-.contact-form { display: grid; gap: 1.2rem; max-width: 680px; margin: 2rem auto; }
-.form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary); }
+/* 📝 Formulaires */
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
 .form-group input, .form-group select, .form-group textarea {
-  width: 100%; padding: 0.85rem 1rem; border: 1px solid var(--border); border-radius: var(--radius-md);
-  font-family: inherit; font-size: 1rem; background: var(--bg-primary); transition: var(--transition);
+  width: 100%; padding: 0.75rem 1rem;
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  font-family: inherit; font-size: 1rem;
+  transition: var(--transition); background: var(--surface);
 }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-  outline: none; border-color: var(--accent-primary); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
 }
-.form-note { margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted); text-align: center; }
 
-/* ===== AVIS / REVIEWS ===== */
-.review-card {
-  background: var(--bg-primary); border: 1px solid var(--border); padding: 1.5rem;
-  border-radius: var(--radius-lg); transition: var(--transition);
-}
-.review-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); }
-.stars { color: var(--warning); font-size: 1.1rem; margin-bottom: 0.6rem; letter-spacing: 2px; }
-.review-card p { font-style: italic; margin: 0.6rem 0; color: var(--text-secondary); }
-.reviewer { display: block; font-size: 0.85rem; color: var(--text-muted); font-weight: 600; margin-top: 0.8rem; }
-
-/* ===== FOOTER ===== */
+/* 🦶 Footer SaaS */
 .main-footer {
-  background: var(--bg-primary); border-top: 1px solid var(--border);
-  padding: 2rem 0; margin-top: 4rem; text-align: center;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  text-align: center;
+  color: var(--text-muted);
 }
-.main-footer p { color: var(--text-muted); font-size: 0.9rem; margin: 0.3rem 0; }
-.main-footer a { color: var(--accent-primary); font-weight: 500; }
+.main-footer a { color: var(--primary); text-decoration: none; }
 .main-footer a:hover { text-decoration: underline; }
 
-/* ===== UTILS ===== */
-.text-center { text-align: center; }
-.text-muted { color: var(--text-muted); }
-.mt-1 { margin-top: 1rem; }
-.mt-2 { margin-top: 1.5rem; }
-.mb-1 { margin-bottom: 1rem; }
-.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
-
-/* ===== RESPONSIVE ===== */
+/* 📱 Responsive */
 @media (max-width: 768px) {
-  .main-header h1 { font-size: 2rem; }
-  .module-header h1 { font-size: 1.8rem; }
-  .nav-primary { gap: 0.8rem; flex-wrap: wrap; justify-content: center; }
-  .dropdown-menu { position: static; box-shadow: none; opacity: 1; visibility: visible; transform: none; display: none; background: transparent; padding-left: 0.5rem; }
-  .dropdown:hover .dropdown-menu { display: block; }
-  .modules-grid { grid-template-columns: 1fr; }
-  .comparison-table { font-size: 0.85rem; }
-  .comparison-table th, .comparison-table td { padding: 0.7rem; }
+  .main-header, .module-header { padding: 2.5rem 0 2rem; }
+  .nav-wrapper { flex-direction: column; gap: 0.5rem; }
+  .nav-primary { justify-content: center; }
+  .modules-grid, .instrument-grid { grid-template-columns: 1fr; }
+  .container { padding: 0 1rem; }
 }
 
-/* ===== PRINT ===== */
-@media print {
-  body { background: #fff; font-size: 11pt; }
-  .main-nav, .btn, .dropdown, footer, .apc-block:hover { box-shadow: none !important; transform: none !important; }
-  .apc-block, .module-card, .review-card { border: 1px solid #ccc; break-inside: avoid; }
-  a { color: #000; text-decoration: none; }
-}
-
-/* ===== PRATIQUE INSTRUMENTALE & RESSOURCES ===== */
-.instrument-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
-.instrument-card { background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem; transition: var(--transition); }
-.instrument-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--accent-primary); }
-.instrument-card h3 { margin: 0 0 0.5rem; color: var(--text-primary); }
-.instrument-card p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem; }
-
-.resource-section { background: var(--bg-primary); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; margin: 2rem 0; }
-.resource-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0; }
-.btn-pdf { background: #ef4444; color: #fff; }
-.btn-pdf:hover { background: #dc2626; color: #fff; }
-.btn-video { background: #0ea5e9; color: #fff; }
-.btn-video:hover { background: #0284c7; color: #fff; }
-
-.upload-zone { border: 2px dashed var(--border); border-radius: var(--radius-md); padding: 2rem; text-align: center; background: var(--bg-tertiary); margin-top: 1.5rem; }
-.upload-zone input { display: none; }
-.upload-zone label { cursor: pointer; color: var(--accent-primary); font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; }
-.upload-zone:hover { border-color: var(--accent-primary); background: #f0f7ff; }
-.file-preview { margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted); }
-
-/* ===== SVG MUSICAUX ===== */
-.music-staff { display: inline-block; vertical-align: middle; margin: 0.5rem 0; }
-.music-staff svg { overflow: visible; }
-.note-head { fill: var(--text-primary); }
-.note-stem { stroke: var(--text-primary); stroke-width: 1.5; fill: none; }
-.ledger-line { stroke: var(--text-primary); stroke-width: 1.2; }
-.clef { fill: var(--text-primary); }
-.time-signature { font-family: 'Georgia', serif; font-size: 24px; fill: var(--text-primary); font-weight: bold; }
-.bar-line { stroke: var(--text-primary); stroke-width: 2; }
-.rest { fill: var(--text-primary); }
-
-/* Positionnement des notes */
-.note-do { transform: translateY(0px); }
-.note-re { transform: translateY(-8px); }
-.note-mi { transform: translateY(-16px); }
-.note-fa { transform: translateY(-24px); }
-.note-sol { transform: translateY(-32px); }
-.note-la { transform: translateY(-40px); }
-.note-si { transform: translateY(-48px); }
+/* 🌙 Utilitaires */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 0.5rem; } .mt-2 { margin-top: 1rem; } .mb-1 { margin-bottom: 0.5rem; }
+.text-muted { color: var(--text-muted); }
