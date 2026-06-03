@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>CAP MUSIQUE | CEAA-Kpalimé - Espace Pédagogique Numérique</title>
+    
+    <!-- Police Premium Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* 🎨 Reset & Base */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+            color: #ffffff;
+        }
+
+        /* 🎥 Vidéo de fond */
+        .bg-video {
+            position: fixed; top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            object-fit: cover;
+            z-index: -2;
+            background: #0f172a; /* Fallback couleur */
+        }
+
+        /* 🌑 Overlay sombre pour lisibilité */
+        .bg-overlay {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.82); /* Bleu nuit intense */
+            z-index: -1;
+        }
+
+        /* 📦 Conteneur Principal */
+        .landing-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        /* ✨ Carte Glassmorphism */
+        .landing-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 🔠 Typographie */
+        .logo-icon { font-size: 3.5rem; margin-bottom: 1rem; display: block; filter: drop-shadow(0 0 10px rgba(255,255,255,0.3)); }
+        h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem; background: linear-gradient(to right, #ffffff, #93c5fd); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { font-size: clamp(1rem, 2vw, 1.25rem); color: #cbd5e1; margin-bottom: 2rem; font-weight: 400; }
+
+        /* ✅ Liste des avantages */
+        .features { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem; text-align: left; padding: 0 1rem; }
+        .feature-item { display: flex; align-items: center; gap: 0.75rem; font-size: 1rem; color: #f1f5f9; }
+        .check-icon { color: #34d399; font-size: 1.2rem; flex-shrink: 0; }
+
+        /* 🔘 Bouton CTA */
+        .btn-cta {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: #ffffff;
+            font-size: 1.125rem; font-weight: 700;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+            border: 1px solid rgba(255,255,255,0.2);
+            width: 100%;
+        }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5); background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); }
+        .btn-cta:active { transform: translateY(1px); }
+
+        /* 🔽 Flèche animée */
+        .scroll-indicator { margin-top: 3rem; animation: bounce 2s infinite; opacity: 0.6; font-size: 1.5rem; }
+        @keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-10px); } 60% { transform: translateY(-5px); } }
+
+        /* 📱 Responsive Mobile */
+        @media (max-width: 480px) {
+            .landing-card { padding: 2rem 1.25rem; }
+            h1 { font-size: 2rem; }
+            .btn-cta { padding: 0.875rem 1.5rem; font-size: 1rem; }
+            .bg-video { display: none; } /* Économie de batterie sur mobile */
+            body { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+        }
+
+        /* 🦶 Footer discret */
+        .landing-footer { margin-top: 3rem; font-size: 0.8rem; color: #64748b; }
+        .landing-footer a { color: #94a3b8; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <!-- 🎥 Vidéo de fond -->
+    <video class="bg-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/bg-video.mp4" type="video/mp4">
+    </video>
+    
+    <!-- 🌑 Overlay -->
+    <div class="bg-overlay"></div>
+
+    <!-- 📦 Contenu Principal -->
+    <main class="landing-container">
+        <div class="landing-card">
+            <span class="logo-icon">🎵</span>
+            <h1>CAP MUSIQUE</h1>
+            <p class="subtitle">Collège d'Enseignement Artistique & Artisanal<br><strong>CEAA-Kpalimé</strong></p>
+
+            <!-- Avantages -->
+            <div class="features">
+                <div class="feature-item"><span class="check-icon">✅</span> <span>Cours de Solfège, Instruments & Chant</span></div>
+                <div class="feature-item"><span class="check-icon">✅</span> <span>Partitions et Supports Vidéo</span></div>
+                <div class="feature-item"><span class="check-icon">✅</span> <span>Accessible 24/7 sur mobile & PC</span></div>
+                <div class="feature-item"><span class="check-icon">✅</span> <span>Conforme au référentiel APC</span></div>
+            </div>
+
+            <!-- Bouton d'Action -->
+            <a href="login.html" class="btn-cta">
+                🚀 Accéder à l'espace pédagogique
+            </a>
+        </div>
+
+        <div class="landing-footer">
+            <p>&copy; 2026-2027 CEAA-Kpalimé. Tous droits réservés.</p>
+            <p style="margin-top: 0.5rem;"><a href="tel:+22870424196">📞 Support : +228 70 42 41 96</a></p>
+        </div>
+    </main>
+
+</body>
+</html>
