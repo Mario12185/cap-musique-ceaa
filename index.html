@@ -16,6 +16,31 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- 🔐 Vérification d'accès (Mobile-Safe + Key Fix) -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Ne pas bloquer si on est sur login, landing ou contacts
+        const path = window.location.pathname;
+        if (path.includes('login.html') || path.includes('landing.html') || path.includes('contacts.html')) {
+            return;
+        }
+        
+        try {
+            // ✅ Clé cohérente avec login.html : 'cap_auth'
+            const authenticated = localStorage.getItem('cap_auth');
+            const isProduction = window.location.hostname.includes('github.io');
+            
+            if (!authenticated && isProduction) {
+                // Redirection douce sans boucle
+                window.location.replace('login.html');
+            }
+        } catch (e) {
+            // Si localStorage est bloqué (mode privé), on laisse accéder
+            console.warn('Auth check skipped:', e);
+        }
+    });
+    </script>
+
     <nav class="main-nav">
         <div class="container nav-wrapper">
             <ul class="nav-primary">
@@ -39,27 +64,10 @@
     </nav>
 
     <!-- 🎥 Vidéo de fond globale -->
-<video class="bg-video" autoplay muted loop playsinline>
-  <source src="assets/bg-video.mp4" type="video/mp4">
-</video>
-<div class="bg-overlay"></div>
-
-    <!-- 🔐 Vérification d'accès - À placer juste après <body> -->
-<script>
-(function() {
-    // Si la page actuelle EST login.html, ne pas bloquer
-    if (window.location.pathname.includes('login.html')) return;
-    
-    // Vérifier l'authentification
-    const authenticated = localStorage.getItem('capMusiqueAccess');
-    const isProduction = window.location.hostname.includes('github.io'); // Optionnel : désactiver en local
-    
-    if (!authenticated && isProduction) {
-        // Rediriger vers la page de connexion
-        window.location.href = 'login.html';
-    }
-})();
-</script>
+    <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="assets/icon-192.png">
+        <source src="assets/bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay"></div>
 
     <header class="main-header">
         <div class="container">
@@ -133,6 +141,7 @@
         </div>
     </footer>
 
+    <!-- PWA Service Worker -->
     <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
