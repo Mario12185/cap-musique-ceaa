@@ -3,106 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#2563eb">
     <title>Accès CAP MUSIQUE | CEAA-Kpalimé</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .login-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #f8fafc; padding: 1rem; }
-        .login-box { background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); width: 100%; max-width: 380px; text-align: center; }
-        .login-box h1 { margin: 0 0 0.5rem; font-size: 1.5rem; }
-        .login-box p { color: #64748b; margin: 0 0 1.5rem; font-size: 0.9rem; }
-        .field { margin-bottom: 1rem; text-align: left; }
-        .field label { display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.3rem; }
-        .field input { width: 100%; padding: 0.7rem; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 1rem; box-sizing: border-box; }
-        .field input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 2px rgba(37,99,235,0.2); }
-        .btn-login { width: 100%; padding: 0.8rem; background: #2563eb; color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 1rem; }
-        .btn-login:hover { background: #1d4ed8; }
-        .btn-login:disabled { opacity: 0.6; cursor: not-allowed; }
-        .msg { margin-top: 1rem; font-size: 0.9rem; min-height: 1.2em; }
-        .msg.err { color: #dc2626; }
-        .msg.ok { color: #16a34a; }
-        .back-link { display: inline-block; margin-top: 1rem; color: #2563eb; text-decoration: none; font-size: 0.85rem; }
+        /* 🔐 Auth Wrapper - Aligné SaaS Premium v2 */
+        .auth-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .auth-wrapper::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .auth-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            width: 100%; max-width: 420px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+            position: relative; z-index: 1;
+            animation: fadeIn 0.4s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+        
+        .auth-header { text-align: center; margin-bottom: 2rem; }
+        .auth-header .logo { font-size: 2.5rem; margin-bottom: 0.5rem; display: block; }
+        .auth-header h1 { font-size: var(--text-2xl); font-weight: 800; color: var(--text); margin: 0 0 0.25rem; }
+        .auth-header p { color: var(--text-secondary); font-size: var(--text-sm); margin: 0; }
+        
+        .form-step { display: none; }
+        .form-step.active { display: block; animation: fadeIn 0.3s ease; }
+        
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--text); font-size: var(--text-sm); }
+        .form-group input {
+            width: 100%; padding: 0.875rem 1rem;
+            border: 1px solid var(--border); border-radius: var(--radius-sm);
+            font-family: inherit; font-size: var(--text-base);
+            transition: var(--transition); background: var(--surface);
+        }
+        .form-group input:focus {
+            outline: none; border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+        }
+        
+        .btn-full { width: 100%; justify-content: center; padding: 0.875rem; font-size: var(--text-base); }
+        .status-msg { margin-top: 1rem; padding: 0.75rem; border-radius: var(--radius-sm); font-size: var(--text-sm); font-weight: 500; text-align: center; display: none; }
+        .status-msg.success { background: #f0fdf4; color: var(--success); border: 1px solid #bbf7d0; }
+        .status-msg.error { background: #fef2f2; color: var(--danger); border: 1px solid #fecaca; }
+        
+        .code-input { text-align: center; font-size: 1.25rem; font-weight: 700; letter-spacing: 0.25rem; padding: 1rem; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.35rem; color: var(--primary); text-decoration: none; font-size: var(--text-sm); margin-top: 1rem; cursor: pointer; }
+        .back-link:hover { text-decoration: underline; }
+        
+        .step-indicator { display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .step-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); transition: var(--transition); }
+        .step-dot.active { background: var(--primary); }
     </style>
 </head>
 <body>
-    <div class="login-wrap">
-        <div class="login-box">
-            <h1>🎵 CAP MUSIQUE</h1>
-            <p>CEAA-Kpalimé - Accès pédagogique</p>
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <div class="auth-header">
+                <span class="logo">🎵</span>
+                <h1>CAP MUSIQUE</h1>
+                <p>CEAA-Kpalimé - Espace pédagogique sécurisé</p>
+            </div>
 
-            <!-- Étape 1 : Demande -->
-            <form id="reqForm">
-                <div class="field"><label>Nom complet</label><input type="text" id="name" required placeholder="Ex: Koffi AMOUZOU"></div>
-                <div class="field"><label>Email</label><input type="email" id="email" required placeholder="ton@email.com"></div>
-                <button type="submit" class="btn-login" id="reqBtn">📩 Demander le code</button>
-                <div class="msg" id="reqMsg"></div>
+            <div class="step-indicator">
+                <span class="step-dot active" id="dot1"></span>
+                <span class="step-dot" id="dot2"></span>
+            </div>
+
+            <!-- ÉTAPE 1 : Demande -->
+            <form id="step1" class="form-step active">
+                <div class="form-group">
+                    <label for="fullName">Nom complet</label>
+                    <input type="text" id="fullName" required placeholder="Ex: Koffi AMOUZOU" autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email personnel</label>
+                    <input type="email" id="email" required placeholder="ton.email@exemple.com" autocomplete="email">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" id="reqBtn">
+                    <span id="reqText">📩 Demander mon accès</span>
+                    <span id="reqLoading" style="display:none">⏳ Envoi...</span>
+                </button>
+                <p id="step1Status" class="status-msg"></p>
             </form>
 
-            <!-- Étape 2 : Code -->
-            <form id="codeForm" style="display:none;">
-                <div class="field"><label>Code reçu par email</label><input type="text" id="code" required placeholder="Ex: CEAA2026" maxlength="12" style="text-align:center; letter-spacing: 2px;"></div>
-                <button type="submit" class="btn-login" id="codeBtn">✅ Accéder</button>
-                <div class="msg" id="codeMsg"></div>
-                <a href="#" class="back-link" id="backToReq">← Retour à la demande</a>
+            <!-- ÉTAPE 2 : Code -->
+            <form id="step2" class="form-step">
+                <div class="form-group">
+                    <label for="accessCode">Code reçu par email</label>
+                    <input type="text" id="accessCode" required placeholder="••••••" class="code-input" maxlength="10" autocomplete="one-time-code">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" id="codeBtn">
+                    <span id="codeText">✅ Accéder à l'espace</span>
+                    <span id="codeLoading" style="display:none">⏳ Vérification...</span>
+                </button>
+                <p id="step2Status" class="status-msg"></p>
+                <div class="back-link" id="backToReq">← Retour à la demande</div>
             </form>
         </div>
     </div>
 
     <script>
-    const ACCESS_CODE = "CEAA2026"; // 🔑 Change ici si besoin
-    const FORM_ENDPOINT = "https://formspree.io/f/xlgkrjbg"; // Ton endpoint
+    const CONFIG = {
+        formspree: 'https://formspree.io/f/xlgkrjbg',
+        code: 'CEAA2026',
+        redirect: 'index.html'
+    };
 
-    // Si déjà connecté → redirection immédiate
-    if(localStorage.getItem("cap_auth") === "1") window.location.href = "index.html";
+    // Redirection immédiate si déjà authentifié
+    if(localStorage.getItem('cap_auth') === '1') window.location.href = CONFIG.redirect;
 
-    const reqForm = document.getElementById("reqForm");
-    const codeForm = document.getElementById("codeForm");
-    const reqMsg = document.getElementById("reqMsg");
-    const codeMsg = document.getElementById("codeMsg");
-    const reqBtn = document.getElementById("reqBtn");
-    const codeBtn = document.getElementById("codeBtn");
+    const step1 = document.getElementById('step1'), step2 = document.getElementById('step2');
+    const dot1 = document.getElementById('dot1'), dot2 = document.getElementById('dot2');
+    
+    const goToStep = n => {
+        if(n === 2) {
+            step1.classList.remove('active'); step2.classList.add('active');
+            dot1.classList.remove('active'); dot2.classList.add('active');
+            document.getElementById('accessCode').focus();
+        } else {
+            step2.classList.remove('active'); step1.classList.add('active');
+            dot2.classList.remove('active'); dot1.classList.add('active');
+        }
+    };
 
-    // 1️⃣ Envoi de la demande (juste pour te notifier)
-    reqForm.addEventListener("submit", async e => {
+    // 1️⃣ Envoi demande (Formspree async)
+    document.getElementById('step1').addEventListener('submit', async e => {
         e.preventDefault();
-        reqBtn.disabled = true;
-        reqMsg.textContent = "⏳ Envoi...";
-        reqMsg.className = "msg";
+        const btn = document.getElementById('reqBtn'), t = document.getElementById('reqText'), l = document.getElementById('reqLoading'), msg = document.getElementById('step1Status');
+        btn.disabled = true; t.style.display = 'none'; l.style.display = 'inline'; msg.style.display = 'none';
+        
         try {
             const fd = new FormData();
-            fd.append("name", document.getElementById("name").value);
-            fd.append("email", document.getElementById("email").value);
-            fd.append("_subject", "🔐 Demande d'accès CAP MUSIQUE");
-            await fetch(FORM_ENDPOINT, { method:"POST", body:fd, headers:{Accept:"application/json"} });
-            reqMsg.textContent = "✅ Demande envoyée ! Vérifie tes emails.";
-            reqMsg.className = "msg ok";
-            setTimeout(() => { reqForm.style.display="none"; codeForm.style.display="block"; }, 1200);
-        } catch { reqMsg.textContent = "❌ Erreur réseau. Vérifie ta connexion."; reqMsg.className="msg err"; }
-        finally { reqBtn.disabled = false; }
+            fd.append('fullName', document.getElementById('fullName').value);
+            fd.append('email', document.getElementById('email').value);
+            fd.append('_subject', '🔐 Demande d\'accès CAP MUSIQUE');
+            await fetch(CONFIG.formspree, { method: 'POST', body: fd, headers: { Accept: 'application/json' } });
+            msg.textContent = '✅ Demande envoyée ! Vérifie tes emails (et spams).';
+            msg.className = 'status-msg success'; msg.style.display = 'block';
+            setTimeout(() => goToStep(2), 1500);
+        } catch {
+            msg.textContent = '❌ Erreur réseau. Vérifie ta connexion.';
+            msg.className = 'status-msg error'; msg.style.display = 'block';
+        } finally {
+            setTimeout(() => { btn.disabled = false; t.style.display = 'inline'; l.style.display = 'none'; }, 500);
+        }
     });
 
-    // 2️⃣ Vérification du code (instantanée, 0 réseau)
-    codeForm.addEventListener("submit", e => {
+    // 2️⃣ Vérification code (Locale & Instantanée)
+    document.getElementById('step2').addEventListener('submit', e => {
         e.preventDefault();
-        codeBtn.disabled = true;
-        codeMsg.textContent = "⏳ Vérification...";
-        codeMsg.className = "msg";
+        const btn = document.getElementById('codeBtn'), t = document.getElementById('codeText'), l = document.getElementById('codeLoading'), msg = document.getElementById('step2Status');
+        btn.disabled = true; t.style.display = 'none'; l.style.display = 'inline'; msg.style.display = 'none';
+        
         setTimeout(() => {
-            if(document.getElementById("code").value.trim().toUpperCase() === ACCESS_CODE.toUpperCase()) {
-                localStorage.setItem("cap_auth", "1");
-                codeMsg.textContent = "✅ Accès validé !";
-                codeMsg.className = "msg ok";
-                setTimeout(() => window.location.href = "index.html", 600);
+            if(document.getElementById('accessCode').value.trim().toUpperCase() === CONFIG.code.toUpperCase()) {
+                localStorage.setItem('cap_auth', '1');
+                msg.textContent = '✅ Accès validé ! Redirection...';
+                msg.className = 'status-msg success'; msg.style.display = 'block';
+                setTimeout(() => window.location.href = CONFIG.redirect, 600);
             } else {
-                codeMsg.textContent = "❌ Code incorrect. Réessaie.";
-                codeMsg.className = "msg err";
-                codeBtn.disabled = false;
+                msg.textContent = '❌ Code incorrect. Réessaie ou demande un nouveau code.';
+                msg.className = 'status-msg error'; msg.style.display = 'block';
+                document.getElementById('accessCode').focus();
+                document.getElementById('accessCode').select();
             }
-        }, 300); // Délai UX uniquement
+            btn.disabled = false; t.style.display = 'inline'; l.style.display = 'none';
+        }, 300);
     });
 
-    document.getElementById("backToReq").addEventListener("click", e => {
-        e.preventDefault();
-        codeForm.style.display="none"; reqForm.style.display="block"; reqMsg.textContent="";
+    document.getElementById('backToReq').addEventListener('click', e => {
+        e.preventDefault(); goToStep(1);
+        const msg = document.getElementById('step1Status');
+        msg.textContent = '💡 Remplis à nouveau le formulaire pour renvoyer ta demande.';
+        msg.className = 'status-msg'; msg.style.display = 'block';
     });
     </script>
 </body>
