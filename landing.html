@@ -17,7 +17,7 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             overflow-x: hidden;
             color: #ffffff;
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); /* Fallback si vidéo lente */
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
         }
 
         /* 🎥 Vidéo de fond */
@@ -28,7 +28,7 @@
             z-index: -2;
         }
 
-        /* 🌑 Overlay sombre pour lisibilité */
+        /* 🌑 Overlay sombre */
         .bg-overlay {
             position: fixed; top: 0; left: 0;
             width: 100%; height: 100%;
@@ -36,7 +36,7 @@
             z-index: -1;
         }
 
-        /* 📦 Conteneur Principal */
+        /* 📦 Conteneur */
         .landing-container {
             min-height: 100vh;
             display: flex;
@@ -55,7 +55,7 @@
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
-            padding: 2.5rem 1.5rem;
+            padding: 2rem 1.25rem;
             max-width: 500px;
             width: 100%;
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
@@ -70,12 +70,12 @@
         /* 🔠 Typographie */
         .logo-icon { font-size: 3rem; margin-bottom: 0.75rem; display: block; }
         h1 { font-size: clamp(2rem, 5vw, 2.5rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.25rem; }
-        .subtitle { font-size: clamp(0.95rem, 2vw, 1.1rem); color: #cbd5e1; margin-bottom: 1.5rem; font-weight: 400; }
+        .subtitle { font-size: clamp(0.95rem, 2vw, 1.1rem); color: #cbd5e1; margin-bottom: 1.5rem; font-weight: 400; line-height: 1.4; }
 
         /* ✅ Liste des avantages */
-        .features { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 2rem; text-align: left; }
-        .feature-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem; color: #f1f5f9; }
-        .check-icon { color: #34d399; font-size: 1.1rem; flex-shrink: 0; }
+        .features { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.75rem; text-align: left; }
+        .feature-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #f1f5f9; }
+        .check-icon { color: #34d399; font-size: 1rem; flex-shrink: 0; }
 
         /* 🔘 Bouton CTA */
         .btn-cta {
@@ -93,14 +93,14 @@
         }
         .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5); }
 
-        /* 🦶 Footer discret */
-        .landing-footer { margin-top: 2rem; font-size: 0.75rem; color: #64748b; }
+        /* 🦶 Footer */
+        .landing-footer { margin-top: 1.5rem; font-size: 0.75rem; color: #64748b; }
         .landing-footer a { color: #94a3b8; text-decoration: none; }
     </style>
 </head>
 <body>
 
-    <!-- 🎥 Vidéo de fond (fonctionne mobile + desktop) -->
+    <!-- 🎥 Vidéo de fond -->
     <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="assets/icon-192.png">
         <source src="assets/bg-video.mp4" type="video/mp4">
     </video>
@@ -115,11 +115,12 @@
             <h1>CAP MUSIQUE</h1>
             <p class="subtitle">Cours Préparatoire 2026-2027<br><strong>CEAA-Kpalimé</strong></p>
 
-            <!-- Avantages (court) -->
+            <!-- Avantages (4 points) -->
             <div class="features">
                 <div class="feature-item"><span class="check-icon">✅</span> <span>Solfège • Instruments • Chant</span></div>
                 <div class="feature-item"><span class="check-icon">✅</span> <span>Partitions PDF & Vidéos</span></div>
                 <div class="feature-item"><span class="check-icon">✅</span> <span>Accès mobile 24/7</span></div>
+                <div class="feature-item"><span class="check-icon">✅</span> <span>Conforme au référentiel APC</span></div>
             </div>
 
             <!-- Bouton d'Action -->
