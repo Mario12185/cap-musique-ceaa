@@ -38,7 +38,17 @@
     
     <title>Pratique Instrumentale | CAP MUSIQUE</title>
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- ✨ Texte blanc lisible sur fond vidéo -->
     <style>
+        .text-hero h2, .text-hero p {
+            color: #ffffff !important;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+        .text-hero p {
+            color: rgba(255,255,255,0.95) !important;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+        }
         @media (max-width: 768px) {
             body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
             .container { padding: 0 1rem !important; }
@@ -53,6 +63,12 @@
     </style>
 </head>
 <body>
+    <!-- 🎥 Vidéo arrière-plan totale (fixe, plein écran) -->
+    <video class="bg-video-full" autoplay muted loop playsinline preload="auto" poster="assets/icon-192.png">
+        <source src="assets/bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay-full"></div>
+
     <nav class="main-nav">
         <div class="container nav-wrapper">
             <ul class="nav-primary">
@@ -83,9 +99,10 @@
     </header>
 
     <main class="container">
-        <section class="text-center mt-2 mb-1">
+        <!-- ✅ Section intro avec texte blanc (classe text-hero) -->
+        <section class="text-center mt-2 mb-1 text-hero">
             <h2>Choisis ton instrument ou ta discipline</h2>
-            <p class="text-muted" style="max-width: 700px; margin: 0 auto;">Chaque espace contient les cours, partitions (PDF) et supports vidéo officiels du CEAA-Kpalimé.</p>
+            <p style="max-width: 700px; margin: 0 auto;">Chaque espace contient les cours, partitions (PDF) et supports vidéo officiels du CEAA-Kpalimé.</p>
         </section>
 
         <!-- ✅ TOUS LES INSTRUMENTS DANS LA MÊME GRILLE -->

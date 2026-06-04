@@ -199,5 +199,18 @@
         msg.className = 'status-msg'; msg.style.display = 'block';
     });
     </script>
+    <script>
+// 🎥 Fallback vidéo mobile : si pas chargée en 3s → affiche le gradient
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+    const video = document.querySelector('.bg-video');
+    if (video) {
+        setTimeout(() => {
+            if (video.readyState === 0 || video.networkState === 3) {
+                document.body.classList.add('no-video');
+            }
+        }, 3000);
+    }
+}
+</script>
 </body>
 </html>

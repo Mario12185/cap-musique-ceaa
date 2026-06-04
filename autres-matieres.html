@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8">
-    
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Mobile Font & Encoding Fix -->
@@ -53,6 +53,12 @@
     </style>
 </head>
 <body>
+    <!-- 🎥 Vidéo arrière-plan totale (UNIVERSEL - Mode 2) -->
+    <video class="bg-video-full" autoplay muted loop playsinline preload="auto" poster="assets/icon-192.png">
+        <source src="assets/bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay-full"></div>
+
     <!-- NAVIGATION -->
     <nav class="main-nav">
         <div class="container nav-wrapper">
@@ -76,7 +82,7 @@
         </div>
     </nav>
 
-    <header class="module-header">
+    <header class="module-header text-hero">
         <div class="container">
             <a href="index.html" class="back-link">← Retour à l'accueil</a>
             <h1>📚 Autres Matières</h1>
@@ -91,7 +97,7 @@
                 <div class="apc-block situation">
                     <h5>ℹ️ Information Importante</h5>
                     <p>Pour tous renseignements, <strong>contactez l'Administration du Collège d'Enseignement Artistique et Artisanal (CEAA-Kpalimé)</strong> afin d'obtenir les programmes, emplois du temps et supports pédagogiques concernant les matières suivantes :</p>
-                    <p style="font-size: 1.3rem; margin: 1.2rem 0; padding: 0.8rem; background: #edf2f7; border-radius: 8px; text-align: center;">
+                    <p style="font-size: 1.3rem; margin: 1.2rem 0; padding: 0.8rem; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-sm); text-align: center;">
                         📞 <strong>Téléphone : 70 42 41 96</strong>
                     </p>
                 </div>
@@ -99,25 +105,25 @@
                 <div class="apc-block content">
                     <h5>📖 Matières du Programme Complémentaire</h5>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 1rem;">
-                        <div style="padding: 1.2rem; background: #f7fafc; border-radius: 8px; border-left: 4px solid #3182ce;">
-                            <h4 style="margin-bottom: 0.5rem;">🔢 Mathématiques - Algèbre</h4>
-                            <p style="font-size: 0.95rem; color: #4a5568;">Calcul, équations, fonctions & raisonnement logique.</p>
+                        <div style="padding: 1.2rem; background: var(--surface); border-radius: var(--radius); border-left: 4px solid var(--primary);">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--text);">🔢 Mathématiques - Algèbre</h4>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary);">Calcul, équations, fonctions & raisonnement logique.</p>
                         </div>
-                        <div style="padding: 1.2rem; background: #f7fafc; border-radius: 8px; border-left: 4px solid #805ad5;">
-                            <h4 style="margin-bottom: 0.5rem;">🎨 Histoire de l'Art</h4>
-                            <p style="font-size: 0.95rem; color: #4a5568;">Mouvements artistiques, courants culturels & analyse d'œuvres.</p>
+                        <div style="padding: 1.2rem; background: var(--surface); border-radius: var(--radius); border-left: 4px solid var(--accent);">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--text);">🎨 Histoire de l'Art</h4>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary);">Mouvements artistiques, courants culturels & analyse d'œuvres.</p>
                         </div>
-                        <div style="padding: 1.2rem; background: #f7fafc; border-radius: 8px; border-left: 4px solid #e53e3e;">
-                            <h4 style="margin-bottom: 0.5rem;">⚖️ Législation du Travail</h4>
-                            <p style="font-size: 0.95rem; color: #4a5568;">Droit professionnel, contrats, statuts & cadre juridique musical.</p>
+                        <div style="padding: 1.2rem; background: var(--surface); border-radius: var(--radius); border-left: 4px solid var(--danger);">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--text);">⚖️ Législation du Travail</h4>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary);">Droit professionnel, contrats, statuts & cadre juridique musical.</p>
                         </div>
-                        <div style="padding: 1.2rem; background: #f7fafc; border-radius: 8px; border-left: 4px solid #38a169;">
-                            <h4 style="margin-bottom: 0.5rem;">🇬🇧 Anglais</h4>
-                            <p style="font-size: 0.95rem; color: #4a5568;">Langue internationale, vocabulaire musical & communication.</p>
+                        <div style="padding: 1.2rem; background: var(--surface); border-radius: var(--radius); border-left: 4px solid var(--success);">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--text);">🇬🇧 Anglais</h4>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary);">Langue internationale, vocabulaire musical & communication.</p>
                         </div>
-                        <div style="padding: 1.2rem; background: #f7fafc; border-radius: 8px; border-left: 4px solid #dd6b20;">
-                            <h4 style="margin-bottom: 0.5rem;">🇫🇷 Français</h4>
-                            <p style="font-size: 0.95rem; color: #4a5568;">Grammaire, expression écrite & orale, littérature.</p>
+                        <div style="padding: 1.2rem; background: var(--surface); border-radius: var(--radius); border-left: 4px solid var(--warning);">
+                            <h4 style="margin-bottom: 0.5rem; color: var(--text);">🇫🇷 Français</h4>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary);">Grammaire, expression écrite & orale, littérature.</p>
                         </div>
                     </div>
                 </div>
@@ -125,7 +131,7 @@
                 <div class="apc-block resume">
                     <h5>✅ Prochaines Étapes</h5>
                     <p>Les contenus pédagogiques détaillés pour ces 5 matières seront progressivement intégrés au manuel numérique. En attendant, l'administration du CEAA-Kpalimé reste à votre entière disposition pour toute question relative aux cursus, aux examens ou aux ressources complémentaires.</p>
-                    <a href="tel:+22870424196" class="btn" style="margin-top: 1.2rem; display: inline-block;">📞 Appeler l'Administration</a>
+                    <a href="tel:+22870424196" class="btn btn-primary" style="margin-top: 1.2rem; display: inline-block;">📞 Appeler l'Administration</a>
                 </div>
             </section>
         </article>

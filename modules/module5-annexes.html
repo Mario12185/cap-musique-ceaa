@@ -53,7 +53,13 @@
     </style>
 </head>
 <body>
-    <header class="module-header">
+    <!-- 🎥 Vidéo arrière-plan totale (UNIVERSEL - Mode 2) -->
+    <video class="bg-video-full" autoplay muted loop playsinline preload="auto" poster="../assets/icon-192.png">
+        <source src="../assets/bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay-full"></div>
+
+    <header class="module-header text-hero">
         <div class="container">
             <a href="../index.html" class="back-link">← Retour à l'accueil</a>
             <h1>📚 ANNEXES</h1>
@@ -62,6 +68,7 @@
         </div>
     </header>
 
+    <!-- NAVIGATION -->
     <nav class="main-nav">
         <div class="container nav-wrapper">
             <ul class="nav-primary">
@@ -84,11 +91,11 @@
 
     <main class="container">
         <article id="chap9" class="chapter">
-            <h3>Chapitre 9 : Ressources Complémentaires</h3>
+            <h3 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">Chapitre 9 : Ressources Complémentaires</h3>
             
             <!-- LEXIQUE -->
             <section class="lesson" id="lexique">
-                <h3>I. Lexique Musical</h3>
+                <h3 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">I. Lexique Musical</h3>
                 <div class="apc-block content">
                     <h4>1. Notes de musique</h4>
                     <p>Do – Ré – Mi – Fa – Sol – La – Si</p>
@@ -116,7 +123,7 @@
 
             <!-- SYMBOLES -->
             <section class="lesson" id="symboles">
-                <h3>II. Symboles Musicaux</h3>
+                <h3 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">II. Symboles Musicaux</h3>
                 <div class="apc-block content">
                     <h4>1. Clés musicales</h4>
                     <ul>
@@ -139,39 +146,55 @@
                 </div>
             </section>
 
-            <!-- TABLEAUX -->
+            <!-- TABLEAUX (avec fond blanc pour lisibilité) -->
             <section class="lesson" id="tableaux">
-                <h3>III. Tableaux Récapitulatifs</h3>
+                <h3 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">III. Tableaux Récapitulatifs</h3>
                 
                 <h4>1. Valeurs des notes</h4>
-                <table class="comparison-table">
-                    <caption>Valeurs rythmiques essentielles</caption>
-                    <thead><tr><th>Figure</th><th>Valeur</th></tr></thead>
-                    <tbody>
-                        <tr><td>Noire</td><td>1 temps</td></tr>
-                        <tr><td>Blanche</td><td>2 temps</td></tr>
-                        <tr><td>Croche</td><td>1/2 temps</td></tr>
-                        <tr><td>Double croche</td><td>1/4 temps</td></tr>
-                        <tr><td>Soupir</td><td>1 temps de silence</td></tr>
-                    </tbody>
-                </table>
+                <!-- Tableau avec fond blanc pour contraste parfait -->
+                <div style="background: #ffffff; border-radius: var(--radius); padding: 1rem; margin: 1rem 0; box-shadow: var(--shadow); overflow-x: auto;">
+                    <table class="comparison-table" style="width: 100%; border-collapse: collapse; background: transparent;">
+                        <caption style="font-weight: 600; margin-bottom: 0.75rem; color: var(--text);">Valeurs rythmiques essentielles</caption>
+                        <thead>
+                            <tr style="background: var(--surface-hover);">
+                                <th style="padding: 0.75rem 1rem; text-align: left; border-bottom: 2px solid var(--border); color: var(--text);">Figure</th>
+                                <th style="padding: 0.75rem 1rem; text-align: left; border-bottom: 2px solid var(--border); color: var(--text);">Valeur</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.75rem 1rem; color: var(--text);">Noire</td><td style="padding: 0.75rem 1rem; color: var(--text);">1 temps</td></tr>
+                            <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.75rem 1rem; color: var(--text);">Blanche</td><td style="padding: 0.75rem 1rem; color: var(--text);">2 temps</td></tr>
+                            <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.75rem 1rem; color: var(--text);">Croche</td><td style="padding: 0.75rem 1rem; color: var(--text);">1/2 temps</td></tr>
+                            <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.75rem 1rem; color: var(--text);">Double croche</td><td style="padding: 0.75rem 1rem; color: var(--text);">1/4 temps</td></tr>
+                            <tr><td style="padding: 0.75rem 1rem; color: var(--text);">Soupir</td><td style="padding: 0.75rem 1rem; color: var(--text);">1 temps de silence</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <h4>2. Familles d'instruments</h4>
-                <table class="comparison-table">
-                    <caption>Classification organologique</caption>
-                    <thead><tr><th>Famille</th><th>Exemples</th></tr></thead>
-                    <tbody>
-                        <tr><td>Idiophones</td><td>Balafon, triangle, maracas, sanza, guiros</td></tr>
-                        <tr><td>Membranophones</td><td>Djembé, caisse claire, conga, tam-tam, talking drum</td></tr>
-                        <tr><td>Cordophones</td><td>Guitare, kora, violon, piano, harpe, ngoni</td></tr>
-                        <tr><td>Aérophones</td><td>Flûte traversière, flûte à bec, trompette, tuba, cor</td></tr>
-                    </tbody>
-                </table>
+                <!-- Tableau avec fond blanc pour contraste parfait -->
+                <div style="background: #ffffff; border-radius: var(--radius); padding: 1rem; margin: 1rem 0; box-shadow: var(--shadow); overflow-x: auto;">
+                    <table class="comparison-table" style="width: 100%; border-collapse: collapse; background: transparent;">
+                        <caption style="font-weight: 600; margin-bottom: 0.75rem; color: var(--text);">Classification organologique</caption>
+                        <thead>
+                            <tr style="background: var(--surface-hover);">
+                                <th style="padding: 0.75rem 1rem; text-align: left; border-bottom: 2px solid var(--border); color: var(--text);">Famille</th>
+                                <th style="padding: 0.75rem 1rem; text-align: left; border-bottom: 2px solid var(--border); color: var(--text);">Exemples</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.75rem 1rem; color: var(--text);">Idiophones</td><td style="padding: 0.75rem 1rem; color: var(--text);">Balafon, triangle, maracas, sanza, guiros</td></tr>
+                            <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.75rem 1rem; color: var(--text);">Membranophones</td><td style="padding: 0.75rem 1rem; color: var(--text);">Djembé, caisse claire, conga, tam-tam, talking drum</td></tr>
+                            <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.75rem 1rem; color: var(--text);">Cordophones</td><td style="padding: 0.75rem 1rem; color: var(--text);">Guitare, kora, violon, piano, harpe, ngoni</td></tr>
+                            <tr><td style="padding: 0.75rem 1rem; color: var(--text);">Aérophones</td><td style="padding: 0.75rem 1rem; color: var(--text);">Flûte traversière, flûte à bec, trompette, tuba, cor</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
 
             <!-- CULTURE & RÉPERTOIRE -->
             <section class="lesson" id="culture">
-                <h3>IV. Notions de Culture Artistique & Répertoire</h3>
+                <h3 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">IV. Notions de Culture Artistique & Répertoire</h3>
                 <div class="apc-block content">
                     <h4>Culture artistique</h4>
                     <p>La culture artistique permet à l'élève de :</p>
@@ -195,7 +218,7 @@
 
             <!-- CONSEILS & RÉSUMÉ -->
             <section class="lesson" id="conseils">
-                <h3>V. Conseils pour la Pratique Instrumentale</h3>
+                <h3 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">V. Conseils pour la Pratique Instrumentale</h3>
                 <div class="apc-block resume">
                     <h5>✅ Guide de progression</h5>
                     <p>Pour progresser efficacement en musique, l'élève doit :</p>

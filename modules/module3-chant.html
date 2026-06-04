@@ -53,7 +53,13 @@
     </style>
 </head>
 <body>
-    <header class="module-header">
+    <!-- 🎥 Vidéo arrière-plan totale (UNIVERSEL - Mode 2) -->
+    <video class="bg-video-full" autoplay muted loop playsinline preload="auto" poster="../assets/icon-192.png">
+        <source src="../assets/bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay-full"></div>
+
+    <header class="module-header text-hero">
         <div class="container">
             <a href="../index.html" class="back-link">← Retour à l'accueil</a>
             <h1>🎤 Module 3</h1>
@@ -62,6 +68,7 @@
         </div>
     </header>
 
+    <!-- NAVIGATION -->
     <nav class="main-nav">
         <div class="container nav-wrapper">
             <ul class="nav-primary">
@@ -84,11 +91,11 @@
 
     <main class="container">
         <article id="chap6" class="chapter">
-            <h3>Chapitre 6 : Les Chansons Éducatives</h3>
+            <h3 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">Chapitre 6 : Les Chansons Éducatives</h3>
             
             <!-- LEÇON 1 -->
             <section class="lesson" id="lec6_1">
-                <h4>Leçon 1 : Chanson sur le Civisme et l'Impôt</h4>
+                <h4 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">Leçon 1 : Chanson sur le Civisme et l'Impôt</h4>
                 <div class="apc-block situation">
                     <h5>📋 Situation d'Apprentissage</h5>
                     <p>Lors d'une activité culturelle, les élèves doivent présenter une chanson portant sur les valeurs citoyennes. Le professeur propose une œuvre sur le civisme et l'impôt pour sensibiliser aux devoirs envers la société.</p>
@@ -124,7 +131,7 @@
 
             <!-- LEÇON 2 -->
             <section class="lesson" id="lec6_2">
-                <h4>Leçon 2 : Chanson sur le DIH et la Paix</h4>
+                <h4 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">Leçon 2 : Chanson sur le DIH et la Paix</h4>
                 <div class="apc-block situation">
                     <h5>📋 Situation d'Apprentissage</h5>
                     <p>Lors d'une campagne de sensibilisation, les élèves participent à une activité sur la paix et la protection des personnes en temps de conflit. Le professeur propose une chanson éducative sur le Droit International Humanitaire (DIH).</p>
@@ -157,7 +164,7 @@
 
             <!-- LEÇON 3 -->
             <section class="lesson" id="lec6_3">
-                <h4>Leçon 3 : Chanson sur le VIH/SIDA</h4>
+                <h4 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">Leçon 3 : Chanson sur le VIH/SIDA</h4>
                 <div class="apc-block situation">
                     <h5>📋 Situation d'Apprentissage</h5>
                     <p>Lors d'une campagne sanitaire, les élèves doivent sensibiliser leurs pairs aux moyens de prévention et aux comportements responsables via une chanson éducative sur le VIH/SIDA.</p>
@@ -190,7 +197,7 @@
 
             <!-- LEÇON 4 -->
             <section class="lesson" id="lec6_4">
-                <h4>Leçon 4 : Chanson sur l'Environnement</h4>
+                <h4 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">Leçon 4 : Chanson sur l'Environnement</h4>
                 <div class="apc-block situation">
                     <h5>📋 Situation d'Apprentissage</h5>
                     <p>Lors d'une campagne de salubrité, les élèves participent à une activité sur la protection de l'environnement. Le professeur propose une chanson pour valoriser le message écologique.</p>
@@ -221,79 +228,53 @@
                 </div>
             </section>
 
-    <!-- 🎬 + 💳 Section Vidéo (montage local) + Achat Livre Maketou -->
-<div class="apc-block content" style="margin-top: 2rem;">
-    <h5>🎬 Vidéo du chapitre</h5>
-    
-    <!-- 🎥 Lecteur vidéo local (MP4 hébergé sur GitHub Pages) -->
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius); margin-bottom: 1rem; background: #000; border: 1px solid var(--border);">
-        <video 
-            class="module-video"
-            controls 
-            preload="metadata" 
-            playsinline 
-            poster="assets/thumbnails/module1-thumb.jpg"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; background: #000;"
-        >
-            <!-- 🔧 Remplace le src par le chemin de TA vidéo -->
-            <source src="assets/videos/module1-chapitre.mp4" type="video/mp4">
-            Ton navigateur ne supporte pas la lecture vidéo. <a href="assets/videos/module1-chapitre.mp4" download>Télécharger la vidéo</a>.
-        </video>
-    </div>
-    
-    <!-- ⚠️ Message d'aide si la vidéo ne charge pas -->
-    <p id="videoHelp" style="font-size: var(--text-xs); color: var(--text-muted); display: none; margin-bottom: 1rem;">
-        💡 La vidéo met du temps à charger ? <a href="#" id="downloadLink" style="color: var(--primary);">Télécharge-la ici</a> pour la regarder hors-ligne.
-    </p>
+            <!-- 🎬 + 💳 Section Vidéo (montage local) + Achat Livre Maketou -->
+            <div class="apc-block content" style="margin-top: 2rem;">
+                <h5>🎬 Vidéo du chapitre</h5>
+                
+                <!-- 🎥 Lecteur vidéo local (MP4 hébergé sur GitHub Pages) -->
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius); margin-bottom: 1rem; background: #000; border: 1px solid var(--border);">
+                    <video 
+                        class="module-video"
+                        controls 
+                        preload="metadata" 
+                        playsinline 
+                        poster="../assets/thumbnails/module3-thumb.jpg"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; background: #000;"
+                    >
+                        <!-- 🔧 Chemin corrigé pour dossier modules/ -->
+                        <source src="../assets/videos/module3-chapitre.mp4" type="video/mp4">
+                        Ton navigateur ne supporte pas la lecture vidéo. <a href="../assets/videos/module3-chapitre.mp4" download>Télécharger la vidéo</a>.
+                    </video>
+                </div>
+                
+                <!-- ⚠️ Message d'aide si la vidéo ne charge pas -->
+                <p id="videoHelp" style="font-size: var(--text-xs); color: var(--text-muted); display: none; margin-bottom: 1rem;">
+                    💡 La vidéo met du temps à charger ? <a href="#" id="downloadLink" style="color: var(--primary);">Télécharge-la ici</a> pour la regarder hors-ligne.
+                </p>
 
-    <h5 style="margin-top: 1.5rem;">📚 Acquérir le manuel complet du chapitre</h5>
-    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-        Version PDF imprimable • Exercices corrigés • Ressources complémentaires • Accès à vie.
-    </p>
-    
-    <!-- 🔗 Bouton Maketou (remplace le href par ton vrai lien de paiement) -->
-    <a href="https://maketou.com/p/TON_LIEN_PAIEMENT_MODULE1" 
-       target="_blank" 
-       rel="noopener"
-       class="btn btn-maketou"
-       style="background: linear-gradient(135deg, #d97706, #b45309); color: white; display: inline-flex; align-items: center; gap: 0.5rem; width: 100%; justify-content: center;">
-        💳 Acheter le manuel • 2 500 FCFA
-    </a>
-    
-    <p style="font-size: var(--text-xs); color: var(--text-muted); margin-top: 0.75rem; text-align: center;">
-        🔐 Paiement sécurisé via Maketou • Accès immédiat après validation
-    </p>
-</div>
-
-<!-- 📜 Script : fallback vidéo + aide téléchargement -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const video = document.querySelector('.module-video');
-    const help = document.getElementById('videoHelp');
-    const downloadLink = document.getElementById('downloadLink');
-    
-    if (video && help && downloadLink) {
-        // Si la vidéo ne se lance pas en 5s → proposer le téléchargement
-        setTimeout(() => {
-            if (video.readyState === 0 || video.networkState === 3) {
-                help.style.display = 'block';
-                downloadLink.href = video.querySelector('source').src;
-                downloadLink.download = '';
-            }
-        }, 5000);
-        
-        // Clic sur "Télécharger" → ouvre en nouvel onglet
-        downloadLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.open(this.href, '_blank');
-        });
-    }
-});
-</script>
+                <h5 style="margin-top: 1.5rem;">📚 Acquérir le manuel complet du chapitre</h5>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                    Version PDF imprimable • Exercices corrigés • Ressources complémentaires • Accès à vie.
+                </p>
+                
+                <!-- 🔗 Bouton Maketou (remplace le href par ton vrai lien de paiement) -->
+                <a href="https://maketou.com/p/TON_LIEN_PAIEMENT_MODULE3" 
+                   target="_blank" 
+                   rel="noopener"
+                   class="btn btn-maketou"
+                   style="background: linear-gradient(135deg, #d97706, #b45309); color: white; display: inline-flex; align-items: center; gap: 0.5rem; width: 100%; justify-content: center;">
+                    💳 Acheter le manuel • 2 500 FCFA
+                </a>
+                
+                <p style="font-size: var(--text-xs); color: var(--text-muted); margin-top: 0.75rem; text-align: center;">
+                    🔐 Paiement sécurisé via Maketou • Accès immédiat après validation
+                </p>
+            </div>
 
             <!-- LEÇON 5 -->
             <section class="lesson" id="lec6_5">
-                <h4>Leçon 5 : Chanson Libre et Création Artistique</h4>
+                <h4 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">Leçon 5 : Chanson Libre et Création Artistique</h4>
                 <div class="apc-block situation">
                     <h5>📋 Situation d'Apprentissage</h5>
                     <p>Lors d'un projet artistique de fin de module, les élèves doivent créer ou adapter une chanson libre. Chaque groupe fait preuve de créativité pour produire une œuvre originale sur un thème choisi.</p>
@@ -335,8 +316,33 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="container">
             <p><a href="../index.html">← Retour à l'accueil</a> | <a href="module2-solfege.html">Module 2</a> | <a href="module4-pratiques.html">Module 4 →</a></p>
             <p>Module 3 - Chant, Interprétation et Culture Artistique</p>
+            <p>&copy; 2026-2027 CEAA-Kpalimé - CAP Musique. Conforme au référentiel APC.</p>
         </div>
     </footer>
+
+    <!-- 📜 Script : fallback vidéo locale + aide téléchargement -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.querySelector('.module-video');
+        const help = document.getElementById('videoHelp');
+        const downloadLink = document.getElementById('downloadLink');
+        
+        if (video && help && downloadLink) {
+            setTimeout(() => {
+                if (video.readyState === 0 || video.networkState === 3) {
+                    help.style.display = 'block';
+                    downloadLink.href = video.querySelector('source').src;
+                    downloadLink.download = '';
+                }
+            }, 5000);
+            
+            downloadLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.open(this.href, '_blank');
+            });
+        }
+    });
+    </script>
 
     <!-- PWA Service Worker -->
     <script>
@@ -348,18 +354,5 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
     </script>
-    <script>
-// 🎥 Fallback vidéo mobile : si pas chargée en 3s → affiche le gradient
-if (/Mobi|Android/i.test(navigator.userAgent)) {
-    const video = document.querySelector('.bg-video');
-    if (video) {
-        setTimeout(() => {
-            if (video.readyState === 0 || video.networkState === 3) {
-                document.body.classList.add('no-video');
-            }
-        }, 3000);
-    }
-}
-</script>
 </body>
 </html>

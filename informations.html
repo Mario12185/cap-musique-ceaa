@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8">
-    
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
     <!-- Mobile Font & Encoding Fix -->
@@ -38,7 +38,17 @@
     
     <title>Informations | CAP MUSIQUE</title>
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- ✨ Texte blanc lisible sur fond vidéo -->
     <style>
+        .text-hero h2, .text-hero p, .text-hero .subtitle, .text-hero .competence {
+            color: #ffffff !important;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+        .text-hero p, .text-hero .subtitle, .text-hero .competence {
+            color: rgba(255,255,255,0.95) !important;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+        }
         @media (max-width: 768px) {
             body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
             .container { padding: 0 1rem !important; }
@@ -53,6 +63,12 @@
     </style>
 </head>
 <body>
+    <!-- 🎥 Vidéo arrière-plan totale (fixe, plein écran) -->
+    <video class="bg-video-full" autoplay muted loop playsinline preload="auto" poster="assets/icon-192.png">
+        <source src="assets/bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay-full"></div>
+
     <nav class="main-nav">
         <div class="container nav-wrapper">
             <ul class="nav-primary">
@@ -74,7 +90,7 @@
         </div>
     </nav>
 
-    <header class="module-header">
+    <header class="module-header text-hero">
         <div class="container">
             <a href="index.html" class="back-link">← Retour à l'accueil</a>
             <h1>ℹ️ Informations</h1>
@@ -119,14 +135,14 @@
                     </ul>
                 </div>
 
-                <div class="alert-box">
+                <div class="alert-box" style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; border-radius: var(--radius); margin: 1.5rem 0;">
                     <strong>⚠️ Important :</strong> Les places sont limitées chaque année. Les inscriptions ouvrent généralement en <strong>Septembre</strong> et ferment fin <strong>Octobre</strong>. Contactez le secrétariat dès que possible pour réserver votre place.
                 </div>
 
                 <div class="apc-block content">
                     <h5>📞 Besoin de précisions ?</h5>
                     <p>N'hésitez pas à consulter nos pages <a href="contacts.html">Contacts</a> et <a href="librairie.html">Librairie</a>, ou à appeler directement le secrétariat au <strong>+228 70 42 41 96</strong>.</p>
-                    <a href="contacts.html" class="btn" style="margin-top: 1rem; display: inline-block;">📅 Prendre rendez-vous</a>
+                    <a href="contacts.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">📅 Prendre rendez-vous</a>
                 </div>
             </section>
         </article>

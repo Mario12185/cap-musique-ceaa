@@ -29,6 +29,12 @@
     });
     </script>
 
+    <!-- 🎥 Arrière-plan vidéo fixe -->
+<video class="bg-video-full" autoplay muted loop playsinline preload="auto" poster="assets/icon-192.png">
+  <source src="assets/bg-video.mp4" type="video/mp4">
+</video>
+<div class="bg-overlay-full"></div>
+
     <nav class="main-nav">
         <div class="container nav-wrapper">
             <ul class="nav-primary">
@@ -51,22 +57,11 @@
         </div>
     </nav>
 
-    <!-- 🎥 HERO VIDEO SECTION (Plein largeur, positionnée en haut) -->
-    <section class="hero-video-section">
-        <video class="bg-video" autoplay muted loop playsinline preload="auto" poster="assets/icon-192.png">
-            <source src="assets/bg-video.mp4" type="video/mp4">
-        </video>
-        <div class="bg-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">🎵 CAP MUSIQUE</h1>
-            <p class="subtitle">Cursus Diplômant 2026-2027 • CEAA-Kpalimé</p>
-        </div>
-    </section>
 
     <main class="container">
-        <section class="text-center mt-2 mb-1">
-            <h2 style="color: var(--text);">Bienvenue sur votre espace numérique</h2>
-            <p style="max-width: 700px; margin: 0 auto; color: var(--text-secondary); font-size: var(--text-base); line-height: 1.6;">Manuel pédagogique conforme au référentiel APC. Accédez aux cours, supports, évaluations et ressources complémentaires en un clic.</p>
+        <section class="text-center mt-2 mb-1 text-hero">
+            <h2>Bienvenue sur votre espace numérique</h2>
+            <p style="max-width: 700px; margin: 0 auto;">Manuel pédagogique conforme au référentiel APC. Accédez aux cours, supports, évaluations et ressources complémentaires en un clic.</p>
         </section>
 
         <section class="modules-grid">

@@ -41,8 +41,6 @@
     <style>
         .music-svg { max-width: 100%; height: auto; margin: 1.5rem auto; display: block; }
         .music-svg svg { background: #fff; padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border); }
-    </style>
-    <style>
         @media (max-width: 768px) {
             body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
             .container { padding: 0 1rem !important; }
@@ -57,7 +55,13 @@
     </style>
 </head>
 <body>
-    <header class="module-header">
+    <!-- 🎥 Vidéo arrière-plan totale (UNIVERSEL - Mode 2) -->
+    <video class="bg-video-full" autoplay muted loop playsinline preload="auto" poster="../assets/icon-192.png">
+        <source src="../assets/bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay-full"></div>
+
+    <header class="module-header text-hero">
         <div class="container">
             <a href="../index.html" class="back-link">← Retour à l'accueil</a>
             <h1>🥁 Module 1</h1>
@@ -66,7 +70,7 @@
         </div>
     </header>
 
-    <!-- NAVIGATION CORRIGÉE -->
+    <!-- NAVIGATION -->
     <nav class="main-nav">
         <div class="container nav-wrapper">
             <ul class="nav-primary">
@@ -75,11 +79,11 @@
                 <li class="dropdown">
                     <a href="../autres-matieres.html" class="dropdown-toggle">Autres matières ▾</a>
                     <ul class="dropdown-menu">
-                        <li><a href="../maths-algebre.html">Mathématiques - Algèbre</a></li>
-                        <li><a href="../histoire-art.html">Histoire de l'Art</a></li>
-                        <li><a href="../legislation-travail.html">Législation du travail</a></li>
-                        <li><a href="../anglais.html">Anglais</a></li>
-                        <li><a href="../francais.html">Français</a></li>
+                        <li><a href="maths-algebre.html">Mathématiques - Algèbre</a></li>
+                        <li><a href="histoire-art.html">Histoire de l'Art</a></li>
+                        <li><a href="legislation-travail.html">Législation du travail</a></li>
+                        <li><a href="anglais.html">Anglais</a></li>
+                        <li><a href="francais.html">Français</a></li>
                     </ul>
                 </li>
                 <li><a href="../contacts.html">Contacts</a></li>
@@ -313,6 +317,50 @@
                 </div>
             </section>
         </article>
+
+        <!-- 🎬 + 💳 Section Vidéo (montage local) + Achat Livre Maketou -->
+        <div class="apc-block content" style="margin-top: 2rem;">
+            <h5>🎬 Vidéo du chapitre</h5>
+            
+            <!-- 🎥 Lecteur vidéo local (MP4 hébergé sur GitHub Pages) -->
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius); margin-bottom: 1rem; background: #000; border: 1px solid var(--border);">
+                <video 
+                    class="module-video"
+                    controls 
+                    preload="metadata" 
+                    playsinline 
+                    poster="../assets/thumbnails/module1-thumb.jpg"
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; background: #000;"
+                >
+                    <!-- 🔧 Chemin corrigé pour dossier modules/ -->
+                    <source src="../assets/videos/module1-chapitre.mp4" type="video/mp4">
+                    Ton navigateur ne supporte pas la lecture vidéo. <a href="../assets/videos/module1-chapitre.mp4" download>Télécharger la vidéo</a>.
+                </video>
+            </div>
+            
+            <!-- ⚠️ Message d'aide si la vidéo ne charge pas -->
+            <p id="videoHelp" style="font-size: var(--text-xs); color: var(--text-muted); display: none; margin-bottom: 1rem;">
+                💡 La vidéo met du temps à charger ? <a href="#" id="downloadLink" style="color: var(--primary);">Télécharge-la ici</a> pour la regarder hors-ligne.
+            </p>
+
+            <h5 style="margin-top: 1.5rem;">📚 Acquérir le manuel complet du chapitre</h5>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                Version PDF imprimable • Exercices corrigés • Ressources complémentaires • Accès à vie.
+            </p>
+            
+            <!-- 🔗 Bouton Maketou (remplace le href par ton vrai lien de paiement) -->
+            <a href="https://maketou.com/p/TON_LIEN_PAIEMENT_MODULE1" 
+               target="_blank" 
+               rel="noopener"
+               class="btn btn-maketou"
+               style="background: linear-gradient(135deg, #d97706, #b45309); color: white; display: inline-flex; align-items: center; gap: 0.5rem; width: 100%; justify-content: center;">
+                💳 Acheter le manuel • 2 500 FCFA
+            </a>
+            
+            <p style="font-size: var(--text-xs); color: var(--text-muted); margin-top: 0.75rem; text-align: center;">
+                🔐 Paiement sécurisé via Maketou • Accès immédiat après validation
+            </p>
+        </div>
     </main>
 
     <footer class="main-footer">
@@ -322,75 +370,29 @@
         </div>
     </footer>
 
-    <!-- 🎬 + 💳 Section Vidéo (montage local) + Achat Livre Maketou -->
-<div class="apc-block content" style="margin-top: 2rem;">
-    <h5>🎬 Vidéo du chapitre</h5>
-    
-    <!-- 🎥 Lecteur vidéo local (MP4 hébergé sur GitHub Pages) -->
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius); margin-bottom: 1rem; background: #000; border: 1px solid var(--border);">
-        <video 
-            class="module-video"
-            controls 
-            preload="metadata" 
-            playsinline 
-            poster="assets/thumbnails/module1-thumb.jpg"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; background: #000;"
-        >
-            <!-- 🔧 Remplace le src par le chemin de TA vidéo -->
-            <source src="assets/videos/module1-chapitre.mp4" type="video/mp4">
-            Ton navigateur ne supporte pas la lecture vidéo. <a href="assets/videos/module1-chapitre.mp4" download>Télécharger la vidéo</a>.
-        </video>
-    </div>
-    
-    <!-- ⚠️ Message d'aide si la vidéo ne charge pas -->
-    <p id="videoHelp" style="font-size: var(--text-xs); color: var(--text-muted); display: none; margin-bottom: 1rem;">
-        💡 La vidéo met du temps à charger ? <a href="#" id="downloadLink" style="color: var(--primary);">Télécharge-la ici</a> pour la regarder hors-ligne.
-    </p>
-
-    <h5 style="margin-top: 1.5rem;">📚 Acquérir le manuel complet du chapitre</h5>
-    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
-        Version PDF imprimable • Exercices corrigés • Ressources complémentaires • Accès à vie.
-    </p>
-    
-    <!-- 🔗 Bouton Maketou (remplace le href par ton vrai lien de paiement) -->
-    <a href="https://maketou.com/p/TON_LIEN_PAIEMENT_MODULE1" 
-       target="_blank" 
-       rel="noopener"
-       class="btn btn-maketou"
-       style="background: linear-gradient(135deg, #d97706, #b45309); color: white; display: inline-flex; align-items: center; gap: 0.5rem; width: 100%; justify-content: center;">
-        💳 Acheter le manuel • 2 500 FCFA
-    </a>
-    
-    <p style="font-size: var(--text-xs); color: var(--text-muted); margin-top: 0.75rem; text-align: center;">
-        🔐 Paiement sécurisé via Maketou • Accès immédiat après validation
-    </p>
-</div>
-
-<!-- 📜 Script : fallback vidéo + aide téléchargement -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const video = document.querySelector('.module-video');
-    const help = document.getElementById('videoHelp');
-    const downloadLink = document.getElementById('downloadLink');
-    
-    if (video && help && downloadLink) {
-        // Si la vidéo ne se lance pas en 5s → proposer le téléchargement
-        setTimeout(() => {
-            if (video.readyState === 0 || video.networkState === 3) {
-                help.style.display = 'block';
-                downloadLink.href = video.querySelector('source').src;
-                downloadLink.download = '';
-            }
-        }, 5000);
+    <!-- 📜 Script : fallback vidéo locale + aide téléchargement -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.querySelector('.module-video');
+        const help = document.getElementById('videoHelp');
+        const downloadLink = document.getElementById('downloadLink');
         
-        // Clic sur "Télécharger" → ouvre en nouvel onglet
-        downloadLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            window.open(this.href, '_blank');
-        });
-    }
-});
-</script>
+        if (video && help && downloadLink) {
+            setTimeout(() => {
+                if (video.readyState === 0 || video.networkState === 3) {
+                    help.style.display = 'block';
+                    downloadLink.href = video.querySelector('source').src;
+                    downloadLink.download = '';
+                }
+            }, 5000);
+            
+            downloadLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.open(this.href, '_blank');
+            });
+        }
+    });
+    </script>
 
     <!-- PWA Service Worker -->
     <script>
@@ -402,18 +404,5 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
     </script>
-    <script>
-// 🎥 Fallback vidéo mobile : si pas chargée en 3s → affiche le gradient
-if (/Mobi|Android/i.test(navigator.userAgent)) {
-    const video = document.querySelector('.bg-video');
-    if (video) {
-        setTimeout(() => {
-            if (video.readyState === 0 || video.networkState === 3) {
-                document.body.classList.add('no-video');
-            }
-        }, 3000);
-    }
-}
-</script>
 </body>
 </html>
