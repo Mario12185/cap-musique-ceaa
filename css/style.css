@@ -292,3 +292,36 @@ main.container > .chapter > .lesson > p {
   color: rgba(255,255,255,0.95) !important;
   text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
+
+/* 🔧 FIX URGENT MOBILE + VIDÉO BG + TEXTE BLANC */
+/* 1. Rendre les headers transparents pour voir la vidéo */
+header.main-header, header.module-header {
+    background: transparent !important;
+    padding-top: 4rem !important;
+}
+header.main-header::after, header.module-header::after { display: none !important; }
+
+/* 2. Forcer texte blanc sur fond vidéo (tous écrans) */
+.text-hero h1, .text-hero h2, .text-hero h3, .text-hero h4, .text-hero h5, .text-hero h6,
+.text-hero p, .text-hero .subtitle, .text-hero .competence {
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7) !important;
+}
+
+/* 3. Mobile corrigé (Android/iOS) */
+@media (max-width: 768px) {
+    .bg-video-full { display: block !important; }
+    .bg-overlay-full { background: rgba(15, 23, 42, 0.82) !important; }
+    
+    header.main-header, header.module-header { padding: 2.5rem 0 1.5rem !important; }
+    .nav-wrapper { flex-direction: column !important; height: auto !important; padding: 0.5rem 0 !important; }
+    .nav-primary { flex-wrap: wrap !important; justify-content: center !important; gap: 0.2rem !important; }
+    .nav-primary a { font-size: 0.75rem !important; padding: 0.25rem 0.4rem !important; white-space: nowrap !important; }
+    .container { padding: 0 0.5rem !important; }
+    .modules-grid, .instrument-grid, .dropdown-menu { grid-template-columns: 1fr !important; gap: 0.6rem !important; }
+    .apc-block { padding: 0.7rem !important; margin: 0.4rem 0 !important; }
+    .btn, .btn-maketou { width: 100% !important; justify-content: center !important; }
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.2rem !important; }
+    h3 { font-size: 1.1rem !important; }
+}
