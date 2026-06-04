@@ -39,17 +39,34 @@
     <title>Librairie | CAP MUSIQUE</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .product-card { background: var(--card-bg); padding: 1.8rem; border-radius: var(--radius); box-shadow: var(--shadow-md); border-left: 4px solid var(--accent); display: flex; flex-direction: column; transition: transform 0.2s; }
-        .product-card:hover { transform: translateY(-4px); }
-        .product-card h4 { margin: 0.6rem 0; color: var(--primary); font-size: 1.15rem; }
-        .product-card p { flex: 1; margin: 0.5rem 0; color: var(--text-light); font-size: 0.95rem; }
-        .btn-maketou { background: #d69e2e; color: white; text-align: center; padding: 0.8rem; border-radius: var(--radius-sm); font-weight: 700; margin-top: auto; transition: background 0.2s; }
-        .btn-maketou:hover { background: #b7791f; text-decoration: none; color: white; }
-        .review-card { background: #f7fafc; padding: 1.2rem; border-radius: var(--radius-sm); border-left: 3px solid #48bb78; }
-        .stars { color: #d69e2e; font-size: 1.1rem; margin-bottom: 0.5rem; }
-        .reviewer { display: block; margin-top: 0.5rem; font-size: 0.85rem; color: #718096; font-style: italic; }
-    </style>
-    <style>
+        .product-card { background: var(--surface); padding: 1.8rem; border-radius: var(--radius-lg); box-shadow: var(--shadow); border-left: 4px solid var(--accent); display: flex; flex-direction: column; transition: var(--transition); }
+        .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--primary); }
+        .product-card h4 { margin: 0.6rem 0; color: var(--text); font-size: var(--text-lg); font-weight: 700; }
+        .product-card p { flex: 1; margin: 0.5rem 0; color: var(--text-secondary); font-size: var(--text-sm); }
+        .btn-maketou { 
+            background: linear-gradient(135deg, #d97706, #b45309); 
+            color: white !important; 
+            text-align: center; 
+            padding: 0.8rem; 
+            border-radius: var(--radius-sm); 
+            font-weight: 700; 
+            margin-top: auto; 
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+        }
+        .btn-maketou:hover { 
+            background: linear-gradient(135deg, #b45309, #92400e); 
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(217, 119, 6, 0.4);
+        }
+        .review-card { background: var(--surface-hover); padding: 1.2rem; border-radius: var(--radius); border-left: 3px solid var(--success); }
+        .stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .reviewer { display: block; margin-top: 0.5rem; font-size: var(--text-xs); color: var(--text-muted); font-style: italic; }
+        
         @media (max-width: 768px) {
             body { font-size: 16px !important; line-height: 1.6 !important; overflow-x: hidden !important; }
             .container { padding: 0 1rem !important; }
@@ -64,6 +81,12 @@
     </style>
 </head>
 <body>
+    <!-- 🎥 Vidéo arrière-plan totale (UNIVERSEL - Mode 2) -->
+    <video class="bg-video-full" autoplay muted loop playsinline preload="auto" poster="assets/icon-192.png">
+        <source src="assets/bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="bg-overlay-full"></div>
+
     <nav class="main-nav">
         <div class="container nav-wrapper">
             <ul class="nav-primary">
@@ -84,7 +107,7 @@
         </div>
     </nav>
 
-    <header class="module-header">
+    <header class="module-header text-hero">
         <div class="container">
             <a href="index.html" class="back-link">← Retour à l'accueil</a>
             <h1>🛒 Librairie</h1>
@@ -101,6 +124,58 @@
                     <p>Tous les supports pédagogiques du CEAA-Kpalimé sont disponibles à l'achat via <strong>Maketou</strong>. Après validation du paiement, vous recevrez un accès immédiat au contenu numérique ou une livraison physique.</p>
                 </div>
 
+                <!-- 🎹 CLAVIERS : Piano / Orgue / Synthétiseur (3 produits séparés) -->
+                <h4 style="margin: 2rem 0 1rem; color: var(--text); font-size: var(--text-xl);">🎹 Claviers</h4>
+                <div class="modules-grid">
+                    <div class="product-card">
+                        <h4>🎹 Piano</h4>
+                        <p>Méthode complète : posture, doigtés, lecture de partitions, exercices techniques et répertoire classique/moderne.</p>
+                        <a href="https://maketou.tg/ceaa-piano" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
+                    </div>
+                    <div class="product-card">
+                        <h4>🎹 Orgue</h4>
+                        <p>Pédalier, registration, techniques liturgiques et classiques, improvisation et accompagnement.</p>
+                        <a href="https://maketou.tg/ceaa-orgue" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
+                    </div>
+                    <div class="product-card">
+                        <h4>🎹 Synthétiseur</h4>
+                        <p>Initiation aux sons électroniques, séquençage, effets, arrangements et production moderne.</p>
+                        <a href="https://maketou.tg/ceaa-synthe" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
+                    </div>
+                </div>
+
+                <!-- 🥁 PERCUSSIONS : Batterie / Percussion & Tam-tam (2 produits séparés) -->
+                <h4 style="margin: 2rem 0 1rem; color: var(--text); font-size: var(--text-xl);">🥁 Percussions</h4>
+                <div class="modules-grid">
+                    <div class="product-card">
+                        <h4>🥁 Batterie</h4>
+                        <p>Coordination, independence, grooves, lecture rythmique avancée, styles rock/jazz/funk.</p>
+                        <a href="https://maketou.tg/ceaa-batterie" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
+                    </div>
+                    <div class="product-card">
+                        <h4>🪘 Percussion & Tam-tam</h4>
+                        <p>Rythmes africains, frappes traditionnelles, ensembles polyrythmiques, djembé, congas, cloches.</p>
+                        <a href="https://maketou.tg/ceaa-percussion" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
+                    </div>
+                </div>
+
+                <!-- 🎤 VOIX & PRODUCTION : Technique Vocale / MAO (2 produits séparés) -->
+                <h4 style="margin: 2rem 0 1rem; color: var(--text); font-size: var(--text-xl);">🎤 Voix & Production</h4>
+                <div class="modules-grid">
+                    <div class="product-card">
+                        <h4>🎤 Technique Vocale</h4>
+                        <p>Respiration, justesse, placement de voix, interprétation, chant collectif et solo.</p>
+                        <a href="https://maketou.tg/ceaa-technique-vocale" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
+                    </div>
+                    <div class="product-card">
+                        <h4>🎛️ MAO / Production Musicale</h4>
+                        <p>Enregistrement, Editeur de Musique, logiciels audio (Audacity, Reaper), mixage, mastering et création numérique.</p>
+                        <a href="https://maketou.tg/ceaa-mao" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
+                    </div>
+                </div>
+
+                <!-- 📚 FORMATION GÉNÉRALE -->
+                <h4 style="margin: 2rem 0 1rem; color: var(--text); font-size: var(--text-xl);">📚 Formation Générale</h4>
                 <div class="modules-grid">
                     <div class="product-card">
                         <h4>🎵 Formation Musicale & Culture Artistique</h4>
@@ -112,29 +187,10 @@
                         <p>Apprentissage progressif de la portée, clés, notes, rythmes et exercices pratiques corrigés.</p>
                         <a href="https://maketou.tg/ceaa-solfege" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
                     </div>
-                    <div class="product-card">
-                        <h4>🎹 Piano & Orgue</h4>
-                        <p>Méthode complète : posture, doigtés, lecture de partitions, exercices techniques et répertoire.</p>
-                        <a href="https://maketou.tg/ceaa-piano-orgue" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
-                    </div>
-                    <div class="product-card">
-                        <h4>🎺 Trompette & Cuivres</h4>
-                        <p>Technique d'embouchure, souffle, pistons, gammes, études et exercices d'orchestre/fanfare.</p>
-                        <a href="https://maketou.tg/ceaa-trompette" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
-                    </div>
-                    <div class="product-card">
-                        <h4>🥁 Batterie & Percussion / Tam-tam</h4>
-                        <p>Rythmes, coordination, frappes, lecture de partitions percussion, techniques africaines & modernes.</p>
-                        <a href="https://maketou.tg/ceaa-percussion" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
-                    </div>
-                    <div class="product-card">
-                        <h4>🎤 Technique Vocale & MAO</h4>
-                        <p>Respiration, justesse, interprétation, enregistrement, logiciels audio et production musicale.</p>
-                        <a href="https://maketou.tg/ceaa-voix-mao" target="_blank" class="btn-maketou">🛍️ Acheter sur Maketou</a>
-                    </div>
                 </div>
 
-                <section class="lesson" id="avis">
+                <!-- ⭐ AVIS -->
+                <section class="lesson" id="avis" style="margin-top: 3rem;">
                     <div class="apc-block situation">
                         <h5>⭐ Avis des Étudiants & Professionnels</h5>
                         <div class="modules-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
@@ -145,7 +201,7 @@
                             </div>
                             <div class="review-card">
                                 <div class="stars">★★★★☆</div>
-                                <p>« J'ai acheté le guide Solfège & Piano. Très pratique pour réviser hors connexion. Le paiement Maketou est rapide. »</p>
+                                <p>« J'ai acheté le guide Piano. Très pratique pour réviser hors connexion. Le paiement Maketou est rapide. »</p>
                                 <span class="reviewer">— Amina, Élève CAP 1</span>
                             </div>
                             <div class="review-card">
@@ -160,7 +216,7 @@
                 <div class="apc-block resume" style="margin-top: 2rem; text-align: center;">
                     <h5>✅ Assistance & Support</h5>
                     <p>En cas de problème de paiement ou d'accès aux manuels, contactez le secrétariat au <strong>+228 70 42 41 96</strong>.</p>
-                    <a href="contacts.html" class="btn" style="margin-top: 1rem; display: inline-block;">📞 Besoin d'aide ? Contactez-nous</a>
+                    <a href="contacts.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-flex; align-items: center; gap: 0.5rem;">📞 Besoin d'aide ? Contactez-nous</a>
                 </div>
             </section>
         </article>
